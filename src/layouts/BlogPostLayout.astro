@@ -1,7 +1,7 @@
 ---
-import Container from "../components/utils/Container.astro";
-import BaseLayout from "./BaseLayout.astro";
-import PageTitle from "../components/typography/PageTitle.astro";
+import Container from "@components/utils/Container.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogPostTitle from "@components/typography/BlogPostTitle.astro";
 const { title } = Astro.props;
 ---
 
@@ -9,7 +9,7 @@ const { title } = Astro.props;
   <article>
     <header class="py-12 xl:py-16 bg-pink text-grassGreen">
       <Container>
-        <PageTitle>{title}</PageTitle>
+        <BlogPostTitle>{title}</BlogPostTitle>
       </Container>
     </header>
     <div class="py-12 xl:py-24">
