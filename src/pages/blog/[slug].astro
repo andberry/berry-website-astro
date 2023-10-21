@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Container from "../../components/utils/Container.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((p) => {
+    return {
+      params: {
+        slug: p.slug,
+      },
+      props: {
+        post: p,
+      },
+    };
+  });
+}
+
+interface Props {
+  post: CollectionEntry<"blog">;
+}
+
+const { slug } = Astro.params;
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout>
+  <header class="py-16">
+    <Container>
+      <h1 class="font-black text-6xl mb-8">{post.data.title}</h1>
+    </Container>
+  </header>
+  <div>
+    <Container size="small">
+      <article>
+        <div class="text-xl font-thin">
+          <Content />
+        </div>
+      </article>
+    </Container>
+  </div>
+</BaseLayout>

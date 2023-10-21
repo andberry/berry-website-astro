@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import Container from "../../components/utils/Container.astro";
+const posts = await getCollection("blog");
+---
+
+<BaseLayout metaTitle="Homepage">
+  <article>
+    <Container>
+      <h1 class="text-6xl font-bold">AndBerry blog</h1>
+      {
+        posts && (
+          <ul>
+            {posts.map((p) => (
+              <li>
+                <a class="block py-3" href={`/blog/${p.slug}`}>
+                  {p.data.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </Container>
+  </article>
+</BaseLayout>
