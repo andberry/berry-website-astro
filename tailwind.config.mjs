@@ -14,7 +14,7 @@ export default {
       ultraviolet: "#52489C",
       teal: "#3891A6",
       black: "#000807",
-      lightgreen: "#000807",
+      lightgreen: "#90EE90",
       yellow: "#FCFF4B",
 
       //
@@ -22,6 +22,7 @@ export default {
       green: "#77FF94",
       greenyellow: "##ABFF67",
       raisingBlack: "##2D2931",
+      grassGreen: "#7CFC00",
     },
     screens: {
       sm: "640px",
@@ -30,6 +31,13 @@ export default {
       xl: "1280px",
       "2xl": "1440px",
       "3xl": "1680px",
+    },
+    maxWidth: {
+      "screen-md": "768px",
+      "screen-lg": "1024px",
+      "screen-xl": "1280px",
+      "screen-2xl": "1440px",
+      "screen-3xl": "1680px",
     },
     fontFamily: {
       exo2: ['"Exo 2"', "sans-serif"],
