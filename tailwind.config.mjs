@@ -4,9 +4,7 @@ export default {
   theme: {
     fontFamily: {
       exo2: ['"Exo 2"', "sans-serif"],
-      domine: ["Domine", "serif"],
-      playfairDisplay: ['"Playfair Display"', "serif"],
-      titillium: ["Titillium Web", "sans-serif"],
+      merryweather: ["Merriweather", "serif"],
     },
     extend: {},
   },
