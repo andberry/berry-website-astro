@@ -9,6 +9,19 @@ export default {
       purple: "#5b21b6",
       pink: "#FF10F0",
       lime: "#90FF5D",
+
+      //
+      ultraviolet: "#52489C",
+      teal: "#3891A6",
+      black: "#000807",
+      lightgreen: "#000807",
+      yellow: "#FCFF4B",
+
+      //
+      pink2: "#EC058E",
+      green: "#77FF94",
+      greenyellow: "##ABFF67",
+      raisingBlack: "##2D2931",
     },
     screens: {
       sm: "640px",
