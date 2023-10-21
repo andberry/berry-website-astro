@@ -1,0 +1,45 @@
+---
+import Copy from "@components/typography/Copy.astro";
+import H1 from "@components/typography/H1.astro";
+import H2 from "@components/typography/H2.astro";
+import H3 from "@components/typography/H3.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import Container from "@components/utils/Container.astro";
+---
+
+<BaseLayout>
+  <article class="py-16">
+    <Container size="medium">
+      <H1>This is Heading1</H1>
+      <H2>This is Heading1</H2>
+      <H3>This is Heading1</H3>
+      <Copy size="small">
+        <b>This is Copy small</b> Dicta culpa facilis tempore veniam aliquam
+        nihil sed porro et aut enim vero repudiandae excepturi qui vel
+        exercitationem tempore molestiae rerum sequi dolor quaerat laborum quis
+        laboriosam dolor cumque velit voluptatem necessitatibus velit
+        repellendus perferendis provident sed quibusdam et aspernatur excepturi
+        maxime veniam assumenda non doloribus et vitae qui et facilis vel sequi
+        animi perferendis.
+      </Copy>
+      <Copy size="medium">
+        This is Copy medium (default) Dicta culpa facilis tempore veniam aliquam
+        nihil sed porro et aut enim vero repudiandae excepturi qui vel
+        exercitationem tempore molestiae rerum sequi dolor quaerat laborum quis
+        laboriosam dolor cumque velit voluptatem necessitatibus velit
+        repellendus perferendis provident sed quibusdam et aspernatur excepturi
+        maxime veniam assumenda non doloribus et vitae qui et facilis vel sequi
+        animi perferendis.
+      </Copy>
+      <Copy size="large">
+        This is Copy large Dicta culpa facilis tempore veniam aliquam nihil sed
+        porro et aut enim vero repudiandae excepturi qui vel exercitationem
+        tempore molestiae rerum sequi dolor quaerat laborum quis laboriosam
+        dolor cumque velit voluptatem necessitatibus velit repellendus
+        perferendis provident sed quibusdam et aspernatur excepturi maxime
+        veniam assumenda non doloribus et vitae qui et facilis vel sequi animi
+        perferendis.
+      </Copy>
+    </Container>
+  </article>
+</BaseLayout>
