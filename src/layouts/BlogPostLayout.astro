@@ -1,0 +1,23 @@
+---
+import Container from "../components/utils/Container.astro";
+import BaseLayout from "./BaseLayout.astro";
+const { title } = Astro.props;
+---
+
+<BaseLayout>
+  <article>
+    <header class="py-12 xl:py-16 bg-pink text-grassGreen">
+      <Container>
+        <h1 class="font-black text-[6vw] leading-[0.9]">{title}</h1>
+      </Container>
+    </header>
+    <div class="py-12 xl:py-24">
+      <Container size="small">
+        {/*<div class="text-xl font-light leading-relaxed">*/}
+        <div class="text-lg font-light leading-loose font-merryweather">
+          <slot />
+        </div>
+      </Container>
+    </div>
+  </article>
+</BaseLayout>
