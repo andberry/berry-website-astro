@@ -1,0 +1,15 @@
+---
+import { nav } from "../config/nav";
+---
+
+<nav id="desktop-nav">
+  <ul class="flex gap-8">
+    {
+      nav.map((item) => (
+        <li>
+          <a href={item.url}>{item.title}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
