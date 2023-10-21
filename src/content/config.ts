@@ -9,11 +9,8 @@ const blogCollection = defineCollection({
       createdAt: z.number(),
       createdAtDisplay: z.string(),
       published: z.boolean().default(true),
-      tags: z.array(z.string()),
-      heroImage: z.object({
-        src: z.string(),
-        alt: z.string(),
-      }),
+      tags: z.array(z.string()).optional(),
+      heroImage: z.string().optional(),
     }),
 });
 
