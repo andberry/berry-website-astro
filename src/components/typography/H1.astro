@@ -1,0 +1,11 @@
+---
+import type { HTMLTag } from "astro/types";
+export interface Props {
+  Tag?: HTMLTag;
+}
+const { Tag = "h1" } = Astro.props;
+---
+
+<Tag class="font-black text-[6vw] leading-[0.9]">
+  <slot />
+</Tag>

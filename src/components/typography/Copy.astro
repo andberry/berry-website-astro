@@ -1,0 +1,22 @@
+---
+export interface Props {
+  size?: "small" | "medium" | "large";
+}
+
+const fontSizeMap: { [key in typeof size]: string } = {
+  small: "text-sm",
+  medium: "text-xl",
+  large: "text-2xl",
+};
+const { size = "medium" } = Astro.props;
+---
+
+<div
+  class:list={[
+    "leading-relaxed font-light font-merryweather",
+    fontSizeMap[size],
+    "py-4",
+  ]}
+>
+  <slot />
+</div>
