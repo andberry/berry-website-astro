@@ -3,7 +3,7 @@ interface Props {
   size?: "small" | "medium" | "large" | "fluid";
   additionalClasses?: string;
 }
-const { size = "large", additionalClasses } = Astro.props;
+const { size = "large", additionalClasses = "" } = Astro.props;
 const sizeClassMap = {
   small: "max-w-screen-md lg:px-0",
   medium: "max-w-screen-xl",
