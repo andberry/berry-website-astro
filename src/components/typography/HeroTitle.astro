@@ -1,11 +1,17 @@
 ---
 import type { HTMLTag } from "astro/types";
 export interface Props {
-  Tag?: HTMLTag;
+  as?: HTMLTag;
+  class?: string;
 }
-const { Tag = "h1" } = Astro.props;
+const { as: Tag = "h1", class: additionalClasses = "" } = Astro.props;
 ---
 
-<Tag class="text-purple font-black text-[6.5vw] leading-[0.9]">
+<Tag
+  class:list={[
+    "font-black text-clamphero leading-[0.9] my-4",
+    additionalClasses,
+  ]}
+>
   <slot />
 </Tag>

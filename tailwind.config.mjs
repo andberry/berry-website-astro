@@ -43,7 +43,14 @@ export default {
       exo2: ['"Exo 2"', "sans-serif"],
       merryweather: ["Merriweather", "serif"],
     },
-    extend: {},
+    extend: {
+      fontSize: {
+        clamphero: "clamp(4rem, -1.75rem + 10vw, 7.25rem)",
+        clamph1: "clamp(3.2rem, -1.786rem + 9.762vw, 7rem)",
+        clamph2: "clamp(2.6rem, -1.714rem + 8.571vw, 6rem)",
+        clamph3: "clamp(2.2rem, -1.036rem + 6.429vw, 4.75rem)",
+      },
+    },
   },
   plugins: [],
 };

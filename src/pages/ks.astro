@@ -13,8 +13,17 @@ import Container from "@components/utils/Container.astro";
     <Container size="medium">
       <HeroTitle>This is HeroTitle</HeroTitle>
       <H1>This is Heading1</H1>
-      <H2>This is Heading1</H2>
-      <H3>This is Heading1</H3>
+      <H2>This is Heading2</H2>
+      <H3>This is Heading3</H3>
+
+      <H1 as="h6" class="uppercase text-pink2">
+        This is Heading1 as h6, uppercase color-pink2
+      </H1>
+      <H2 as="h4" class="font-thin">This is Heading2 as h4 font-thin</H2>
+      <H3 as="h1" class="text-[tomato]">
+        This is Heading3 as h1 text-[tomato]
+      </H3>
+
       <Copy size="small">
         <b>This is Copy small</b> Dicta culpa facilis tempore veniam aliquam
         nihil sed porro et aut enim vero repudiandae excepturi qui vel
