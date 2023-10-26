@@ -20,8 +20,8 @@ export default {
       //
       pink2: "#EC058E",
       green: "#77FF94",
-      greenyellow: "##ABFF67",
-      raisingBlack: "##2D2931",
+      greenyellow: "#ABFF67",
+      raisingBlack: "#2D2931",
       grassGreen: "#7CFC00",
     },
     screens: {
