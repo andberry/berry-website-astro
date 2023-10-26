@@ -1,0 +1,15 @@
+---
+export interface Props {
+  url: string;
+  title?: string;
+}
+
+const { url, title = "Read the Article" } = Astro.props;
+---
+
+<a
+  href={url}
+  class="bg-lime text-xs text-raisingBlack font-light p-2 rounded-sm leading-none"
+>
+  {title}
+</a>

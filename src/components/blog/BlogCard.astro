@@ -1,6 +1,7 @@
 ---
 import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
-import Tag from "./Tag.astro";
+import BlogTag from "./BlogTag.astro";
+import BlogCta from "./BlogCta.astro";
 export interface Props {
   url: string;
   title: string;
@@ -34,16 +35,10 @@ const { url, title, heroImage, tags } = Astro.props;
     </a>
   </div>
 
-  <div class="flex justify-between items-center mt-3">
+  <div class="flex justify-between items-center mt-4">
     <div class="flex gap-2">
-      {tags && tags.map((t) => <Tag name={t} />)}
+      {tags && tags.map((t) => <BlogTag name={t} />)}
     </div>
-    <a
-      href={url}
-      class="flex items-center gap-2 group py-2 px-2 font-merryweather font-thin"
-    >
-      <span>Read the Article</span>
-      <div>ICON</div>
-    </a>
+    <BlogCta url={url} />
   </div>
 </article>
