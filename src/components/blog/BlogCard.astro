@@ -1,0 +1,49 @@
+---
+import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
+import Tag from "./Tag.astro";
+export interface Props {
+  url: string;
+  title: string;
+  heroImage: string;
+  tags?: string[];
+}
+
+const { url, title, heroImage, tags } = Astro.props;
+---
+
+<article>
+  <a href={url} class="block">
+    {
+      heroImage && (
+        <div class="aspect-video overflow-hidden rounded-md">
+          <div class="w-full h-full relative">
+            <img
+              src={heroImage}
+              alt=""
+              class="object-cover object-center translate-y-"
+            />
+          </div>
+        </div>
+      )
+    }
+  </a>
+
+  <div class="relative">
+    <a href={url}>
+      <BlogCardTitle>{title}</BlogCardTitle>
+    </a>
+  </div>
+
+  <div class="flex justify-between items-center mt-3">
+    <div class="flex gap-2">
+      {tags && tags.map((t) => <Tag name={t} />)}
+    </div>
+    <a
+      href={url}
+      class="flex items-center gap-2 group py-2 px-2 font-merryweather font-thin"
+    >
+      <span>Read the Article</span>
+      <div>ICON</div>
+    </a>
+  </div>
+</article>
