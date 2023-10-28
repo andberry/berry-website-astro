@@ -6,16 +6,14 @@ export default {
       white: "#FFFFFF",
       black0: "#000",
       lightgray: "#f2f3f6",
+      mediumgray: "#d9dadd",
       purple: "#5b21b6",
       pink: "#FF10F0",
       lime: "#90FF5D",
 
       //
       ultraviolet: "#52489C",
-      teal: "#3891A6",
-      black: "#000807",
       lightgreen: "#90EE90",
-      yellow: "#FCFF4B",
 
       //
       pink2: "#EC058E",
