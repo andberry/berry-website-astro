@@ -40,6 +40,7 @@ export default {
     fontFamily: {
       exo2: ['"Exo 2"', "sans-serif"],
       merryweather: ["Merriweather", "serif"],
+      mono: ['"JetBrains Mono"', "monospace"],
     },
     extend: {
       fontSize: {
