@@ -1,11 +1,11 @@
 ---
-title: 'Centering Things in CSS'
-abstract: 'Yet another article about different ways to center things in CSS: position absolute + translate, Flexbox, CSS Grid.'
+title: "Centering Things in CSS"
+abstract: "Yet another article about different ways to center things in CSS: position absolute + translate, Flexbox, CSS Grid."
 createdAt: 20200901
-createdAtDisplay: 'September 1, 2020'
+createdAtDisplay: "September 1, 2020"
 published: true
-tags: ['css']
-heroImage: 'garda4.jpg'
+tags: ["css"]
+heroImage: "garda4.jpg"
 ---
 
 As usual, as web developers, we have different ways to do the same thing, and centering items is a topic we face on daily basis. Fortunately we've moved from the prehistoric age of tables and float and today we can easily get support from standardized useful technologies that dramatically simplifies our job.
@@ -18,7 +18,7 @@ If we're going to center an inline element, it's just as simple as using the goo
 
 ```css
 .container {
-    text-align: center;
+  text-align: center;
 }
 ```
 
@@ -26,8 +26,8 @@ If we're going to center a block element, it's sufficient to set margin-left and
 
 ```css
 .content {
-    width: 75%;
-    margin: 0 auto;
+  width: 75%;
+  margin: 0 auto;
 }
 ```
 
@@ -37,13 +37,13 @@ If we know the exact height of our content we can absolutely position it to 50% 
 
 ```css
 .container {
-    position: relative;
+  position: relative;
 }
 .content {
-    height: 200px;
-    position: absolute;
-    top: 50%;
-    margin-top: -100px; /* half of content height */
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  margin-top: -100px; /* half of content height */
 }
 ```
 
@@ -51,12 +51,12 @@ But, if we don't know the exact height of our content, we can absolutely positio
 
 ```css
 .container {
-    position: relative;
+  position: relative;
 }
 .content {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 ```
 
@@ -66,13 +66,13 @@ If we don't know the exact height and width of our content we can absolutely pos
 
 ```css
 .container {
-    position: relative;
+  position: relative;
 }
 .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 ```
 
@@ -80,10 +80,10 @@ It's a very common situation (for me), so I created a usefull Sass mixin to be u
 
 ```css
 @mixin berry-abs-center() {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 ```
 
@@ -95,9 +95,9 @@ Centering both horizontally and vertically a div with an unknown width and heigh
 
 ```css
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 ```
 
@@ -107,17 +107,17 @@ Managing alignment of items is really easy also in CSS Grid:
 
 ```css
 .container {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 }
 
 .content {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 ```

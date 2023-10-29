@@ -110,29 +110,29 @@ lang: fr
 
 Structure your globals data files with multiple keys (one per language) and code your templates and partials to include the relavanta data only
 
-```twig
-    {
-        "en": {
-            "websitename": "Berry is the best",
-            "footercopyright": "Foo bar"
-        },
+```json
+{
+  "en": {
+    "websitename": "Berry is the best",
+    "footercopyright": "Foo bar"
+  },
 
-        "fr": {
-            "websitename": "Berry est la meilleure ",
-            "footercopyright": "Foo bar fr"
-        }
-    }
+  "fr": {
+    "websitename": "Berry est la meilleure ",
+    "footercopyright": "Foo bar fr"
+  }
+}
 ```
 
 ```twig
-    {% set navMain = navMain[lang] if lang else navMain['en'] %}
+{% set navMain = navMain[lang] if lang else navMain['en'] %}
 
-    <nav id="main-nav" class="c-nav-main u-show-on-desktop">
-        <ul>
-            {% for item in navMain %}
-            [...]
-        </ul>
-    </nav>
+<nav id="main-nav" class="c-nav-main u-show-on-desktop">
+    <ul>
+        {% for item in navMain %}
+        [...]
+    </ul>
+</nav>
 ```
 
 ## Show me the code!
