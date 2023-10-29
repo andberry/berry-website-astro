@@ -26,6 +26,6 @@ const { post } = Astro.props;
 const { Content } = await post.render();
 ---
 
-<BlogPostLayout title={post.data.title}>
+<BlogPostLayout postData={post.data}>
   <Content />
 </BlogPostLayout>
