@@ -5,7 +5,7 @@ createdAt: 20201120
 createdAtDisplay: "November 20, 2020"
 published: true
 tags: ["javascript"]
-heroImage: "@images/halifax-public-gardens.jpg"
+heroImage: "@images/ottawa-rideau.jpg"
 ---
 
 Vue.js is an outstanding library we can use to build complex frontend UI and/or apps, but it can also be used to implement small features even if we're working with a legacy/old project.

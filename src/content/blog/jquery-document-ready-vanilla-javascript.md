@@ -5,7 +5,7 @@ createdAt: 20210804
 createdAtDisplay: "August 04, 2021"
 published: true
 tags: ["javascript"]
-heroImage: "@images/halifax-public-gardens.jpg"
+heroImage: "@images/ottawa-bridge.jpg"
 ---
 
 **jQuery's $(document).ready()** method allows us to safely run code only once **the DOM is loaded and parsed**.

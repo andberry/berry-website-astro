@@ -5,7 +5,7 @@ createdAt: 20210826
 createdAtDisplay: "September 13, 2021"
 published: true
 tags: [frontend]
-heroImage: "@images/halifax-public-library.jpg"
+heroImage: "@images/montreal-park.jpg"
 ---
 
 [UIkit](https://getuikit.com/) is an amazing lightweight and modular front-end framework that can help you, frontend developer, a lot.

@@ -5,7 +5,7 @@ createdAt: 20211024
 createdAtDisplay: "October 24, 2021"
 published: true
 tags: ["css", "frontend"]
-heroImage: "@images/garda3.jpg"
+heroImage: "@images/halifax-public-gardens.jpg"
 ---
 
 > because writing CSS is easy; looking after it is not.

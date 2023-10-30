@@ -5,7 +5,7 @@ createdAt: 20201126
 createdAtDisplay: "November 26, 2020"
 published: true
 tags: [javascript]
-heroImage: "@images/ottawa-rideau.jpg"
+heroImage: "@images/montreal-skyline.jpg"
 ---
 
 Obviously this is my **humble**, yet definitive, **opinion**.
