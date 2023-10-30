@@ -2,10 +2,13 @@
 import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
 import BlogTag from "./BlogTag.astro";
 import BlogCta from "./BlogCta.astro";
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
 export interface Props {
   url: string;
   title: string;
-  heroImage: string;
+  heroImage: CollectionEntry<"blog">["data"]["heroImage"];
   tags?: string[];
 }
 
@@ -18,10 +21,12 @@ const { url, title, heroImage, tags } = Astro.props;
       heroImage && (
         <div class="aspect-video overflow-hidden rounded-md">
           <div class="w-full h-full relative">
-            <img
+            <Image
               src={heroImage}
               alt=""
-              class="object-cover object-center translate-y-"
+              class="object-cover object-center"
+              widths={[360, 640, 768, 1280, 1440]}
+              sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50w, 100vw"
             />
           </div>
         </div>

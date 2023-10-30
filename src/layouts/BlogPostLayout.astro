@@ -6,6 +6,7 @@ import type { CollectionEntry } from "astro:content";
 import Copy from "@components/typography/Copy.astro";
 import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
 import BlogTag from "@components/blog/BlogTag.astro";
+import { Image } from "astro:assets";
 export interface Props {
   postData: CollectionEntry<"blog">["data"];
 }
@@ -14,10 +15,27 @@ const { postData } = Astro.props;
 
 <BaseLayout>
   <article>
-    <header class="py-16 xl:py-16 bg-pink">
-      <Container>
-        <HeroTitle as="h1" class="text-grassGreen">{postData.title}</HeroTitle>
-      </Container>
+    <header>
+      <div class="py-16 xl:py-16 bg-lime">
+        <Container size="medium">
+          <HeroTitle as="h1" class="text-pink">
+            {postData.title}
+          </HeroTitle>
+        </Container>
+      </div>
+      {
+        postData.heroImage && (
+          <div class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]">
+            <Image
+              src={postData.heroImage}
+              alt=""
+              class="object-cover object-center w-full block h-full"
+              widths={[360, 640, 1024, 1280, 1920]}
+              sizes="100vw"
+            />
+          </div>
+        )
+      }
     </header>
     <section class="py-12 xl:py-24">
       <Container size="medium">
