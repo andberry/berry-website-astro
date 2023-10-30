@@ -1,11 +1,11 @@
 ---
-title: 'BEM, CSS Namespaces and ITCSS'
-abstract: 'How to make frontend code more readable and maintaininable, because CSS is easy, but looking after it, is not'
+title: "BEM, CSS Namespaces and ITCSS"
+abstract: "How to make frontend code more readable and maintaininable, because CSS is easy, but looking after it, is not"
 createdAt: 20211024
-createdAtDisplay: 'October 24, 2021'
+createdAtDisplay: "October 24, 2021"
 published: true
-tags: ['css', 'frontend']
-heroImage: 'halifax-public-gardens.jpg'
+tags: ["css", "frontend"]
+heroImage: "@images/garda3.jpg"
 ---
 
 > because writing CSS is easy; looking after it is not.
@@ -26,33 +26,33 @@ Block Element Modifier is a methodolgy, or a naming convention suggestion that *
 
 Definitely a way to save time when deciding class names.
 
--   **Block**: the parent, the standalone entity that has a meaning by itself (top level abstraction of your component)
--   **Element**: a part of the block, without meaning standalont by itself (a child item)
--   **Modifier**: a flag, a variation, a state to a block or element
+- **Block**: the parent, the standalone entity that has a meaning by itself (top level abstraction of your component)
+- **Element**: a part of the block, without meaning standalont by itself (a child item)
+- **Modifier**: a flag, a variation, a state to a block or element
 
 Here is an example of BEM applied to a button
 
 ```html
 <a class="button button--big">
-    <span class="button__icon"></span>
+  <span class="button__icon"></span>
 </a>
 ```
 
 ```css
 .button {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 6px;
-    padding: 8px 12px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  padding: 8px 12px;
 }
 .button__icon {
-    margin-right: 6px;
-    font-size: 0.5rem;
+  margin-right: 6px;
+  font-size: 0.5rem;
 }
 .button--big {
-    padding: 12px 16px;
-    font-size: 20px;
+  padding: 12px 16px;
+  font-size: 20px;
 }
 ```
 
@@ -60,11 +60,11 @@ Here is an example of BEM applied to a button
 
 How many times have you looked at a piece of HTML only to wonder:
 
--   which classes do what
--   which classes are related to each other
--   which classes are optional
--   which classes are recyclable
--   which classes can you delete, and so on?
+- which classes do what
+- which classes are related to each other
+- which classes are optional
+- which classes are recyclable
+- which classes can you delete, and so on?
 
 A lot of times, I bet.
 
@@ -114,9 +114,9 @@ Eg. **js-carousel, js-accordion**
 
 It helps us to **organize our CSS files** to better deal with CSS specifics/issues/pitfalls like:
 
--   global namespace
--   cascade
--   selectors specificity.
+- global namespace
+- cascade
+- selectors specificity.
 
 At the end, we split CSS properties based on their level of specificity and importance.
 
@@ -126,16 +126,16 @@ Going from top to bottom symbolizes an increase in specificity, and each subsect
 
 My personal implementation:
 
--   **1-settings**: sass variables: _font, colors, spacings_
--   **2-tools**: mixins and functions: _bg-image(), abs-center()_
--   **3-base**: generic + elements, normalize/reset + base html elements style without classes: _body, h1, table_ (this is the first CSS output)
--   **4-layout**: (remember objects?) abstract layouts, unstyles patterns: _grid, layout-sidebar, media_
--   **5-components**: style for a specific piece of UI: _c-hero, c-footer_
--   **6-modules**: aggregation of modules: _c-cards-list, c-cards-carousel_
--   **7-trumps/utilities**: utilities and helper classes with ability to override anything which goes before, all **CMS specific stuff like base overrides, views, specific page style**
+- **1-settings**: sass variables: _font, colors, spacings_
+- **2-tools**: mixins and functions: _bg-image(), abs-center()_
+- **3-base**: generic + elements, normalize/reset + base html elements style without classes: _body, h1, table_ (this is the first CSS output)
+- **4-layout**: (remember objects?) abstract layouts, unstyles patterns: _grid, layout-sidebar, media_
+- **5-components**: style for a specific piece of UI: _c-hero, c-footer_
+- **6-modules**: aggregation of modules: _c-cards-list, c-cards-carousel_
+- **7-trumps/utilities**: utilities and helper classes with ability to override anything which goes before, all **CMS specific stuff like base overrides, views, specific page style**
 
 ## Links
 
--   My ITCSS Github repo: https://github.com/andberry/berry-itcss
--   My Component-based Drupal 8/9 theme implemented with ITCSS: https://github.com/andberry/berrydrupal
--   Namespaces Article from CSSWizardry: https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/
+- My ITCSS Github repo: https://github.com/andberry/berry-itcss
+- My Component-based Drupal 8/9 theme implemented with ITCSS: https://github.com/andberry/berrydrupal
+- Namespaces Article from CSSWizardry: https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/

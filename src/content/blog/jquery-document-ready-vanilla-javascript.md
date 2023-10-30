@@ -1,11 +1,11 @@
 ---
-title: 'jQuery $(document).ready() in vanilla JavaScript'
-abstract: 'How to replace the must used jQuery method with vanilla JavaScript'
+title: "jQuery $(document).ready() in vanilla JavaScript"
+abstract: "How to replace the must used jQuery method with vanilla JavaScript"
 createdAt: 20210804
-createdAtDisplay: 'August 04, 2021'
+createdAtDisplay: "August 04, 2021"
 published: true
-tags: ['javascript']
-heroImage: 'ottawa-bridge.jpg'
+tags: ["javascript"]
+heroImage: "@images/halifax-public-gardens.jpg"
 ---
 
 **jQuery's $(document).ready()** method allows us to safely run code only once **the DOM is loaded and parsed**.
@@ -14,8 +14,8 @@ Not to be confused with **$( window ).on( "load")**, to be used if we want to ru
 
 We can achieve the same result with vanilla js and Web APIs, in particular using:
 
--   Window: DOMContentLoaded event
--   document.readyState
+- Window: DOMContentLoaded event
+- document.readyState
 
 The tricky part is considering that when the browser runs our code it may have already loaded and parsed the DOM, so the best practice is to first check the document.readyState variable.
 
@@ -35,14 +35,14 @@ Here is the code:
 */
 
 function doOnDocumentLoaded() {
-    loaderInit();
-    carouseslInit();
+  loaderInit();
+  carouseslInit();
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', doOnDocumentLoaded);
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", doOnDocumentLoaded);
 } else {
-    doOnDocumentLoaded();
+  doOnDocumentLoaded();
 }
 ```
 

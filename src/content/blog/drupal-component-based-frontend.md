@@ -1,11 +1,11 @@
 ---
-title: 'Component-Based Frontend in Drupal'
-abstract: 'What is Component-Based Frontend Dev? Why it is worth using it? How to implement it in Drupal?'
+title: "Component-Based Frontend in Drupal"
+abstract: "What is Component-Based Frontend Dev? Why it is worth using it? How to implement it in Drupal?"
 createdAt: 20210826
-createdAtDisplay: 'August 16, 2021'
+createdAtDisplay: "August 16, 2021"
 published: true
 tags: [frontend, cms]
-heroImage: 'halifax-cruise-ship.jpg'
+heroImage: "@images/montreal-park.jpg"
 ---
 
 ## What is Component-Base Frontend Development
@@ -22,11 +22,11 @@ you can use Paragraphs in Drupal, Matrix field in Craft CMS or Flexible Content 
 
 This is an example list of UI components:
 
--   hero
--   gallery
--   card
--   cards
--   cards-carousel
+- hero
+- gallery
+- card
+- cards
+- cards-carousel
 
 The actual names of your components is up to you, designers and developers. They should be as more abstract as possible, but I suggest you to find a good compromise avoiding overthinking.
 
@@ -87,24 +87,24 @@ This is an excerpt of the related Scss file:
 
 ```css
 .c-hero {
-    padding-top: $space_xl;
-    padding-bottom: $space_2xl;
-    position: relative;
+  padding-top: $space_xl;
+  padding-bottom: $space_2xl;
+  position: relative;
 
-    @include mq(lg) {
-        padding-top: $space_2xl;
-        padding-bottom: $space_3xl;
-    }
+  @include mq(lg) {
+    padding-top: $space_2xl;
+    padding-bottom: $space_3xl;
+  }
 }
 
 .c-hero__bgimage {
-    @include bg-image();
-    @include abs-fill();
+  @include bg-image();
+  @include abs-fill();
 }
 
 .c-hero__title {
-    @include fs1();
-    color: $color_white;
+  @include fs1();
+  color: $color_white;
 }
 ```
 
@@ -124,9 +124,9 @@ Inside each specific Drupal Twig file I simply go with a Twig include statement 
 
 The "specific Drupal Twig file" depends on how you structured the content, but this can be easily done for:
 
--   nodes templates (eg. node--page.html.twig)
--   views templates (eg. views-view-fields--hero.html.twig)
--   paragraphs templates (eg. paragraph--card.html.twig)
+- nodes templates (eg. node--page.html.twig)
+- views templates (eg. views-view-fields--hero.html.twig)
+- paragraphs templates (eg. paragraph--card.html.twig)
 
 Often the tricky and time wasting part is to access field plain value.
 
@@ -196,5 +196,5 @@ And then inside c-gallery.html.twig
 
 ### Interesting links
 
--   https://www.droptica.com/blog/component-based-design/
--   https://www.cmsdrupal.com/blog/how-component-based-approach-speeds-your-ui-design-process
+- https://www.droptica.com/blog/component-based-design/
+- https://www.cmsdrupal.com/blog/how-component-based-approach-speeds-your-ui-design-process

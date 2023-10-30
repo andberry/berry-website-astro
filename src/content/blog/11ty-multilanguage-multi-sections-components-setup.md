@@ -5,7 +5,7 @@ createdAt: 20220311
 createdAtDisplay: "March 11, 2022"
 published: true
 tags: ["javascript"]
-heroImage: "halifax-public-library.jpg"
+heroImage: "@images/halifax-public-library.jpg"
 ---
 
 ## Intro

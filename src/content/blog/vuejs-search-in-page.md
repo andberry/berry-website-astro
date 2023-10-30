@@ -1,11 +1,11 @@
 ---
-title: 'Search in page with Vue.js'
-abstract: 'Using Vue.js to implement a simple but effective and usable search in page.'
+title: "Search in page with Vue.js"
+abstract: "Using Vue.js to implement a simple but effective and usable search in page."
 createdAt: 20201120
-createdAtDisplay: 'November 20, 2020'
+createdAtDisplay: "November 20, 2020"
 published: true
-tags: ['javascript']
-heroImage: 'ottawa-rideau.jpg'
+tags: ["javascript"]
+heroImage: "@images/halifax-public-gardens.jpg"
 ---
 
 Vue.js is an outstanding library we can use to build complex frontend UI and/or apps, but it can also be used to implement small features even if we're working with a legacy/old project.
@@ -22,68 +22,64 @@ This is the final JavaScript code:
 
 ```javascript
 var searchApp = new Vue({
-    el: '#searchapp',
+  el: "#searchapp",
 
-    data: {
-        documents: [],
-        searchString: '',
-        searchResultsVisible: true,
+  data: {
+    documents: [],
+    searchString: "",
+    searchResultsVisible: true,
+  },
+
+  mounted: function () {
+    docsEls = document.querySelectorAll(".list__item");
+    for (const item of Array.from(docsEls)) {
+      this.documents.push({
+        text: item.querySelector(".list__item__description").innerHTML,
+      });
+    }
+
+    document.documentElement.addEventListener("click", this.handleClickOnBody);
+
+    document.addEventListener("keyup", this.handleKeyUp);
+  },
+
+  computed: {
+    activeSearchString: function () {
+      return this.searchString.length >= 3 ? this.searchString : "";
     },
 
-    mounted: function () {
-        docsEls = document.querySelectorAll('.list__item');
-        for (const item of Array.from(docsEls)) {
-            this.documents.push({
-                text: item.querySelector('.list__item__description').innerHTML,
-            });
-        }
-
-        document.documentElement.addEventListener(
-            'click',
-            this.handleClickOnBody
+    searchResults: function () {
+      if (this.activeSearchString !== "") {
+        return this.documents.filter(
+          (d) =>
+            d.text
+              .toLowerCase()
+              .includes(this.activeSearchString.toLowerCase()) == true
         );
+      } else {
+        return [];
+      }
+    },
+  },
 
-        document.addEventListener('keyup', this.handleKeyUp);
+  methods: {
+    handleClickOnBody: function (e) {
+      const target = e.target;
+      const searchEl = this.$refs.searchEl;
+
+      if (target !== searchEl && !searchEl.contains(target)) {
+        this.searchResultsVisible = false;
+      } else {
+        this.searchResultsVisible = true;
+      }
     },
 
-    computed: {
-        activeSearchString: function () {
-            return this.searchString.length >= 3 ? this.searchString : '';
-        },
-
-        searchResults: function () {
-            if (this.activeSearchString !== '') {
-                return this.documents.filter(
-                    (d) =>
-                        d.text
-                            .toLowerCase()
-                            .includes(this.activeSearchString.toLowerCase()) ==
-                        true
-                );
-            } else {
-                return [];
-            }
-        },
+    handleKeyUp: function (e) {
+      if (e.key === "Escape") {
+        this.searchResultsVisible = false;
+      }
     },
-
-    methods: {
-        handleClickOnBody: function (e) {
-            const target = e.target;
-            const searchEl = this.$refs.searchEl;
-
-            if (target !== searchEl && !searchEl.contains(target)) {
-                this.searchResultsVisible = false;
-            } else {
-                this.searchResultsVisible = true;
-            }
-        },
-
-        handleKeyUp: function (e) {
-            if (e.key === 'Escape') {
-                this.searchResultsVisible = false;
-            }
-        },
-    },
+  },
 });
 ```
 

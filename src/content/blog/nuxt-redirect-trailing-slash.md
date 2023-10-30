@@ -1,11 +1,11 @@
 ---
-title: 'Nuxt.js: force trailing slash with a redirect'
-abstract: 'Setup Nuxt.js with @nuxtjs/redirect-module to force a trailing slash with a 301 redirect'
+title: "Nuxt.js: force trailing slash with a redirect"
+abstract: "Setup Nuxt.js with @nuxtjs/redirect-module to force a trailing slash with a 301 redirect"
 createdAt: 20201012
-createdAtDisplay: 'October 12, 2020'
+createdAtDisplay: "October 12, 2020"
 published: true
 tags: [javascript]
-heroImage: 'montreal-metro.jpg'
+heroImage: "@images/montreal-subway.jpg"
 ---
 
 In a recent Nuxt.js project I've been working at, a SEO requirement was that all URLs had to be **with** trailing slash.

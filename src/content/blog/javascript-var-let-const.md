@@ -1,11 +1,11 @@
 ---
-title: 'var, let, const: declaring variables in JavaScript'
-abstract: 'My 2 cents on the 3 different ways to declare variables in JavaScript.'
+title: "var, let, const: declaring variables in JavaScript"
+abstract: "My 2 cents on the 3 different ways to declare variables in JavaScript."
 createdAt: 20200916
-createdAtDisplay: 'September 16, 2020'
+createdAtDisplay: "September 16, 2020"
 published: true
-tags: ['javascript']
-heroImage: 'garda5.jpg'
+tags: ["javascript"]
+heroImage: "@images/montreal-skyline.jpg"
 ---
 
 In Javascript we can declare variables using <strong>var</strong>, <strong>const</strong> and <strong>let</strong> keywords
@@ -48,16 +48,16 @@ On the other end, the scope of variables declared with <strong>const</strong> an
 Variables declared outside functions (aka in the top level of program) with <strong>var</strong> become properties of the global object (window), while variables declared with <strong>let</strong> or <strong>const</strong> don't.
 
 ```javascript
-var foo = 'foo';
-let bar = 'bar';
+var foo = "foo";
+let bar = "bar";
 window.foo;
-('foo');
+("foo");
 window.bar;
 undefined;
 ```
 
 ## Conclusion
 
--   I don't use <strong>var</strong> anymore
--   I use <strong>let</strong> only when it's required that binding can change during execution (eg. loop variables)
--   I use <strong>const</strong> almost for everything
+- I don't use <strong>var</strong> anymore
+- I use <strong>let</strong> only when it's required that binding can change during execution (eg. loop variables)
+- I use <strong>const</strong> almost for everything

@@ -1,11 +1,11 @@
 ---
-title: 'How to integrate UIkit in Drupal'
-abstract: 'Using the Drupal theme, loading it as library from CDN or install with npm and integrate in gulp workflow'
+title: "How to integrate UIkit in Drupal"
+abstract: "Using the Drupal theme, loading it as library from CDN or install with npm and integrate in gulp workflow"
 createdAt: 20210826
-createdAtDisplay: 'September 13, 2021'
+createdAtDisplay: "September 13, 2021"
 published: true
 tags: [frontend]
-heroImage: 'montreal-park.jpg'
+heroImage: "@images/halifax-public-library.jpg"
 ---
 
 [UIkit](https://getuikit.com/) is an amazing lightweight and modular front-end framework that can help you, frontend developer, a lot.
@@ -64,16 +64,16 @@ CSS/Scss: where to put these code snippets actually depends on how you structure
 but the concept is that you need first to include variables and mixins (eg. \_settings.scss)
 
 ```scss
-@import 'uikit/src/scss/variables';
-@import 'uikit/src/scss/mixins';
+@import "uikit/src/scss/variables";
+@import "uikit/src/scss/mixins";
 ```
 
 and the you can include the CSS for the components you're using (eg. \_components.scss):
 
 ```scss
-@import 'uikit/src/scss/components/visibility';
-@import 'uikit/src/scss/components/accordion';
-@import 'uikit/src/scss/components/animation';
+@import "uikit/src/scss/components/visibility";
+@import "uikit/src/scss/components/accordion";
+@import "uikit/src/scss/components/animation";
 ```
 
 JavaScript: simply import the framework (eg. in app.js)

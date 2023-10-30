@@ -1,11 +1,11 @@
 ---
-title: 'WordPress code snippets'
+title: "WordPress code snippets"
 abstract: "Usefull WordPress code snippets I've been using for years."
 createdAt: 20200912
-createdAtDisplay: 'September 12, 2020'
+createdAtDisplay: "September 12, 2020"
 published: true
-tags: ['cms']
-heroImage: 'garda2.jpg'
+tags: ["cms"]
+heroImage: "@images/garda2.jpg"
 ---
 
 ## Get the Content
