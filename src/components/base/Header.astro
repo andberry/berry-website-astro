@@ -1,11 +1,22 @@
 ---
 import Container from "@components/utils/Container.astro";
 import DesktopNav from "@components/DesktopNav.astro";
+import { Image } from "astro:assets";
+import berryTwitterImg from "@images/berry-twitter.jpg";
 ---
 
-<header class="py-4 bg-purple text-white">
-  <Container>
-    <div class="flex justify-between">
+<header class="py-3 bg-purple text-white fixed top-0 left-0 w-full z-50">
+  <Container size="fluid">
+    <div class="flex items-center gap-6">
+      <div class="w-12">
+        <Image
+          src={berryTwitterImg}
+          alt="Berry"
+          class="rounded-md"
+          widths={[48, 96, 192]}
+          sizes="48px"
+        />
+      </div>
       <DesktopNav />
     </div>
   </Container>

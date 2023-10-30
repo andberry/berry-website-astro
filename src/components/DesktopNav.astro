@@ -3,11 +3,14 @@ import { nav } from "@config/nav";
 ---
 
 <nav id="desktop-nav">
-  <ul class="flex gap-8">
+  <ul class="flex">
     {
       nav.map((item) => (
         <li>
-          <a class="uppercase" href={item.url}>
+          <a
+            class="py-2 px-6 text-lg font-light uppercase hover:text-grassGreen"
+            href={item.url}
+          >
             {item.title}
           </a>
         </li>
