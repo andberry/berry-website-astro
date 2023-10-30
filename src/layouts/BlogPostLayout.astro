@@ -16,11 +16,21 @@ const { postData } = Astro.props;
 <BaseLayout>
   <article>
     <header>
-      <div class="py-16 xl:py-16 bg-lime">
-        <Container size="medium">
+      <div class="pt-32 pb-8 2xl:pt-48 bg-lime">
+        <Container size="md">
           <HeroTitle as="h1" class="text-pink">
             {postData.title}
           </HeroTitle>
+          <time
+            datetime={`${postData.createdAt
+              .toString()
+              .slice(0, 4)}-${postData.createdAt
+              .toString()
+              .slice(4, 6)}-${postData.createdAt.toString().slice(6, 8)}`}
+            class="text-md font-light"
+          >
+            {postData.createdAtDisplay}
+          </time>
         </Container>
       </div>
       {
