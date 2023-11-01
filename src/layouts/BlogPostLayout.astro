@@ -16,9 +16,9 @@ const { postData } = Astro.props;
 <BaseLayout>
   <article>
     <header>
-      <div class="pt-32 pb-8 2xl:pt-48 bg-lime">
+      <div class="pt-32 pb-8 2xl:pt-48">
         <Container size="md">
-          <HeroTitle as="h1" class="text-pink">
+          <HeroTitle as="h1" class="dark:text-lightgray text-black">
             {postData.title}
           </HeroTitle>
           <time
@@ -55,15 +55,18 @@ const { postData } = Astro.props;
           >
             <div
               class='prose prose-neutral max-w-screen-3xl
-              prose-a:text-black prose-a:dark:text-white
+              prose-p:dark:text-darkgray prose-p:font-exo2
+              prose-a:dark:text-mediumgray prose-a:dark:font-normal
               prose-blockquote:text-white
-              prose-strong:dark:text-white2
-              prose-headings:text-pink2 prose-headings:font-exo2
+              prose-strong:dark:text-mediumgray
+              prose-ul:my-0 prose-li:dark:text-mediumgray
+              prose-headings:text-pink2 prose-headings:leading-[1] prose-headings:mb-8
+              prose-h2:text-clamph2 prose-h3:text-clamph3
               prose-headings:relative
               prose-headings:before:block prose-headings:before:absolute prose-headings:before:-left-4 prose-headings:before:top-0 prose-headings:before:content-[""] prose-headings:before:w-1 prose-headings:before:h-full prose-headings:before:bg-purple
-              xl:prose-headings:mt-20 prose-headings:mb-3 prose-headings:ml-4
-              prose-code:text-white2 prose-code:text-sm prose-pre:leading-none prose-code:font-mono
-              prose-p:my-0 prose-p:mb-10'
+              xl:prose-headings:mt-0 prose-headings:ml-4
+              prose-code:text-white prose-code:text-sm prose-pre:leading-none prose-code:font-mono
+              prose-p:my-0 prose-p:mb-5'
             >
               <Copy size="medium">
                 <slot />

@@ -6,22 +6,22 @@ const { metaTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;700;900&family=Merriweather:wght@300;400;900&family=JetBrains+Mono:wght@100;400&&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;700;900&family=Merriweather:wght@300;400;900&family=JetBrains+Mono:wght@100;400&&family=Montserrat:wght@300;400;700&family=Literata:opsz,wght@7..72,200;7..72,300;7..72,400;7..72,700&display=swap"
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
   </head>
-  <body class="font-exo2 font-extralight">
+  <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
     <Header />
 
-    <main>
+    <main class="">
       <slot />
     </main>
 
