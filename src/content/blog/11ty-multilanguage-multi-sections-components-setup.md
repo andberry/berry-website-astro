@@ -53,11 +53,11 @@ Nunjucks is a template language for JavaScript with syntax pretty similar to Twi
 With Nunjucks the best way to write component based templates is to use the `macro` stratement.
 
 ```twig
-    {% macro field(name, value='', type='text') %}
-        <div class="field">
-            <input type="{{ type }}" name="{{ name }}" value="{{ value | escape }}" />
-        </div>
-    {% endmacro %}
+{% macro field(name, value='', type='text') %}
+    <div class="field">
+        <input type="{{ type }}" name="{{ name }}" value="{{ value | escape }}" />
+    </div>
+{% endmacro %}
 ```
 
 Pay attention: `include` seems to do the job, but actually it's good to be used just for pieces of templates that don't require params. The problem is params scoping: you can try to use the `{% set %}` statement for "passing data" just before the include statement, but there is no scope: all variables you have set before the include call are visible inside the component.
