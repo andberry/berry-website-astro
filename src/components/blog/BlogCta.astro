@@ -1,4 +1,7 @@
 ---
+// import { HiOutlineArrowNarrowRight as ArrowIcon } from 'react-icons/hi';
+import { Icon } from "astro-icon";
+
 export interface Props {
   url: string;
   title?: string;
@@ -9,7 +12,10 @@ const { url, title = "Read the Article" } = Astro.props;
 
 <a
   href={url}
-  class="bg-lime text-xs text-raisingBlack font-light p-2 rounded-sm leading-none"
+  class="dark:text-white font-light p-2 leading-none flex items-center gap-2"
 >
-  {title}
+  <span class="flex-shrink-0 text-base">{title}</span>
+  <span class="w-5 dark:text-white leading-none mt-1">
+    <Icon name="la:long-arrow-alt-right" />
+  </span>
 </a>
