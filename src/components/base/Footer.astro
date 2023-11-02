@@ -3,5 +3,23 @@ import Container from "@components/utils/Container.astro";
 ---
 
 <footer class="py-4 bg-purple text-white text-sm">
-  <Container size="fluid">This is the footer</Container>
+  <Container size="fluid">
+    <div class="flex justify-between">
+      <div>
+        Designed and built by Berry (Andrea Berardi) with <a
+          class="underline hover:text-pink transition-all ease-linear duration-150"
+          href="https://astro.build/">Astro</a
+        > and <a
+          class="underline hover:text-pink transition-all ease-linear duration-150"
+          href="https://tailwindcss.com/">TailwindCSS</a
+        >.
+      </div>
+      <div>
+        <a
+          class="underline hover:text-pink transition-all ease-linear duration-150"
+          href="/kitchen-sink">Kitchen Sink</a
+        >
+      </div>
+    </div>
+  </Container>
 </footer>
