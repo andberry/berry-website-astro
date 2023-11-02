@@ -1,0 +1,39 @@
+---
+import { links } from "@config/links";
+import { Icon } from "astro-icon";
+/*
+
+const EMailIcon = <Icon name="mdi:email" />;
+const TwitterIcon = <Icon name="ri:twitter-fill" />;
+import type { HTMLTag } from "astro/types";
+import type {ILinkType} from "@config/links";
+
+const linksIconsMap: { [key in ILinkType]: HTMLTag } = {
+  email: EMailIcon,
+  twitter: TwitterIcon,
+  linkedin: TwitterIcon,
+  github: TwitterIcon,
+  devto: TwitterIcon
+};
+*/
+---
+
+<nav>
+  <ul class="flex items-center">
+    {
+      links.map((item) => {
+        return (
+          <li>
+            <a
+              class="block px-4 py-2 text-pink2 hover:text-grassGreen leading-none transition-all ease-linear duration-150"
+              href={item.url}
+              target="_blank"
+            >
+              <Icon class="w-7" name={item.iconName} />
+            </a>
+          </li>
+        );
+      })
+    }
+  </ul>
+</nav>

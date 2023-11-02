@@ -3,6 +3,7 @@ import Container from "@components/utils/Container.astro";
 import DesktopNav from "@components/DesktopNav.astro";
 import { Image } from "astro:assets";
 import berryTwitterImg from "@images/berry-twitter.jpg";
+import SocialLinks from "@components/SocialLinks.astro";
 ---
 
 <header
@@ -10,17 +11,20 @@ import berryTwitterImg from "@images/berry-twitter.jpg";
 bg-white text-black0 dark:bg-black dark:text-white"
 >
   <Container size="fluid">
-    <div class="flex items-center gap-6">
-      <div class="w-12">
-        <Image
-          src={berryTwitterImg}
-          alt="Berry"
-          class="rounded-md"
-          widths={[48, 96, 192]}
-          sizes="48px"
-        />
+    <div class="flex justify-between items-center">
+      <div class="flex items-center gap-6">
+        <div class="w-12">
+          <Image
+            src={berryTwitterImg}
+            alt="Berry"
+            class="rounded-md"
+            widths={[48, 96, 192]}
+            sizes="48px"
+          />
+        </div>
+        <DesktopNav />
       </div>
-      <DesktopNav />
+      <SocialLinks />
     </div>
   </Container>
 </header>
