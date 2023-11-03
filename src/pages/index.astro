@@ -1,12 +1,59 @@
 ---
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Container from "@components/utils/Container.astro";
+import ImageBerryTwitter from "@images/berry-twitter.jpg";
+import { Image } from "astro:assets";
+import HeroTitle from "@components/typography/HeroTitle.astro";
 ---
 
 <BaseLayout>
   <article class="py-16">
-    <Container>
-      <h1 class="text-6xl font-black">Welcome to AndBerry.me</h1>
-    </Container>
+    <section
+      class="dark:text-white text-black relative min-h-screen flex items-center md:py-32"
+    >
+      <Container>
+        <div class="lg:grid lg:grid-cols-6 lg:gap-8">
+          <div
+            class="w-1/3 mx-auto py-12 lg:w-full lg:px-4 lg:py-0 lg:col-start-1 lg:col-span-1 max-lg:hidden"
+          >
+            <Image
+              src={ImageBerryTwitter}
+              alt="Berry Image"
+              class="rounded-lg"
+            />
+          </div>
+
+          <div class="lg:col-start-2 lg:col-span-5 relative">
+            <HeroTitle class="text-center lg:text-left">
+              <span class="relative z-30">
+                Hi,{" "}
+              </span>
+               I&apos;m{" "}
+              <span class="dark:u-text-gradientbg u-text-gradientbg--light">
+                Berry!
+              </span>
+              <br />
+               I&apos;m a{" "}
+              <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light">
+                front-end
+              </span>{" "}
+               developer
+              <br />
+               and I love building{" "}
+              <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light">
+                usable, neat
+              </span>{" "}
+               and engaging web projects.
+              {
+                /*
+                                    <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
+                                    <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-lime300 z-30"></div>
+                                    */
+              }
+            </HeroTitle>
+          </div>
+        </div>
+      </Container>
+    </section>
   </article>
 </BaseLayout>
