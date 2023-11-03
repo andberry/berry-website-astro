@@ -3,7 +3,11 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()],
+  integrations: [
+    tailwind({
+      //applyBaseStyles: false,
+    }),
+  ],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
@@ -24,6 +28,8 @@ export default defineConfig({
         "php",
         "python",
         "twig",
+        "md",
+        "mdx",
       ],
       // Enable word wrap to prevent horizontal scrolling
       wrap: false,
