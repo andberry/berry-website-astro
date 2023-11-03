@@ -1,0 +1,90 @@
+---
+import HeroTitle from "@components/typography/HeroTitle.astro";
+import Container from "@components/utils/Container.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+import skillsData from "@config/skills.json";
+import H3 from "@components/typography/H3.astro";
+import { Icon } from "astro-icon";
+import TechIcon from "@components/TechIcon.astro";
+---
+
+<BaseLayout>
+  <article class="pb-24">
+    <Container size="lg">
+      <header class="pt-32 pb-8 2xl:pt-48">
+        <HeroTitle>
+          <span class="u-text-gradientbg">Skills</span> and Tech
+        </HeroTitle>
+      </header>
+      <section>
+        <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {
+            skillsData.map((item) => (
+              <div class="mb-12">
+                <H3 class="mb-3 text-pink2">{item.title}</H3>
+                <ul>
+                  {item.skills.map((item) => (
+                    <li class="py-2 dark:font-extralight font-normal">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section
+        class="py-4 xl:py-24 dark:text-white dark:fill-white text-black0"
+      >
+        <Container>
+          <div class="py-12 max-w-screen-md mx-auto">
+            <H3 class="text-center text-2xl mb-8 u-text-gradientbg">
+              What I use on a daily basis
+            </H3>
+            <div class="flex flex-wrap gap-12 justify-center">
+              <TechIcon icon="logos:nextjs-icon" title="Nextjs" />
+              <TechIcon icon="simple-icons:react" title="React" />
+              <TechIcon icon="mdi:tailwind" title="TailwindCSS" />
+              <TechIcon icon="mdi:language-typescript" title="TypeScript" />
+              <TechIcon icon="mdi:language-javascript" title="JavaScript" />
+              <TechIcon icon="simple-icons:storybook" title="Storybook" />
+              <TechIcon icon="simple-icons:html5" title="Html5" />
+              <TechIcon icon="simple-icons:css3" title="CSS3" />
+              <TechIcon icon="simple-icons:sass" title="Sass" />
+              <TechIcon icon="simple-icons:drupal" title="Drupal" />
+              <TechIcon icon="simple-icons:docker" title="DDEV" />
+              <TechIcon icon="simple-icons:git" title="Git" />
+              <TechIcon icon="simple-icons:jira" title="Jira" />
+              <TechIcon icon="simple-icons:trello" title="Trello" />
+              <TechIcon icon="simple-icons:notion" title="Notion" />
+              <TechIcon icon="simple-icons:slack" title="Slack" />
+              <TechIcon icon="simple-icons:figma" title="Figma" />
+              <TechIcon icon="wpf:macos" title="MacOS" />
+            </div>
+          </div>
+          <div class="py-12 max-w-screen-md mx-auto">
+            <H3 class="text-center text-2xl mb-8 u-text-gradientbg-2">
+              What I use less frequently
+            </H3>
+            <div class="flex flex-wrap gap-12 justify-center">
+              <TechIcon icon="simple-icons:eleventy" title="11ty" />
+              <TechIcon icon="simple-icons:php" title="PHP" />
+              <TechIcon icon="simple-icons:wordpress" title="WordPress" />
+              <TechIcon icon="simple-icons:statamic" title="Statamic" />
+              <TechIcon icon="simple-icons:craftcms" title="CraftCMS" />
+              <TechIcon icon="simple-icons:greensock" title="GSAP" />
+              <TechIcon icon="simple-icons:vuejs" title="Vue.js" />
+              <TechIcon icon="simple-icons:nuxtdotjs" title="Nuxt" />
+              <TechIcon icon="simple-icons:python" title="Python" />
+              <TechIcon icon="simple-icons:django" title="Django" />
+              <TechIcon icon="simple-icons:adobexd" title="Adobe XD" />
+              <TechIcon icon="simple-icons:linux" title="Linux" />
+            </div>
+          </div>
+        </Container>
+      </section>
+    </Container>
+  </article>
+</BaseLayout>

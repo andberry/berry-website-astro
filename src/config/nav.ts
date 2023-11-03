@@ -5,6 +5,6 @@ interface INav {
 
 export const nav: INav[] = [
   { url: "/", title: "Home" },
-  // { url: "/skills", title: "Skill" },
+  { url: "/skills", title: "Skills" },
   { url: "/blog", title: "Blog" },
 ];
