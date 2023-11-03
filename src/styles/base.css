@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .u-text-gradientbg {
+    background: linear-gradient(
+      30deg,
+      rgba(91, 33, 182, 1) 40%,
+      rgba(173, 255, 47, 1) 60%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 130% auto;
+    background-position: 0% 50%;
+    animation: 3s ease-in 1s infinite alternate running animateTextGradientBg;
+  }
+
+  .u-text-gradientbg--light {
+    background: linear-gradient(
+      30deg,
+      rgba(255, 16, 240, 1) 30%,
+      rgba(236, 5, 142, 1) 60%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 130% auto;
+    background-position: 0% 50%;
+    animation: 3s ease-in 1s infinite alternate running animateTextGradientBg;
+  }
+
+  .u-text-gradientbg-2 {
+    background: linear-gradient(
+      30deg,
+      rgba(173, 255, 47, 1) 25%,
+      rgba(91, 33, 182, 1) 40%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 130% auto;
+    background-position: 0% 50%;
+    animation: 3s ease-in 2s infinite alternate running animateTextGradientBg;
+  }
+
+  .u-text-gradientbg-2--light {
+    background: linear-gradient(
+      30deg,
+      rgba(250, 102, 255, 1) 25%,
+      rgba(126, 47, 219, 1) 40%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-size: 130% auto;
+    background-position: 0% 50%;
+    animation: 3s ease-in 2s infinite alternate running animateTextGradientBg;
+  }
+
+  @keyframes animateTextGradientBg {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    90% {
+      background-position: 0% 50%;
+    }
+
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}

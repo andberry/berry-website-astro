@@ -5,7 +5,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [
     tailwind({
-      //applyBaseStyles: false,
+      // By default, the integration imports a basic base.css file on every page of your project.
+      applyBaseStyles: false,
     }),
   ],
   markdown: {
