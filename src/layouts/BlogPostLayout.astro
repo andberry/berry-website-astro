@@ -7,6 +7,8 @@ import Copy from "@components/typography/Copy.astro";
 import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
 import BlogTag from "@components/blog/BlogTag.astro";
 import { Image } from "astro:assets";
+import { Icon } from "astro-icon";
+
 export interface Props {
   postData: CollectionEntry<"blog">["data"];
 }
@@ -89,7 +91,13 @@ const { postData } = Astro.props;
                 )
               }
               <div class="mt-8">
-                <a href="/blog">Back to Blog Index</a>
+                <a href="/blog" class="flex gap-2">
+                  <Icon
+                    name="la:long-arrow-alt-left"
+                    class="w-5 dark:text-white leading-none mt-1"
+                  />
+                  <span>Back to Blog Index</span>
+                </a>
               </div>
             </div>
           </div>
