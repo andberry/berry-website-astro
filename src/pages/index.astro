@@ -7,14 +7,14 @@ import HeroTitle from "@components/typography/HeroTitle.astro";
 ---
 
 <BaseLayout>
-  <article class="py-16">
+  <article>
     <section
-      class="dark:text-white text-black relative min-h-screen flex items-center md:py-32"
+      class="dark:text-white text-black relative min-h-screen flex items-center pt-32 pb-16"
     >
       <Container>
         <div class="lg:grid lg:grid-cols-6 lg:gap-8">
           <div
-            class="w-1/3 mx-auto py-12 lg:w-full lg:px-4 lg:py-0 lg:col-start-1 lg:col-span-1 max-lg:hidden"
+            class="w-1/3 mx-auto py-0 lg:w-full lg:px-4 lg:py-0 lg:col-start-1 lg:col-span-1 max-lg:hidden"
           >
             <Image
               src={ImageBerryTwitter}
@@ -25,31 +25,38 @@ import HeroTitle from "@components/typography/HeroTitle.astro";
 
           <div class="lg:col-start-2 lg:col-span-5 relative">
             <HeroTitle class="text-center lg:text-left">
-              <span class="relative z-30">
-                Hi,{" "}
-              </span>
-               I&apos;m{" "}
-              <span
-                class="dark:u-text-gradientbg--light u-text-gradientbg--light"
-              >
-                Berry!
-              </span>
-              <br />
-               I&apos;m a{" "}
-              <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light">
-                front-end
-              </span>{" "}
-               developer
-              <br />
-               and I love building{" "}
-              <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light">
-                usable</span
-              >, <span class="dark:u-text-gradientbg u-text-gradientbg--light"
-                >neat</span
-              > and <span
-                class="dark:u-text-gradientbg--light u-text-gradientbg--light"
-                >engaging</span
-              > web projects.
+              <p>
+                <span class="relative z-30">
+                  Hi,{" "}
+                </span>
+                 I&apos;m{" "}
+                <span
+                  class="dark:u-text-gradientbg--light u-text-gradientbg--light"
+                >
+                  Berry!
+                </span>
+              </p>
+              <p class="mt-8">
+                I&apos;m a{" "}
+                <span
+                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
+                >
+                  front-end
+                </span>{" "}
+                 developer
+                <br />
+                 and I love building{" "}
+                <span
+                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
+                >
+                  usable</span
+                >, <span class="dark:u-text-gradientbg u-text-gradientbg--light"
+                  >neat</span
+                > and <span
+                  class="dark:u-text-gradientbg--light u-text-gradientbg--light"
+                  >engaging</span
+                > web projects.
+              </p>
               {
                 /*
                                     <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
