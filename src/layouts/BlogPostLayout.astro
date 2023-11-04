@@ -44,6 +44,7 @@ const { postData } = Astro.props;
               class="object-cover object-center w-full block h-full"
               widths={[360, 640, 1024, 1280, 1920]}
               sizes="100vw"
+              transition:name={`tn-blog-hero-image-${postData.title}`}
             />
           </div>
         )
