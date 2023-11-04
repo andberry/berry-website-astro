@@ -16,7 +16,7 @@ const { url, title, heroImage, tags } = Astro.props;
 ---
 
 <article>
-  <a href={url} class="block">
+  <a href={url} class="block group">
     {
       heroImage && (
         <div class="aspect-video overflow-hidden rounded-md">
@@ -24,7 +24,7 @@ const { url, title, heroImage, tags } = Astro.props;
             <Image
               src={heroImage}
               alt=""
-              class="object-cover object-center"
+              class="object-cover object-center transition-all ease-in-out duration-300 scale-100 group-hover:scale-105 group-hover:-translate-y-1"
               widths={[360, 640, 768, 1280, 1440]}
               sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50w, 100vw"
             />
@@ -35,8 +35,15 @@ const { url, title, heroImage, tags } = Astro.props;
   </a>
 
   <div class="relative">
-    <a href={url}>
-      <BlogCardTitle>{title}</BlogCardTitle>
+    <a
+      href={url}
+      class="before:block before:h-full before:absolute before:left-0 before:bg-greenyellow before:opacity-0 before:translate-x-0 before:w-1 hover:before:opacity-100 hover:before:-translate-x-2 group before:transition-all before:ease-out before:duration-200"
+    >
+      <BlogCardTitle
+        class="group-hover:text-pink transition-all duration-200 ease-out"
+      >
+        {title}
+      </BlogCardTitle>
     </a>
   </div>
 
