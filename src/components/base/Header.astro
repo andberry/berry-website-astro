@@ -4,6 +4,7 @@ import DesktopNav from "@components/DesktopNav.astro";
 import { Image } from "astro:assets";
 import berryTwitterImg from "@images/berry-twitter.jpg";
 import SocialLinks from "@components/SocialLinks.astro";
+import { ThemeSwitch } from "@components/ThemeSwitch";
 ---
 
 <header
@@ -26,6 +27,7 @@ bg-white text-black0 dark:bg-black dark:text-white"
         <DesktopNav />
       </div>
       <SocialLinks />
+      <ThemeSwitch client:idle />
     </div>
   </Container>
 </header>
