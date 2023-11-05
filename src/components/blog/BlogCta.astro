@@ -19,6 +19,10 @@ const { url, title = "Read the Article" } = Astro.props;
   >
   <Icon
     name="la:long-arrow-alt-right"
-    class="w-5 dark:text-white leading-none mt-1 group-hover:translate-x-1 transition-all ease-out duration-200 group-hover:text-greenyellow"
+    class:list={[
+      "w-5 dark:text-white leading-none mt-1 group-hover:translate-x-1",
+      "transition-all ease-out duration-200",
+      "dark:group-hover:text-greenyellow group-hover:text-purple",
+    ]}
   />
 </a>
