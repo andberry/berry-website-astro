@@ -31,20 +31,11 @@ const { metaTitle } = Astro.props;
     <Footer />
     <script is:inline>
       /**
-       * get theme's user preference (localStorage or browser settings),
-       * and applying corresponding class to body,
-       * dark by default
+       * get theme's user preference (light/dark) from localStorage,
+       * otherwise default to dark
        */
       let localStorageTheme = localStorage.getItem("theme");
-      const browserPrefersTheme = window.matchMedia(
-        "(prefers-color-scheme: light)"
-      ).matches
-        ? "light"
-        : "dark";
-      if (
-        localStorageTheme === "light" ||
-        (!localStorageTheme && browserPrefersTheme === "light")
-      ) {
+      if (localStorageTheme === "light") {
         document.documentElement.classList.remove("dark");
       } else {
         document.documentElement.classList.add("dark");
