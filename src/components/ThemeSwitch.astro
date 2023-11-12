@@ -1,0 +1,10 @@
+---
+import { Icon } from "astro-icon";
+import { ThemeSwitch as ReactThemeSwitch } from "@components/ThemeSwitch.jsx";
+---
+
+<div class="flex gap-2 items-center">
+  <Icon class="w-5" name="ri:sun-fill" />
+  <ReactThemeSwitch client:only="react" />
+  <Icon class="w-5" name="ri:moon-fill" />
+</div>
