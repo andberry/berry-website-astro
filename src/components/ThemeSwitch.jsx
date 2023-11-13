@@ -28,7 +28,7 @@ export const ThemeSwitch = () => {
       <span
         className={`${
           themeIsDark ? "translate-x-6 bg-pink2" : "translate-x-1 bg-purple"
-        } inline-block h-4 w-4 transform rounded-full transition duration-1000`}
+        } inline-block h-4 w-4 transform rounded-full transition duration-200`}
       />
     </Switch>
   );
