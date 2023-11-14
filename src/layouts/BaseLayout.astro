@@ -1,8 +1,11 @@
 ---
 import Header from "@components/base/Header.astro";
 import Footer from "@components/base/Footer.astro";
-import { ViewTransitions } from "astro:transitions";
 import "@styles/base.css";
+
+export interface Props {
+  metaTitle: string;
+}
 
 const { metaTitle } = Astro.props;
 ---
@@ -19,7 +22,6 @@ const { metaTitle } = Astro.props;
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
-    <ViewTransitions />
   </head>
   <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
     <Header />
