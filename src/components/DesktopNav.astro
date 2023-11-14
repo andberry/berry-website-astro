@@ -1,5 +1,6 @@
 ---
 import { nav } from "@config/nav";
+const currentPathname: string = Astro.url.pathname;
 ---
 
 <nav id="desktop-nav">
@@ -8,7 +9,14 @@ import { nav } from "@config/nav";
       nav.map((item) => (
         <li>
           <a
-            class="py-2 px-6 text-lg font-light uppercase hover:text-pink2 dark:hover:text-grassGreen transition-all ease-linear duration-150"
+            class:list={[
+              "py-2 px-6 text-lg font-light uppercase hover:text-purple dark:hover:text-greenyellow transition-all ease-linear duration-150",
+              {
+                "dark:text-greenyellow text-purple":
+                  currentPathname === item.url ||
+                  (item.url !== "/" && currentPathname.startsWith(item.url)),
+              },
+            ]}
             href={item.url}
           >
             {item.title}
