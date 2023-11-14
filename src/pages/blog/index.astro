@@ -9,7 +9,7 @@ const posts = await getCollection("blog", (p) => p.data.published === true);
 posts.sort((a, b) => b.data.createdAt - a.data.createdAt);
 ---
 
-<BaseLayout metaTitle="Homepage">
+<BaseLayout metaTitle="Blog - andberry.me">
   <article>
     <Container size="lg">
       <header class="pt-32 pb-8 2xl:pt-48">
