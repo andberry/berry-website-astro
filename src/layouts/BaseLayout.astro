@@ -22,10 +22,12 @@ const { metaTitle } = Astro.props;
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
+     /** */
     <script is:inline>
       /**
        * get theme's user preference (light/dark) from localStorage,
        * otherwise default to dark
+       * is:inline required to run this code immediately, and not wait for HTML to be processed
        */
       let localStorageTheme = localStorage.getItem("theme");
       if (localStorageTheme === "light") {
