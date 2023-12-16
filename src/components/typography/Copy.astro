@@ -4,9 +4,9 @@ export interface Props {
 }
 
 const fontSizeMap: { [key in typeof size]: string } = {
-  small: "text-sm",
-  medium: "text-xl",
-  large: "text-2xl",
+  small: "text-sm xl:text-base",
+  medium: "text-lg xl:text-xl",
+  large: "text-xl xl:text-2xl",
 };
 const { size = "medium" } = Astro.props;
 ---
