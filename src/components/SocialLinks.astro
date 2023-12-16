@@ -13,11 +13,12 @@ import { Icon } from "astro-icon";
               class:list={[
                 "block px-4 py-2  leading-none transition-all ease-linear duration-150",
                 "dark:text-white dark:hover::text-greenyellow",
-                "text-black0 hover:text-purple dark:hover:text-pink2",
+                "text-black0 hover:text-purple dark:hover:text-greenyellow",
               ]}
               href={item.url}
               target="_blank"
             >
+              <span class="sr-only">{item.name}</span>
               <Icon class="w-7" name={item.iconName} />
             </a>
           </li>
