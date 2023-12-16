@@ -57,6 +57,11 @@ export default {
         //clamph3: "clamp(2.2rem, -1.036rem + 6.429vw, 4.75rem)",
         clamph3: "clamp(1.5rem, 0.9rem + 1.5vw, 2.25rem)",
       },
+      backgroundImage: {
+        rgpointwhite: "radial-gradient(#aaaaaa 1px, transparent 0)",
+        rgpointgreen: "radial-gradient(#7CFC00 1px, transparent 0)",
+        rgpointpink: "radial-gradient(#EC058E 1px, transparent 0)",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
