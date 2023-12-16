@@ -22,12 +22,13 @@ export const ThemeSwitch = () => {
       checked={themeIsDark}
       onChange={themeSwitchCallBack}
       className={`${
-        themeIsDark ? "bg-raisingBlack" : "bg-white border-2 border-[black0]"
+        themeIsDark ? "bg-white" : "bg-white border-2 border-[black0]"
       } relative inline-flex h-6 w-11 items-center rounded-full`}
     >
+      <span class="sr-only">Dark Mode</span>
       <span
         className={`${
-          themeIsDark ? "translate-x-6 bg-pink2" : "translate-x-1 bg-purple"
+          themeIsDark ? "translate-x-6 bg-pink" : "translate-x-1 bg-purple"
         } inline-block h-4 w-4 transform rounded-full transition duration-200`}
       />
     </Switch>
