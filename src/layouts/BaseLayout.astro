@@ -22,15 +22,6 @@ const { metaTitle } = Astro.props;
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
-  </head>
-  <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
-    <Header />
-
-    <main>
-      <slot />
-    </main>
-
-    <Footer />
     <script is:inline>
       /**
        * get theme's user preference (light/dark) from localStorage,
@@ -41,5 +32,14 @@ const { metaTitle } = Astro.props;
         document.documentElement.classList.remove("dark");
       }
     </script>
+  </head>
+  <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
+    <Header />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
   </body>
 </html>
