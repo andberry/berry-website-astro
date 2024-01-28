@@ -62,6 +62,12 @@ export default {
         rgpointgreen: "radial-gradient(#7CFC00 1px, transparent 0)",
         rgpointpink: "radial-gradient(#EC058E 1px, transparent 0)",
       },
+      transitionTimingFunction: {
+        OutCubic: " cubic-bezier(0.33, 1, 0.68, 1);",
+        OutExpo: "cubic-bezier(0.16, 1, 0.3, 1);",
+        OutQuart: "cubic-bezier(0.25, 1, 0.5, 1);",
+        outQuint: "cubic-bezier(0.22, 1, 0.36, 1);",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],
