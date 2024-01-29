@@ -33,26 +33,21 @@ const { url, title, heroImage, tags } = Astro.props;
         </div>
       )
     }
-  </a>
 
-  <div class="relative">
-    <a
-      href={url}
+    <BlogCardTitle
       class:list={[
-        "before:block before:h-full before:absolute before:left-0 before:bg-purple before:opacity-0",
+        "transition-all duration-200 ease-out",
+        "group-hover:text-purple dark:group-hover:text-pink",
+        "before:block before:h-[calc(100%-20px)] before:absolute before:left-0 before:top-[12px] before:bg-purple before:opacity-0",
         "before:translate-x-0 before:w-1",
-        "hover:before:opacity-100 hover:before:-translate-x-3",
-        "group before:transition-all before:ease-out before:duration-200",
+        "group-hover:before:opacity-100 group-hover:before:-translate-x-3",
+        "before:transition-all before:ease-out before:duration-200",
         "relative block",
       ]}
     >
-      <BlogCardTitle
-        class="group-hover:text-purple dark:group-hover:text-pink transition-all duration-200 ease-out"
-      >
-        {title}
-      </BlogCardTitle>
-    </a>
-  </div>
+      {title}
+    </BlogCardTitle>
+  </a>
 
   <div class="flex justify-between items-center mt-4">
     <div class="flex gap-2">
