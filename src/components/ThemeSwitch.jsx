@@ -28,8 +28,8 @@ export const ThemeSwitch = () => {
       <span class="sr-only">Dark Mode</span>
       <span
         className={`${
-          themeIsDark ? "translate-x-6 bg-pink" : "translate-x-1 bg-purple"
-        } inline-block h-4 w-4 transform rounded-full transition duration-200`}
+          themeIsDark ? "translate-x-6" : "translate-x-1"
+        } bg-purple inline-block h-4 w-4 transform rounded-full transition duration-200`}
       />
     </Switch>
   );
