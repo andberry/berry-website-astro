@@ -38,10 +38,16 @@ const { url, title, heroImage, tags } = Astro.props;
   <div class="relative">
     <a
       href={url}
-      class="before:block before:h-full before:absolute before:left-0 before:bg-pink dark:before:bg-pink2 before:opacity-0 before:translate-x-0 before:w-1 hover:before:opacity-100 hover:before:-translate-x-3 group before:transition-all before:ease-out before:duration-200"
+      class:list={[
+        "before:block before:h-full before:absolute before:left-0 before:bg-purple before:opacity-0",
+        "before:translate-x-0 before:w-1",
+        "hover:before:opacity-100 hover:before:-translate-x-3",
+        "group before:transition-all before:ease-out before:duration-200",
+        "relative block",
+      ]}
     >
       <BlogCardTitle
-        class="group-hover:text-purple dark:group-hover:text-pink2 transition-all duration-200 ease-out"
+        class="group-hover:text-purple dark:group-hover:text-pink transition-all duration-200 ease-out"
       >
         {title}
       </BlogCardTitle>
