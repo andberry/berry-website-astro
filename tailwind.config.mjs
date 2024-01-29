@@ -10,9 +10,10 @@ export default {
       mediumgray: "#d9dadd",
       darkgray: "#aaa",
       purple: "#5b21b6",
+      purpledark: "#371370",
       pink: "#FF10F0",
       lime: "#90FF5D",
-      black: "#1f1f1f",
+      black: "#151515",
 
       //
       ultraviolet: "#52489C",
@@ -42,14 +43,11 @@ export default {
     },
     fontFamily: {
       exo2: ['"Exo 2"', "sans-serif"],
-      merryweather: ["Merriweather", "serif"],
       mono: ['"JetBrains Mono"', "monospace"],
-      literata: ["Literata", "serif"],
-      montserrat: ["Montserrat", "sans-serif"],
     },
     extend: {
       fontSize: {
-        clamphero: "clamp(4rem, -1.75rem + 10vw, 7rem)",
+        clamphero: "clamp(3.5rem, -1.75rem + 10vw, 7rem)",
         // clamph1: "clamp(3.2rem, -1.786rem + 9.762vw, 7rem)",
         clamph1: "clamp(2.625rem, 1.225rem + 3.5vw, 4.375rem)",
         // clamph2: "clamp(2.6rem, -1.714rem + 8.571vw, 6rem)",
@@ -63,10 +61,12 @@ export default {
         rgpointpink: "radial-gradient(#EC058E 1px, transparent 0)",
       },
       transitionTimingFunction: {
-        OutCubic: " cubic-bezier(0.33, 1, 0.68, 1);",
-        OutExpo: "cubic-bezier(0.16, 1, 0.3, 1);",
-        OutQuart: "cubic-bezier(0.25, 1, 0.5, 1);",
-        outQuint: "cubic-bezier(0.22, 1, 0.36, 1);",
+        outCubic: "cubic-bezier(0.33, 1, 0.68, 1)",
+        outExpo: "cubic-bezier(0.16, 1, 0.3, 1)",
+        outQuart: "cubic-bezier(0.25, 1, 0.5, 1)",
+        outQuint: "cubic-bezier(0.22, 1, 0.36, 1)",
+        inOutCubic: "cubic-bezier(0.65, 0, 0.35, 1)",
+        inOutQuart: "cubic-bezier(0.76, 0, 0.24, 1)",
       },
     },
   },
