@@ -11,6 +11,6 @@ const fontSizeMap: { [key in typeof size]: string } = {
 const { size = "medium" } = Astro.props;
 ---
 
-<div class:list={["leading-[1.6] font-light", fontSizeMap[size], "pb-4"]}>
+<div class:list={["leading-[1.6] font-extralight", fontSizeMap[size], "pb-4"]}>
   <slot />
 </div>
