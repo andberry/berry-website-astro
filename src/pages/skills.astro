@@ -14,8 +14,8 @@ import TechIcon from "@components/TechIcon.astro";
       <Container size="lg">
         <HeroTitle>
           <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
-            >Skills</span
-          > and Tech
+            >Skills and Tech</span
+          >
         </HeroTitle>
       </Container>
     </header>
@@ -25,12 +25,10 @@ import TechIcon from "@components/TechIcon.astro";
           {
             skillsData.map((item) => (
               <div class="mb-12">
-                <H3 class="mb-3 text-purple dark:text-pink2">{item.title}</H3>
+                <H3 class="mb-3 dark:text-white text-black0">{item.title}</H3>
                 <ul>
                   {item.skills.map((item) => (
-                    <li class="py-2 dark:font-extralight font-normal">
-                      {item}
-                    </li>
+                    <li class="py-2 dark:font-thin font-normal">{item}</li>
                   ))}
                 </ul>
               </div>
@@ -43,7 +41,7 @@ import TechIcon from "@components/TechIcon.astro";
     <section class="py-16 xl:py-8 dark:text-white dark:fill-white text-black0">
       <Container size="sm">
         <H3
-          class="text-center text-2xl mb-8 dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
+          class="text-center text-2xl mb-8 dark:u-text-gradientbg-22 u-text-gradientbg-2--light"
         >
           What I use on a daily basis
         </H3>
@@ -56,8 +54,8 @@ import TechIcon from "@components/TechIcon.astro";
           <TechIcon icon="simple-icons:storybook" title="Storybook" />
           <TechIcon icon="simple-icons:html5" title="Html5" />
           <TechIcon icon="simple-icons:css3" title="CSS3" />
-          <TechIcon icon="simple-icons:sass" title="Sass" />
           <TechIcon icon="simple-icons:drupal" title="Drupal" />
+
           <TechIcon icon="simple-icons:docker" title="DDEV" />
           <TechIcon icon="simple-icons:git" title="Git" />
           <TechIcon icon="simple-icons:jira" title="Jira" />
@@ -79,11 +77,14 @@ import TechIcon from "@components/TechIcon.astro";
         What I use less frequently
       </H3>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-12">
-        <TechIcon icon="simple-icons:eleventy" title="11ty" />
-        <TechIcon icon="simple-icons:php" title="PHP" />
         <TechIcon icon="simple-icons:wordpress" title="WordPress" />
+        <TechIcon icon="simple-icons:astro" title="Astro" />
+        <TechIcon icon="simple-icons:eleventy" title="11ty" />
         <TechIcon icon="simple-icons:statamic" title="Statamic" />
         <TechIcon icon="simple-icons:craftcms" title="CraftCMS" />
+        <TechIcon icon="simple-icons:processwire" title="ProcessWire" />
+        <TechIcon icon="simple-icons:php" title="PHP" />
+        <TechIcon icon="file-icons:twig" title="Twig" />
         <TechIcon icon="simple-icons:greensock" title="GSAP" />
         <TechIcon icon="simple-icons:vuejs" title="Vue.js" />
         <TechIcon icon="simple-icons:nuxtdotjs" title="Nuxt" />

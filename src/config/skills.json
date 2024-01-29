@@ -5,7 +5,7 @@
       "Html5",
       "CSS3, Sass/SCSS",
       "JavaScript, TypeScript",
-      "PHP, Twig",
+      "PHP",
       "Python"
     ]
   },
@@ -24,11 +24,11 @@
     "skills": [
       "React",
       "Next.js",
-      "Framer Motion",
+      "Astro",
       "Eleventy (11ty)",
       "Vue.js",
       "Nuxt",
-      "GSAP"
+      "Framer Motion, GSAP"
     ]
   },
   {
@@ -49,14 +49,7 @@
   },
   {
     "title": "Dev Tools",
-    "skills": [
-      "Storybook",
-      "Git",
-      "DDEV",
-      "Lando",
-      "Vagrant / Homestead",
-      "gulp.js / rollup.js"
-    ]
+    "skills": ["Storybook", "Git", "DDEV", "gulp.js, rollup.js, Parcel "]
   },
   {
     "title": "OS",
