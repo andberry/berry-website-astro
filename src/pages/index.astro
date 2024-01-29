@@ -30,151 +30,150 @@ import Copy from "@components/typography/Copy.astro";
                 <span class="relative z-30">
                   Hi,{" "}
                 </span>
-                 I&apos;m{" "}
+                I&apos;m{" "}
                 <span
-                  class="dark:u-text-gradientbg--light u-text-gradientbg--light"
+                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
                 >
                   Berry!
                 </span>
               </p>
               <p class="mt-8">
-                I&apos;m a{" "}
-                <span
-                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
-                >
-                  front-end
-                </span>{" "}
-                 developer
+                I&apos;m a front-end{" "}
+                developer
                 <br />
-                 and I love building{" "}
-                <span
-                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
-                >
-                  usable</span
-                >, <span class="dark:u-text-gradientbg u-text-gradientbg--light"
-                  >neat</span
-                > and <span
-                  class="dark:u-text-gradientbg--light u-text-gradientbg--light"
+                and I love building{" "}
+                <span> usable</span>, neat and <span
+                  class="dark:u-text-gradientbg-img u-text-gradientbg-img--light"
                   >engaging</span
                 > web projects.
               </p>
-              {
-                /*
-                                    <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
-                                    <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-lime300 z-30"></div>
-                                    */
-              }
             </HeroTitle>
+            {
+              /*
+                <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
+                <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-lime300 z-30"></div>
+              */
+            }
           </div>
         </div>
       </Container>
     </section>
-
-    <div class="flex flex-col gap-12 md:gap-16">
-      <section class="relative py-12 [text-wrap:balance]">
-        <Container>
-          <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
-            <div class="intro__text lg:col-start-3 lg:col-span-3">
-              <Copy size="large">
-                I'm <span class="text-violet800 font-bold">Andrea Berardi</span
-                >,
-                <br />an italian 🇮🇹 <span class="text-greenyellow font-bold"
-                  >Web Developer</span
-                > with 10+ years of experience, currently located in Halifax,
-                NS, Canada 🇨🇦
-              </Copy>
-              <Copy size="large">
-                <span class="text-pink font-bold">I build websites</span>,
-                <br /> and my main focus and experience is <span
-                  class="text-pink2">frontend development</span
-                >.
-              </Copy>
-            </div>
-          </div>
-        </Container>
-        <div
-          class:list={[
-            "absolute h-full w-1/2 top-0 left-0",
-            "bg-rgpointwhite bg-[length:16px_16px]",
-            "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
-            "opacity-75",
-          ]}
-        >
-        </div>
-      </section>
-
-      <section class="relative p-12 [text-wrap:balance]">
-        <Container>
-          <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
-            <div class="lg:col-start-2 lg:col-span-3">
-              <Copy size="large">
-                Fallen in love with <span class="text-pink"
-                  >Component-Based development</span
-                >, I work with <span class="text-pink2 font-bold">CMS</span>
-                 like <span class="text-pink2">Drupal, Statamic</span>,
-                WordPress, CraftCMS, SSG like Eleventy (11ty), and frontend
-                frameworks like Next.js and Nuxt.js.
-              </Copy>
-              <Copy size="large">
-                Content structure, semantic markup, implementing pixel perfect <span
-                  class="text-purple">responsive layouts</span
-                > mastering <span class="text-ultraviolet">CSS</span>, and a
-                sweet sprinkling of <span class="text-lime"
-                  >JavaScript (ES6+)</span
-                >
-                 are my daily bread and butter.
-              </Copy>
-              <Copy size="large">
-                Attention to details, and UI usability and technical SEO best
-                practices are good additions to my hard skills set.
-              </Copy>
-            </div>
-          </div>
-        </Container>
-        <div
-          class:list={[
-            "absolute h-full w-1/2 top-0 right-0 border border-lime",
-            "bg-rgpointgreen bg-[length:16px_16px]",
-            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
-            "opacity-100",
-          ]}
-        >
-        </div>
-      </section>
-
-      <section class="relative py-12 [text-wrap:balance]">
-        <Container>
-          <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
-            <div class="intro__text lg:col-start-3 lg:col-span-3">
-              <Copy size="large">
-                <span class="text-greenyellow font-bold"
-                  >What am I doing right now?</span
-                >
-                <br />
-                 Currently having fun with Statamic, Eleventy and Next.js
-              </Copy>
-              <Copy size="large">
-                <span class="text-grassGreen font-bold"
-                  >Plans for the future?</span
-                >
-                <br />
-                 Rocket hands-on experience with Jamstack ecostystem, data
-                visualization with Chart.js, and deep dive into technical SEO
-                are on the way.
-              </Copy>
-            </div>
-          </div>
-        </Container>
-        <div
-          class:list={[
-            "absolute h-full w-1/2 top-0 left-0",
-            "bg-rgpointpink bg-[length:16px_16px]",
-            "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
-            "opacity-50",
-          ]}
-        >
-        </div>
-      </section>
-    </div>
   </article>
+
+  <div class="flex flex-col gap-12 md:gap-16 py-12">
+    <section class="relative lg:my-12 [text-wrap:balance]">
+      <Container>
+        <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
+          <div class="intro__text lg:col-start-3 lg:col-span-3">
+            <Copy size="large">
+              I'm <span class="text-violet800 font-bold">Andrea Berardi</span>,
+              <br />an italian Web Developer with 10+ years of experience,
+              currently located in Trento after living and working in Canada for
+              3 years.
+            </Copy>
+            <Copy size="large">
+              <span
+                class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light font-medium"
+                >I build websites</span
+              >,
+              <br /> and my main focus and experience is <span
+                class="dark:u-text-gradientbg u-text-gradientbg--light font-medium"
+                >frontend development</span
+              >.
+            </Copy>
+          </div>
+        </div>
+      </Container>
+      <div
+        class:list={[
+          "hidden lg:block",
+          "absolute h-full w-1/3 top-12 left-0",
+          "bg-rgpointwhite bg-[length:16px_16px]",
+          "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
+          "opacity-50",
+        ]}
+      >
+      </div>
+    </section>
+
+    <section class="relative lg:my-12 [text-wrap:balance] xl:pb-12">
+      <Container>
+        <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
+          <div class="lg:col-start-2 lg:col-span-4">
+            <Copy size="large">
+              Fallen in love years ago with <span
+                class="dark:u-text-gradientbg-22 u-text-gradientbg-2--light font-medium"
+                >Component-Based development</span
+              >,<br /> I work with <span
+                class="dark:u-text-gradientbg u-text-gradientbg--light font-medium"
+                >CMS</span
+              >
+              like Drupal, WordPress, CraftCMS, SSG like Eleventy (11ty), and frameworks
+              like Astro, Next.js and Nuxt.js.
+            </Copy>
+            <Copy size="large">
+              Content structure, semantic markup, implementing pixel perfect <span
+                class="dark:u-text-gradientbg-22 u-text-gradientbg-2--light font-medium"
+                >responsive layouts</span
+              > mastering <span
+                class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light font-medium"
+                >CSS</span
+              >
+              are my daily bread and butter.
+            </Copy>
+            <Copy size="large">
+              Attention to details, UI usability and technical SEO best
+              practices are good additions to my hard skills set.
+            </Copy>
+          </div>
+        </div>
+      </Container>
+      <div
+        class:list={[
+          "hidden lg:block",
+          "absolute h-full w-1/2 -top-24 right-0 border border-lime",
+          "bg-rgpointpink bg-[length:16px_16px]",
+          "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
+          "opacity-50",
+        ]}
+      >
+      </div>
+    </section>
+
+    <!--
+    <section class="relative lg:my-12 [text-wrap:balance]">
+      <Container>
+        <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
+          <div class="intro__text lg:col-start-3 lg:col-span-3">
+            <Copy size="large">
+              <span class="text-greenyellow font-bold"
+                >What am I doing right now?</span
+              >
+              <br />
+              Currently having fun with Statamic, Eleventy and Next.js
+            </Copy>
+            <Copy size="large">
+              <span class="text-grassGreen font-bold"
+                >Plans for the future?</span
+              >
+              <br />
+              Rocket hands-on experience with Jamstack ecostystem, data visualization
+              with Chart.js, and deep dive into technical SEO are on the way.
+            </Copy>
+          </div>
+        </div>
+      </Container>
+      <div
+        class:list={[
+          "hidden lg:block",
+          "absolute h-full w-1/2 top-0 left-0",
+          "bg-rgpointgreen bg-[length:16px_16px]",
+          "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
+          "opacity-50",
+        ]}
+      >
+      </div>
+    </section>
+     -->
+  </div>
 </BaseLayout>
