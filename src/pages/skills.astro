@@ -20,7 +20,9 @@ import TechIcon from "@components/TechIcon.astro";
     </header>
     <section>
       <Container size="lg" additionalClasses="@container/skills">
-        <div class="@xs/skills:grid @xs/skills:grid-cols-2 gap-12">
+        <div
+          class="@xs/skills:grid @xs/skills:grid-cols-2 @lg/skills:grid-cols-4 gap-12"
+        >
           {
             skillsData.map((item) => (
               <div class="mb-12">
