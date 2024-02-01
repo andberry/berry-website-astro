@@ -12,14 +12,14 @@ import SocialLinks from "./SocialLinks.astro";
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        class="w-full fill-white"
+        class="w-full dark:fill-white fill-black0"
         viewBox="0 0 24 24"
       >
         <path d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"></path>
       </svg>
     </div>
     <div
-      class="text-xs text-center -top-2 relative peer-checked:opacity-0 ease-linear transition-all duration-200"
+      class="text-xs text-center font-light -top-2 relative peer-checked:opacity-0 ease-linear transition-all duration-200"
     >
       Menu
     </div>
@@ -44,7 +44,9 @@ import SocialLinks from "./SocialLinks.astro";
               ></path></svg
             >
           </div>
-          <div class="text-xs text-center -top-2 relative dark:text-white">
+          <div
+            class="text-xs font-light text-center -top-2 relative dark:text-white"
+          >
             Close
           </div>
         </div>
@@ -52,9 +54,7 @@ import SocialLinks from "./SocialLinks.astro";
       <nav
         class="flex flex-col items-start justify-center flex-grow py-8 overflow-y-auto overscroll-y-none"
       >
-        <ul
-          class="list-none flex gap-8 flex-col m-0 md:pl-16 w-full text-center"
-        >
+        <ul class="list-none flex gap-8 flex-col m-0 w-full text-center">
           {
             nav.map((item) => (
               <li>
@@ -67,7 +67,7 @@ import SocialLinks from "./SocialLinks.astro";
         </ul>
       </nav>
       <div class="py-8 flex items-center flex-col">
-        <div class="mb-4">
+        <div class="mb-10">
           <SocialLinks />
         </div>
         <div>
