@@ -1,5 +1,6 @@
 ---
 import Container from "@components/utils/Container.astro";
+import MobileNav from "@components/MobileNav.astro";
 import DesktopNav from "@components/DesktopNav.astro";
 import { Image } from "astro:assets";
 import berryTwitterImg from "@images/berry-twitter.jpg";
@@ -28,8 +29,13 @@ bg-white text-black0 dark:bg-black dark:text-white"
         <DesktopNav />
       </div>
       <div class="flex gap-8">
-        <SocialLinks />
-        <ThemeSwitch />
+        <div class="hidden lg:block">
+          <SocialLinks />
+        </div>
+        <div class="hidden lg:block">
+          <ThemeSwitch />
+        </div>
+        <MobileNav />
       </div>
     </div>
   </Container>

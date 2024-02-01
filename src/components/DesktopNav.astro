@@ -3,7 +3,7 @@ import { nav } from "@config/nav";
 const currentPathname: string = Astro.url.pathname;
 ---
 
-<nav id="desktop-nav">
+<nav id="desktop-nav" class="hidden lg:block">
   <ul class="flex">
     {
       nav.map((item) => (
