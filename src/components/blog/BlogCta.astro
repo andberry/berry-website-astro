@@ -11,7 +11,10 @@ const { url, title = "Read the Article" } = Astro.props;
 
 <a
   href={url}
-  class="dark:text-white font-light p-2 leading-none flex items-center gap-2 group"
+  class:list={[
+    "dark:text-white font-light p-2 leading-none flex items-center gap-2 group justify-end",
+    "mt-1 @2xs/blogcardfooter:mt-0",
+  ]}
 >
   <span
     class="flex-shrink-0 text-base group-hover:text-pink transition-all ease-out duration-200"

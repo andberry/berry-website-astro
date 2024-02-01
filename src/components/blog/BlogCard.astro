@@ -48,11 +48,17 @@ const { url, title, heroImage, tags } = Astro.props;
       {title}
     </BlogCardTitle>
   </a>
-
-  <div class="flex justify-between items-center">
-    <div class="flex gap-2">
-      {tags && tags.map((t) => <BlogTag name={t} />)}
+  <div class="@container/blogcardfooter">
+    <div class="justify-between items-center @2xs/blogcardfooter:flex">
+      <div
+        class:list={[
+          "flex gap-2 flex-wrap @2xs/blogcardfooter:mb-0",
+          "@2xs/blogcardfooter:justify-center",
+        ]}
+      >
+        {tags && tags.map((t) => <BlogTag name={t} />)}
+      </div>
+      <BlogCta url={url} />
     </div>
-    <BlogCta url={url} />
   </div>
 </article>
