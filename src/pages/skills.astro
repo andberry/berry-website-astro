@@ -19,8 +19,8 @@ import TechIcon from "@components/TechIcon.astro";
       </Container>
     </header>
     <section>
-      <Container size="lg">
-        <div class="md:grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <Container size="lg" additionalClasses="@container/skills">
+        <div class="@xs/skills:grid @xs/skills:grid-cols-2 gap-12">
           {
             skillsData.map((item) => (
               <div class="mb-12">
@@ -38,13 +38,15 @@ import TechIcon from "@components/TechIcon.astro";
     </section>
 
     <section class="py-16 xl:py-8 dark:text-white dark:fill-white text-black0">
-      <Container size="sm">
+      <Container size="sm" additionalClasses="@container/skillsicons">
         <H3
           class="text-center text-2xl mb-8 dark:u-text-gradientbg-22 u-text-gradientbg-2--light"
         >
           What I use on a daily basis
         </H3>
-        <div class="grid grid-cols-3 md:grid-cols-6 gap-12">
+        <div
+          class="grid grid-cols-3 @2xs/skillsicons:grid-cols-4 @sm/skillsicons:grid-cols-6 gap-12"
+        >
           <TechIcon icon="logos:nextjs-icon" title="Nextjs" />
           <TechIcon icon="simple-icons:react" title="React" />
           <TechIcon icon="mdi:tailwind" title="TailwindCSS" />
@@ -69,13 +71,15 @@ import TechIcon from "@components/TechIcon.astro";
     <section class="py-8 xl:py-8 dark:text-white dark:fill-white text-black0">
     </section>
 
-    <Container size="sm">
+    <Container size="sm" additionalClasses="@container/skillsicons2">
       <H3
         class="text-center text-2xl mb-8 dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
       >
         What I use less frequently
       </H3>
-      <div class="grid grid-cols-3 md:grid-cols-6 gap-12">
+      <div
+        class="grid grid-cols-3 @2xs/skillsicons2:grid-cols-4 @sm/skillsicons2:grid-cols-6 gap-12"
+      >
         <TechIcon icon="simple-icons:wordpress" title="WordPress" />
         <TechIcon icon="simple-icons:astro" title="Astro" />
         <TechIcon icon="simple-icons:eleventy" title="11ty" />
