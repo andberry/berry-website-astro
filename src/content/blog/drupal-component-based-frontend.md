@@ -5,7 +5,7 @@ createdAt: 20210826
 createdAtDisplay: "August 16, 2021"
 published: true
 tags: [frontend, cms]
-heroImage: "@images/halifax-cruise-ship.jpg"
+heroImage: "@images/container-ship.jpg"
 ---
 
 ## What is Component-Base Frontend Development
