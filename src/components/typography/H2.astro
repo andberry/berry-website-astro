@@ -7,6 +7,11 @@ export interface Props {
 const { as: Tag = "h2", class: additionalClasses = "" } = Astro.props;
 ---
 
-<Tag class:list={["font-bold text-clamph2 leading-[1.2]", additionalClasses]}>
+<Tag
+  class:list={[
+    "font-bold text-clamph2 leading-[1.2] break-words",
+    additionalClasses,
+  ]}
+>
   <slot />
 </Tag>
