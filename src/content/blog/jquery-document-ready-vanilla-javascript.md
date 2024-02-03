@@ -1,8 +1,7 @@
 ---
 title: "jQuery $(document).ready() in vanilla JavaScript"
 abstract: "How to replace the must used jQuery method with vanilla JavaScript"
-createdAt: 20210804
-createdAtDisplay: "August 04, 2021"
+date: 2021-08-04
 published: true
 tags: ["javascript"]
 heroImage: "@images/ottawa-bridge.jpg"

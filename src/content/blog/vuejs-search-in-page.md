@@ -1,8 +1,7 @@
 ---
 title: "Search in page with Vue.js"
 abstract: "Using Vue.js to implement a simple but effective and usable search in page."
-createdAt: 20201120
-createdAtDisplay: "November 20, 2020"
+date: 2020-11-20
 published: true
 tags: ["javascript"]
 heroImage: "@images/ottawa-rideau.jpg"

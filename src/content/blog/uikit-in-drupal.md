@@ -1,8 +1,7 @@
 ---
 title: "How to integrate UIkit in Drupal"
 abstract: "Using the Drupal theme, loading it as library from CDN or install with npm and integrate in gulp workflow"
-createdAt: 20210826
-createdAtDisplay: "September 13, 2021"
+date: 2021-08-26
 published: true
 tags: [frontend]
 heroImage: "@images/montreal-park.jpg"

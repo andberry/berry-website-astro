@@ -1,8 +1,7 @@
 ---
 title: "Multilanguage website with Nuxt.js"
 abstract: "Guide to setup Nuxt.js with nuxt-i18n module to have a website translated in 4 languages"
-createdAt: 20201025
-createdAtDisplay: "October 25, 2020"
+date: 2020-10-25
 published: true
 tags: [javascript]
 heroImage: "@images/montreal-skyline-winter.jpg"

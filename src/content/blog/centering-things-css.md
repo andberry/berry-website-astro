@@ -1,8 +1,7 @@
 ---
 title: "Centering Things in CSS"
 abstract: "Yet another article about different ways to center things in CSS: position absolute + translate, Flexbox, CSS Grid."
-createdAt: 20200901
-createdAtDisplay: "September 1, 2020"
+date: 2020-09-01
 published: true
 tags: ["css"]
 heroImage: "@images/garda5.jpg"

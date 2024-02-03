@@ -1,8 +1,7 @@
 ---
 title: "Is Nuxt.js overkill for tiny projects? No!"
 abstract: "Using frameworks for small tasks can be seen overkill, but building good modern web websites/apps requires us to take into account lots of things."
-createdAt: 20201126
-createdAtDisplay: "November 26, 2020"
+date: 2020-11-26
 published: true
 tags: [javascript]
 heroImage: "@images/montreal-skyline.jpg"

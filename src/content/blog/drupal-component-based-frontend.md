@@ -1,8 +1,7 @@
 ---
 title: "Component-Based Frontend in Drupal"
 abstract: "What is Component-Based Frontend Dev? Why it is worth using it? How to implement it in Drupal?"
-createdAt: 20210826
-createdAtDisplay: "August 16, 2021"
+date: 2021-08-26
 published: true
 tags: [frontend, cms]
 heroImage: "@images/container-ship.jpg"

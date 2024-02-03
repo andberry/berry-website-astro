@@ -1,8 +1,7 @@
 ---
 title: "BEM, CSS Namespaces and ITCSS"
 abstract: "How to make frontend code more readable and maintaininable, because CSS is easy, but looking after it, is not"
-createdAt: 20211024
-createdAtDisplay: "October 24, 2021"
+date: 2021-10-24
 published: true
 tags: ["css", "frontend"]
 heroImage: "@images/halifax-public-gardens.jpg"

@@ -1,8 +1,7 @@
 ---
 title: "Eleventy setup for multilingual component-based flexible pages"
 abstract: "How to setup Eleventy to create pages with page content splitted in serveral files using reusable UI components"
-createdAt: 20220311
-createdAtDisplay: "March 11, 2022"
+date: 2022-03-11
 published: true
 tags: ["javascript"]
 heroImage: "@images/halifax-public-library.jpg"
