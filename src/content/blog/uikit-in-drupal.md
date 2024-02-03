@@ -14,7 +14,7 @@ Super clean black/white style, it can be seen as a library of components you can
 
 Components list ranges from a sort of utility classes like "Align" or "Padding" to more complex and js driven building blocks like Accordion, Dropdown, Lightbox, Scrollspy and Slideshow just to cite a few.
 
-## 1) Using the Drupal theme
+## Using the Drupal theme
 
 The simplest way to start using UIkit in Drupal is to simply install the theme https://www.drupal.org/project/uikit
 
@@ -24,7 +24,7 @@ composer require 'drupal/uikit:^3.15'
 
 You get the all the framework css and js loaded and also a useful bunch of views styles/formatters.
 
-## 2) Loading it as library from CDN
+## Loading it as library from CDN
 
 A second way to integrate UIkit in your theme is to load it from CND defining a library in your theme.
 Something like this (pay attention that this file must follow YAML 2 spaces indentation and that uikit library has to be included in .info.yml file):
@@ -50,7 +50,7 @@ base:
 
 You get the all the framework css and js loaded in your theme
 
-## 3) Install with npm and integrate in scss/js
+## Install with npm and integrate in scss/js
 
 If you have a workflow tool or task runner in place I guess you'll prefer to install UIkit with npm and then integrate the scss and js parts.
 
