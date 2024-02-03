@@ -1,0 +1,30 @@
+---
+import H3 from "@components/typography/H3.astro"
+import type { MarkdownHeading } from "astro"
+
+interface Props {
+  headings: MarkdownHeading[];
+  showTitle?: boolean;
+}
+
+const {headings, showTitle = true} = Astro.props;
+---
+<div>
+  {showTitle && <H3 class="mb-2">ToC</H3>}
+  <nav>
+    <ol>
+      {headings.map((heading) => {
+        const itemClasseseMap: {[key: number]: string} = {
+          1: 'pl-0',
+          2: 'pl-0',
+          3: 'pl-4',
+          4: 'pl-10'
+        }
+        return (
+        <li class:list={[itemClasseseMap[heading.depth], 'py-1']}>
+          <a class="hover:dark:text-white transition-all ease-linear duration-100" href=`#${heading.slug}`>{heading.text}</a>
+        </li>
+      )})}
+    </ol>
+  </nav>
+</div>
