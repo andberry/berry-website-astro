@@ -15,7 +15,15 @@ export interface Props {
   postData: CollectionEntry<"blog">["data"];
   headings: MarkdownHeading[];
 }
+
 const { postData, headings } = Astro.props;
+const postDate = postData.date;
+const dateFormatter = new Intl.DateTimeFormat("en-CA", {
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+});
+const displayDate = dateFormatter.format(postData.date);
 ---
 
 <BaseLayout metaTitle={`${postData.title} - andberry.me`}>
@@ -26,15 +34,8 @@ const { postData, headings } = Astro.props;
           <HeroTitle as="h1" class="dark:text-lightgray text-black">
             {postData.title}
           </HeroTitle>
-          <time
-            datetime={`${postData.createdAt
-              .toString()
-              .slice(0, 4)}-${postData.createdAt
-              .toString()
-              .slice(4, 6)}-${postData.createdAt.toString().slice(6, 8)}`}
-            class="text-md font-light"
-          >
-            {postData.createdAtDisplay}
+          <time datetime={postDate.toISOString()} class="text-md font-light">
+            {displayDate}
           </time>
         </Container>
       </div>
@@ -92,7 +93,7 @@ const { postData, headings } = Astro.props;
                 class="p-5 dark:bg-purple bg-mediumgray text-black0 dark:text-white rounded-md"
               >
                 <BlogCardTitle>{postData.title}</BlogCardTitle>
-                <div>{postData.createdAtDisplay}</div>
+                <div>{displayDate}</div>
                 {
                   postData.tags && (
                     <div class="flex gap-2 mt-4">

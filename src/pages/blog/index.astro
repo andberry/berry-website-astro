@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 import H1 from "@components/typography/H1.astro";
 import HeroTitle from "@components/typography/HeroTitle.astro";
 const posts = await getCollection("blog", (p) => p.data.published === true);
-posts.sort((a, b) => b.data.createdAt - a.data.createdAt);
+posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout metaTitle="Blog - andberry.me">
