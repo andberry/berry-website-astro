@@ -5,6 +5,9 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  prefetch: {
+    prefetchAll: true,
+  },
   integrations: [
     tailwind({
       // By default, the integration imports a basic base.css file on every page of your project.
