@@ -9,11 +9,16 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
 ---
 
 <header
-  class="fixed top-0 left-0 w-full z-50
-bg-white text-black0 dark:bg-black dark:text-white"
+  class:list={[
+    "fixed top-0 left-0 w-full h-20 z-50",
+    "flex items-center",
+    "bg-white text-black0",
+    "dark:bg-black/80 dark:text-white",
+    "backdrop-blur",
+  ]}
 >
-  <Container size="fluid">
-    <div class="h-20 flex justify-between items-center">
+  <Container size="fluid" additionalClasses="w-full">
+    <div class="flex justify-between items-center">
       <div class="flex items-center gap-6">
         <div class="w-12">
           <a href="/" class="block">
