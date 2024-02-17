@@ -87,10 +87,12 @@ const displayDate = dateFormatter.format(postData.date);
               </Copy>
             </div>
           </article>
+
           <aside class="relative lg:col-span-4 xl:col-span-4 mt-8 lg:mt-0">
             <div class="lg:sticky lg:top-24">
               <div
                 class="p-5 dark:bg-purple bg-mediumgray text-black0 dark:text-white rounded-md"
+                id="blog-post-infos"
               >
                 <BlogCardTitle>{postData.title}</BlogCardTitle>
                 <div>{displayDate}</div>
@@ -113,9 +115,19 @@ const displayDate = dateFormatter.format(postData.date);
                   </a>
                 </div>
               </div>
+
+              <div
+                id="blog-post-progress-bar"
+                class="w-full h-1 bg-lime mt-4 rounded-md"
+              >
+              </div>
+
               {
                 headings.length > 0 && (
-                  <div class="mt-4 p-5 bg-lightgray dark:bg-darkgray hidden lg:block">
+                  <div
+                    class="mt-4 p-5 bg-lightgray dark:bg-darkgray hidden lg:block"
+                    id="blog-sidebar-toc"
+                  >
                     <Toc headings={headings} showTitle={false} />
                   </div>
                 )

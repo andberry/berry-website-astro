@@ -70,7 +70,7 @@
     background-repeat: no-repeat;
     background-clip: text;
     color: transparent;
-    animation: 8s cubic-bezier(0.65, 0, 0.35, 1) 1s infinite normal both running
+    animation: 4s cubic-bezier(0.65, 0, 0.35, 1) 1s infinite normal both running
       animateImgGradientBg;
   }
 
@@ -101,18 +101,101 @@
 
   @keyframes animateImgGradientBg {
     0% {
-      background-position: 35% 50%;
+      background-position: 65% 50%;
       background-size: 150% auto;
     }
 
-    50% {
-      background-position: 15% 50%;
-      background-size: 220% auto;
+    10% {
+      background-position: 0% 50%;
+      background-size: 300% auto;
+    }
+
+    20% {
+      background-position: 65% 50%;
+      background-size: 150% auto;
     }
 
     100% {
-      background-position: 35% 50%;
+      background-position: 65% 50%;
       background-size: 150% auto;
     }
+  }
+
+  /*
+    Scroll driven animations: element's position within scroll container
+  */
+  @keyframes reveal {
+    entry 0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    entry 50% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    entry 100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    exit 100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes revealFade {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes revealBase {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  #blog-post-infos {
+    opacity: 0;
+    animation: revealFade linear;
+    animation-timeline: view();
+    animation-range: cover 30vh cover 50vh;
+    animation-fill-mode: forwards;
+  }
+
+  #blog-sidebar-toc {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: revealBase linear;
+    animation-timeline: view();
+    animation-range: cover 20vh cover 35vh;
+    animation-fill-mode: forwards;
+  }
+
+  /*
+    Scroll driven animations: Scroll position of scroll container
+  */
+  @keyframes progressIndicator {
+    0% {
+      transform: scaleX(0%);
+    }
+    100% {
+      transform: scaleX(100%);
+    }
+  }
+
+  #blog-post-progress-bar {
+    transform-origin: 0%;
+    animation: 2s linear 0s progressIndicator;
+    animation-timeline: scroll();
+    animation-duration: auto;
   }
 }
