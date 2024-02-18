@@ -14,9 +14,8 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
     <Container size="lg">
       <header class="pt-32 pb-8 2xl:pt-48">
         <HeroTitle>
-          Berry's <span
-            class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
-            >Blog</span
+          <span class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light"
+            >Berry's Blog</span
           >
         </HeroTitle>
       </header>
@@ -30,6 +29,7 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
                   url={`/blog/${post.slug}`}
                   heroImage={post.data.heroImage}
                   tags={post.data.tags}
+                  slug={post.slug}
                 />
               ))}
             </div>

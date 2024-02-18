@@ -1,6 +1,7 @@
 ---
 import Header from "@components/base/Header.astro";
 import Footer from "@components/base/Footer.astro";
+import { ViewTransitions, fade } from "astro:transitions";
 import "@styles/base.css";
 
 export interface Props {
@@ -11,7 +12,11 @@ const { metaTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark scroll-smooth">
+<html
+  lang="en"
+  class="dark scroll-smooth"
+  transition:animate={fade({ duration: "0.1s" })}
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,6 +38,7 @@ const { metaTitle } = Astro.props;
         document.documentElement.classList.remove("dark");
       }
     </script>
+    <ViewTransitions />
   </head>
   <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
     <a

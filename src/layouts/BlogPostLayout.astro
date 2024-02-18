@@ -12,11 +12,12 @@ import type { MarkdownHeading } from "astro";
 import Toc from "@components/blog/Toc.astro";
 
 export interface Props {
-  postData: CollectionEntry<"blog">["data"];
+  post: CollectionEntry<"blog">;
   headings: MarkdownHeading[];
 }
 
-const { postData, headings } = Astro.props;
+const { post, headings } = Astro.props;
+const postData = post.data;
 const postDate = postData.date;
 const dateFormatter = new Intl.DateTimeFormat("en-CA", {
   year: "numeric",
@@ -24,6 +25,7 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA", {
   day: "numeric",
 });
 const displayDate = dateFormatter.format(postData.date);
+const slug = post.slug;
 ---
 
 <BaseLayout metaTitle={`${postData.title} - andberry.me`}>
@@ -41,7 +43,10 @@ const displayDate = dateFormatter.format(postData.date);
       </div>
       {
         postData.heroImage && (
-          <div class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]">
+          <div
+            class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]"
+            transition:name={`blogheroimage-${slug}`}
+          >
             <Image
               src={postData.heroImage}
               alt=""

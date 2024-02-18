@@ -6,13 +6,14 @@ import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 export interface Props {
+  slug: string;
   url: string;
   title: string;
   heroImage: CollectionEntry<"blog">["data"]["heroImage"];
   tags?: string[];
 }
 
-const { url, title, heroImage, tags } = Astro.props;
+const { slug, url, title, heroImage, tags } = Astro.props;
 ---
 
 <article class="grid grid-rows-subgrid row-span-2 gap-3">
@@ -21,7 +22,10 @@ const { url, title, heroImage, tags } = Astro.props;
     {
       heroImage && (
         <div class="aspect-video overflow-hidden rounded-md">
-          <div class="w-full h-full relative">
+          <div
+            class="w-full h-full relative"
+            transition:name={`blogheroimage-${slug}`}
+          >
             <Image
               src={heroImage}
               alt=""

@@ -21,11 +21,10 @@ export async function getStaticPaths() {
   });
 }
 
-const { slug } = Astro.params;
 const { post } = Astro.props;
 const { Content, headings } = await post.render();
 ---
 
-<BlogPostLayout postData={post.data} headings={headings}>
+<BlogPostLayout post={post} headings={headings}>
   <Content />
 </BlogPostLayout>

@@ -7,7 +7,9 @@ import react from "@astrojs/react";
 export default defineConfig({
   prefetch: {
     prefetchAll: true,
+    defaultStrategy: "hover",
   },
+
   integrations: [
     tailwind({
       // By default, the integration imports a basic base.css file on every page of your project.
