@@ -124,24 +124,6 @@
   /*
     Scroll driven animations: element's position within scroll container
   */
-  @keyframes reveal {
-    entry 0% {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-    entry 50% {
-      opacity: 0;
-      transform: translateY(100px);
-    }
-    entry 100% {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-    exit 100% {
-      opacity: 1;
-    }
-  }
-
   @keyframes revealFade {
     0% {
       opacity: 0;
@@ -152,10 +134,10 @@
     }
   }
 
-  @keyframes revealBase {
+  @keyframes revealFromBottom {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     100% {
       opacity: 1;
@@ -174,9 +156,67 @@
   #blog-sidebar-toc {
     opacity: 0;
     transform: translateY(30px);
-    animation: revealBase linear;
+    animation: revealFromBottom linear;
     animation-timeline: view();
     animation-range: cover 20vh cover 35vh;
+    animation-fill-mode: forwards;
+  }
+
+  .u-anim--rfb {
+    opacity: 0;
+    animation: revealFromBottom linear;
+    animation-timeline: view();
+    animation-range: cover 20vh cover 35vh;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0px) translateY(60px);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.25;
+      transform: translateX(30px) translateY(0px);
+    }
+
+    100% {
+      opacity: 0.5;
+      transform: translateX(60px) translateY(-60px);
+    }
+  }
+
+  .u-anim--mr {
+    opacity: 0;
+    animation: moveRight linear;
+    animation-timeline: view();
+    animation-range: cover 15% contain 100%;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes moveBottom {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.25;
+      transform: translateY(0px);
+    }
+
+    100% {
+      opacity: 0.5;
+      transform: translateY(60px);
+    }
+  }
+
+  .u-anim--mb {
+    opacity: 0;
+    animation: moveBottom linear;
+    animation-timeline: view();
+    animation-range: cover 15% contain 50%;
     animation-fill-mode: forwards;
   }
 
