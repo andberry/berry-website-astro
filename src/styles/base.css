@@ -137,11 +137,20 @@
   @keyframes revealFromBottom {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
     100% {
       opacity: 1;
       transform: translateY(0px);
+    }
+  }
+
+  @keyframes hide {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
     }
   }
 
@@ -170,34 +179,9 @@
     animation-fill-mode: forwards;
   }
 
-  @keyframes moveRight {
+  @keyframes parallaxUp {
     0% {
-      transform: translateX(0px) translateY(60px);
-      opacity: 0;
-    }
-
-    50% {
-      opacity: 0.25;
-      transform: translateX(30px) translateY(0px);
-    }
-
-    100% {
-      opacity: 0.5;
-      transform: translateX(60px) translateY(-60px);
-    }
-  }
-
-  .u-anim--mr {
-    opacity: 0;
-    animation: moveRight linear;
-    animation-timeline: view();
-    animation-range: cover 15% contain 100%;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes moveBottom {
-    0% {
-      transform: translateY(-60px);
+      transform: translateY(60px);
       opacity: 0;
     }
 
@@ -208,13 +192,38 @@
 
     100% {
       opacity: 0.5;
+      transform: translateY(-60px);
+    }
+  }
+
+  .u-anim--parallax-up {
+    opacity: 0;
+    animation: parallaxUp linear;
+    animation-timeline: view();
+    animation-range: cover 15% contain 100%;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes parallaxDown {
+    0% {
+      transform: translateY(-60px);
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5;
+      transform: translateY(0px);
+    }
+
+    100% {
+      opacity: 1;
       transform: translateY(60px);
     }
   }
 
-  .u-anim--mb {
+  .u-anim--parallax-down {
     opacity: 0;
-    animation: moveBottom linear;
+    animation: parallaxDown linear;
     animation-timeline: view();
     animation-range: cover 15% contain 50%;
     animation-fill-mode: forwards;
@@ -237,5 +246,19 @@
     animation: 2s linear 0s progressIndicator;
     animation-timeline: scroll();
     animation-duration: auto;
+  }
+
+  /*
+    View Transitions Animations
+  */
+  @keyframes revealPageFromBottom {
+    0% {
+      opacity: 0;
+      transform: translateY(200px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
   }
 }

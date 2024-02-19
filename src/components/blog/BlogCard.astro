@@ -4,6 +4,7 @@ import BlogTag from "./BlogTag.astro";
 import BlogCta from "./BlogCta.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { pageAnimations } from "@utils/animations";
 
 export interface Props {
   slug: string;
@@ -25,6 +26,7 @@ const { slug, url, title, heroImage, tags } = Astro.props;
           <div
             class="w-full h-full relative"
             transition:name={`blogheroimage-${slug}`}
+            transition:animate={pageAnimations}
           >
             <Image
               src={heroImage}
