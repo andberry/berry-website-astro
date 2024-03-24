@@ -20,19 +20,22 @@ const { metaTitle } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;700;800;900&family=JetBrains+Mono:wght@100;400&&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;500;700;800;900&family=JetBrains+Mono:wght@100;400&display=swap"
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
     <script is:inline>
       /**
-       * get theme's user preference (light/dark) from localStorage,
-       * otherwise default to dark
+       * get theme's user preference (light/dark) from localStorage
        * is:inline required to run this code immediately, and not wait for HTML to be processed
+       * if no user preference found, let's default to dark and save it in localStorage
        */
       let localStorageTheme = localStorage.getItem("theme");
       if (localStorageTheme === "light") {
         document.documentElement.classList.remove("dark");
+      }
+      if (!localStorageTheme) {
+        localStorage.setItem("theme", "dark");
       }
     </script>
     <ViewTransitions />

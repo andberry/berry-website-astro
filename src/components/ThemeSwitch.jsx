@@ -7,6 +7,7 @@ export const ThemeSwitch = () => {
   );
 
   const themeSwitchCallBack = (val) => {
+    console.log("ThemeSwitch: themeSwitchCallBack: val: ", val);
     if (val === true) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -25,7 +26,7 @@ export const ThemeSwitch = () => {
         themeIsDark ? "bg-white" : "bg-white border-2 border-[black0]"
       } relative inline-flex h-6 w-11 items-center rounded-full`}
     >
-      <span class="sr-only">Dark Mode</span>
+      <span className="sr-only">Dark Mode</span>
       <span
         className={`${
           themeIsDark ? "translate-x-6" : "translate-x-1"
