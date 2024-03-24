@@ -7,7 +7,6 @@ export const ThemeSwitch = () => {
   );
 
   const themeSwitchCallBack = (val) => {
-    console.log("ThemeSwitch: themeSwitchCallBack: val: ", val);
     if (val === true) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
