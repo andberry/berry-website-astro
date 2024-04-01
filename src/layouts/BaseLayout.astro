@@ -24,19 +24,35 @@ const { metaTitle } = Astro.props;
       rel="stylesheet"
     />
     <title>{metaTitle}</title>
-    <script is:inline>
+    <script>
       /**
-       * get theme's user preference (light/dark) from localStorage
-       * is:inline required to run this code immediately, and not wait for HTML to be processed
+       * Get theme's user preference (light/dark) from localStorage:
        * if no user preference found, let's default to dark and save it in localStorage
        */
-      let localStorageTheme = localStorage.getItem("theme");
-      if (localStorageTheme === "light") {
-        document.documentElement.classList.remove("dark");
-      }
-      if (!localStorageTheme) {
-        localStorage.setItem("theme", "dark");
-      }
+      const checkTheme = () => {
+        typeof localStorage !== "undefined" &&
+        localStorage.getItem("theme") === "light"
+          ? document.documentElement.classList.remove("dark")
+          : localStorage.setItem("theme", "dark");
+      };
+
+      /**
+       * When NOT using View Transition: is:inline is required on <script> tag
+       * to run this code immediately, and not wait for HTML to be processed
+       *
+       * When Using View Transition: don't use is:inline and hook into lifecycle events
+       */
+      document.addEventListener("astro:page-load", () => {
+        checkTheme();
+      });
+
+      /**
+       * This is strongly recommended when using View Transition
+       * to check for theme earlier and prevent theme flashing during page load
+       */
+      document.addEventListener("astro:after-swap", () => {
+        checkTheme();
+      });
     </script>
     <ViewTransitions />
   </head>
