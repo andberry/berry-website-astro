@@ -10,10 +10,10 @@ export default {
       mediumgray: "#d9dadd",
       gray: "#aaa",
       darkgray: "#1e1e1e",
-      purple: "#5b21b6",
+      purple: "#5b21b6", // 91,22,182
       purpledark: "#371370",
-      pink: "#FF10F0",
-      lime: "#90FF5D",
+      pink: "#FF10F0", // 255,16,240
+      lime: "#90FF5D", // 144,255,93
       black: "#151515",
 
       //
