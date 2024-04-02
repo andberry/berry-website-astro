@@ -10,7 +10,7 @@ const currentPathname: string = Astro.url.pathname;
         <li>
           <a
             class:list={[
-              "py-2 px-6 text-lg font-light uppercase hover:text-purple dark:hover:text-greenyellow transition-all ease-linear duration-150",
+              "py-2 px-6 text-lg font-normal dark:font-light uppercase hover:text-purple dark:hover:text-greenyellow transition-all ease-linear duration-150",
               {
                 "dark:text-greenyellow text-purple":
                   currentPathname === item.url ||
