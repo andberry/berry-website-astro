@@ -10,7 +10,12 @@ import Copy from "@components/typography/Copy.astro";
 <BaseLayout metaTitle="andberry.me">
   <article class="pb-8">
     <section
-      class="dark:text-white text-black relative min-h-screen flex items-center pt-32 pb-16"
+      class:list={[
+        "text-black relative min-h-screen flex items-center pt-32 pb-16",
+        "from-black to-purpledark from-75% to-95%",
+        "dark:text-white dark:bg-gradient-to-b",
+        "dark:md:bg-gradient-to-br",
+      ]}
     >
       <Container>
         <div class="lg:grid lg:grid-cols-6 lg:gap-8">
@@ -34,125 +39,133 @@ import Copy from "@components/typography/Copy.astro";
                 </span>
                 I&apos;m{" "}
                 <span
-                  class="dark:u-text-gradientbg-22 u-text-gradientbg-2--light"
+                  class="u-text-gradientbg-2 dark:bg-none dark:text-white dark:drop-shadow-[0px_0px_12px_rgba(255,16,240,0.85)]"
                 >
                   Berry!
                 </span>
               </p>
               <p class="mt-8">
-                I&apos;m a front-end{" "}
+                I&apos;m a <span
+                  class="u-text-gradientbg-22 dark:bg-none dark:text-white dark:drop-shadow-[0px_0px_6px_rgba(144,255,93,0.75)]"
+                  >front-end</span
+                >{" "}
                 developer
                 <br />
                 and I love building{" "}
                 <span> usable</span>, neat and <span
-                  class="dark:u-text-gradientbg-img u-text-gradientbg-img--light"
+                  class="dark:u-text-gradientbg-22 u-text-gradientbg-2--light"
                   >engaging</span
                 > web projects.
               </p>
             </HeroTitle>
-            {
-              /*
+          </div>
+          {
+            /*
                 <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
                 <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-lime300 z-30"></div>
               */
-            }
-          </div>
+          }
         </div>
       </Container>
     </section>
-  </article>
 
-  <div class="flex flex-col gap-12 md:gap-16 py-12">
-    <section class="relative lg:my-12 [text-wrap:balance]">
-      <Container>
+    <div
+      class:list={[
+        "flex flex-col gap-12 md:gap-16 py-12",
+        "from-black to-purpledark from-75% to-95%",
+        "dark:bg-gradient-to-t",
+        "dark:md:bg-gradient-to-tr",
+      ]}
+    >
+      <section class="relative lg:my-12 [text-wrap:balance]">
+        <Container>
+          <div
+            class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
+          >
+            <div class="intro__text lg:col-start-3 lg:col-span-3">
+              <Copy size="large">
+                I'm <span class="text-violet800 font-bold">Andrea Berardi</span
+                >,
+                <br />an italian Web Developer with 10+ years of experience,
+                currently located in Trento after living and working in Canada
+                for 3 years.
+              </Copy>
+              <Copy size="large">
+                <span
+                  class="dark:u-text-gradientbg u-text-gradientbg-22 font-medium"
+                  >I build websites</span
+                >,
+                <br /> and my main focus and experience is <span
+                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2 font-medium"
+                  >front-end development</span
+                >.
+              </Copy>
+            </div>
+          </div>
+        </Container>
         <div
-          class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
+          class:list={[
+            "hidden lg:block",
+            "absolute h-full w-1/3 top-12 left-0",
+            "bg-rgpointwhite bg-[length:16px_16px]",
+            "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
+            "opacity-50",
+            "u-anim--parallax-up",
+          ]}
         >
-          <div class="intro__text lg:col-start-3 lg:col-span-3">
-            <Copy size="large">
-              I'm <span class="text-violet800 font-bold">Andrea Berardi</span>,
-              <br />an italian Web Developer with 10+ years of experience,
-              currently located in Trento after living and working in Canada for
-              3 years.
-            </Copy>
-            <Copy size="large">
-              <span
-                class="dark:u-text-gradientbg u-text-gradientbg-22 font-medium"
-                >I build websites</span
-              >,
-              <br /> and my main focus and experience is <span
-                class="dark:u-text-gradientbg-2 u-text-gradientbg-2 font-medium"
-                >front-end development</span
-              >.
-            </Copy>
-          </div>
         </div>
-      </Container>
-      <div
-        class:list={[
-          "hidden lg:block",
-          "absolute h-full w-1/3 top-12 left-0",
-          "bg-rgpointwhite bg-[length:16px_16px]",
-          "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
-          "opacity-50",
-          "u-anim--parallax-up",
-        ]}
-      >
-      </div>
-    </section>
+      </section>
 
-    <section class="relative lg:my-12 [text-wrap:balance] xl:pb-12">
-      <Container>
+      <section class="relative lg:my-12 [text-wrap:balance] xl:pb-12">
+        <Container>
+          <div
+            class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
+          >
+            <div class="lg:col-start-2 lg:col-span-4">
+              <Copy size="large">
+                Fallen in love years ago with <span
+                  class="dark:u-text-gradientbg u-text-gradientbg-2--light font-medium"
+                  >Component-Based development</span
+                >,<br /> I work with <span
+                  class="dark:u-text-gradientbg-2 font-medium">CMS</span
+                >
+                like <span class="dark:u-text-gradientbg-22 font-medium"
+                  >Drupal, WordPress</span
+                >, CraftCMS, SSG like Eleventy (11ty), and frameworks like <span
+                  class="dark:u-text-gradientbg font-medium"
+                  >Next.js, Astro</span
+                >, and Nuxt.js.
+              </Copy>
+              <Copy size="large">
+                Content structure, semantic markup, implementing pixel perfect <span
+                  class="dark:u-text-gradientbg-22 u-text-gradientbg-2 font-medium"
+                  >responsive layouts</span
+                > mastering <span
+                  class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light font-medium"
+                  >CSS</span
+                >
+                are my daily bread and butter.
+              </Copy>
+              <Copy size="large">
+                Attention to details, UI usability and technical SEO best
+                practices are good additions to my hard skills set.
+              </Copy>
+            </div>
+          </div>
+        </Container>
         <div
-          class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
+          class:list={[
+            "hidden lg:block",
+            "absolute h-full w-1/2 -top-24 right-0 border border-lime",
+            "bg-rgpointpink bg-[length:16px_16px]",
+            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
+            "u-anim--parallax-down",
+          ]}
         >
-          <div class="lg:col-start-2 lg:col-span-4">
-            <Copy size="large">
-              Fallen in love years ago with <span
-                class="dark:u-text-gradientbg u-text-gradientbg-2--light font-medium"
-                >Component-Based development</span
-              >,<br /> I work with <span
-                class="dark:u-text-gradientbg-2 font-medium">CMS</span
-              >
-              like <span class="dark:u-text-gradientbg-22 font-medium"
-                >Drupal, WordPress</span
-              >, CraftCMS, SSG like Eleventy (11ty), and <span
-                class="dark:u-text-gradientbg font-medium">frameworks</span
-              >
-              like <span class="dark:u-text-gradientbg font-medium"
-                >Next.js</span
-              >, Astro, and Nuxt.js.
-            </Copy>
-            <Copy size="large">
-              Content structure, semantic markup, implementing pixel perfect <span
-                class="dark:u-text-gradientbg-22 u-text-gradientbg-2--light font-medium"
-                >responsive layouts</span
-              > mastering <span
-                class="dark:u-text-gradientbg-2 u-text-gradientbg-2--light font-medium"
-                >CSS</span
-              >
-              are my daily bread and butter.
-            </Copy>
-            <Copy size="large">
-              Attention to details, UI usability and technical SEO best
-              practices are good additions to my hard skills set.
-            </Copy>
-          </div>
         </div>
-      </Container>
-      <div
-        class:list={[
-          "hidden lg:block",
-          "absolute h-full w-1/2 -top-24 right-0 border border-lime",
-          "bg-rgpointpink bg-[length:16px_16px]",
-          "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
-          "u-anim--parallax-down",
-        ]}
-      >
-      </div>
-    </section>
+      </section>
 
-    <!--
+      <!--
     <section class="relative lg:my-12 [text-wrap:balance]">
       <Container>
         <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
@@ -187,5 +200,6 @@ import Copy from "@components/typography/Copy.astro";
       </div>
     </section>
      -->
-  </div>
+    </div>
+  </article>
 </BaseLayout>
