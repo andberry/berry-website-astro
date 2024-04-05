@@ -15,18 +15,6 @@
     color: transparent;
   }
 
-  .u-text-gradientbg--light {
-    background: linear-gradient(
-      30deg,
-      rgba(255, 16, 240, 1) 30%,
-      rgba(236, 5, 142, 1) 60%
-    );
-    background-size: 130% auto;
-    background-position: 0% 50%;
-    background-clip: text;
-    color: transparent;
-  }
-
   .u-text-gradientbg-2 {
     background: linear-gradient(
       30deg,
@@ -61,64 +49,6 @@
     background-position: 0% 50%;
     background-clip: text;
     color: transparent;
-  }
-
-  .u-text-gradientbg-img {
-    background: url("/img/pattern2.jpg");
-    background-size: 150% auto;
-    background-position: 55% 50%;
-    background-repeat: no-repeat;
-    background-clip: text;
-    color: transparent;
-    animation: 4s cubic-bezier(0.65, 0, 0.35, 1) 1s infinite normal both running
-      animateImgGradientBg;
-  }
-
-  .u-text-gradientbg-img--light {
-    background: url("/img/pattern4.jpg");
-    background-size: 150% auto;
-    background-position: 35% 50%;
-    background-repeat: no-repeat;
-    background-clip: text;
-    color: transparent;
-    animation: 8s cubic-bezier(0.65, 0, 0.35, 1) 1s infinite normal both running
-      animateImgGradientBg;
-  }
-
-  @keyframes animateTextGradientBg {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    90% {
-      background-position: 0% 50%;
-    }
-
-    100% {
-      background-position: 100% 50%;
-    }
-  }
-
-  @keyframes animateImgGradientBg {
-    0% {
-      background-position: 65% 50%;
-      background-size: 150% auto;
-    }
-
-    10% {
-      background-position: 0% 50%;
-      background-size: 300% auto;
-    }
-
-    20% {
-      background-position: 65% 50%;
-      background-size: 150% auto;
-    }
-
-    100% {
-      background-position: 65% 50%;
-      background-size: 150% auto;
-    }
   }
 
   /*
