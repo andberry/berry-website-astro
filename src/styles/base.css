@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer utilities {
-  .u-text-gradientbg {
+  .u-text-bg-gradient-lime {
     background: linear-gradient(
       30deg,
       rgba(171, 255, 103, 1) 40%,
@@ -15,7 +15,7 @@
     color: transparent;
   }
 
-  .u-text-gradientbg-2 {
+  .u-text-bg-gradient-pink {
     background: linear-gradient(
       30deg,
       rgba(91, 33, 182, 1) 40%,
@@ -27,19 +27,7 @@
     color: transparent;
   }
 
-  .u-text-gradientbg-2--light {
-    background: linear-gradient(
-      30deg,
-      rgba(250, 102, 255, 1) 25%,
-      rgba(126, 47, 219, 1) 40%
-    );
-    background-size: 130% auto;
-    background-position: 0% 50%;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .u-text-gradientbg-22 {
+  .u-text-bg-gradient-pink-2 {
     background: linear-gradient(
       30deg,
       rgba(250, 102, 255, 1) 0%,
