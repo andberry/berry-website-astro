@@ -10,7 +10,6 @@ export default {
       mediumgray: "#d9dadd",
       gray: "#aaa",
       darkgray: "#1e1e1e",
-      purple: "#5b21b6", // 91,22,182
       purpledark: "#371370",
       pink: "#FF10F0", // 255,16,240
       lime: "#90FF5D", // 144,255,93
@@ -19,13 +18,16 @@ export default {
       //
       ultraviolet: "#52489C",
       lightgreen: "#90EE90",
-
-      //
       pink2: "#EC058E",
       green: "#77FF94",
       greenyellow: "#ABFF67",
       raisingBlack: "#2D2931",
+
+      // gradients
+      pink3: "#FA66FF",
+      purple: "#5b21b6", // 91,22,182
       grassGreen: "#7CFC00",
+      grassGreenLight: "#75FF67",
     },
     screens: {
       sm: "640px",
