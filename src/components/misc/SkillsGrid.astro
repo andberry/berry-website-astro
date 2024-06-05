@@ -1,0 +1,119 @@
+---
+import SkillItem from "./SkillItem.astro";
+---
+
+<div class="@container/skillsgrid skills-grid">
+  <div
+    class="grid-cols-5 gap-3 @md/skillsgrid:my-24 hidden @md/skillsgrid:grid"
+  >
+    <SkillItem
+      name="HTML"
+      additionalClasses="col-start-1 col-end-2 row-start-1 row-end-2"
+    />
+    <SkillItem
+      name="CSS, Sass"
+      additionalClasses="col-start-2 col-end-3 row-start-2 row-end-3"
+    />
+    <SkillItem
+      name="Javascript"
+      additionalClasses="col-start-3 col-end-4 row-start-1 row-end-2"
+    />
+    <SkillItem
+      name="Typescript"
+      color="pink"
+      additionalClasses="col-start-4 col-end-5 row-start-2 row-end-3"
+    />
+    <SkillItem
+      name="React"
+      additionalClasses="col-start-5 col-end-6 row-start-2 row-end-3"
+    />
+    <SkillItem
+      name="Astro"
+      additionalClasses="col-start-4 col-end-5 row-start-5 row-end-6"
+      color="pink"
+    />
+    <SkillItem
+      name="Tailwind CSS"
+      additionalClasses="col-start-2 col-end-3 row-start-4 row-end-5"
+      color="pink"
+    />
+    <SkillItem
+      name="BEM, ITCSS"
+      additionalClasses="col-start-2 col-end-3 row-start-3 row-end-4"
+    />
+    <SkillItem
+      name="Vue.js, Nuxt.js"
+      additionalClasses="col-start-5 col-end-6 row-start-6 row-end-7"
+    />
+    <SkillItem
+      name="Next.js"
+      additionalClasses="col-start-5 col-end-6 row-start-3 row-end-4"
+      color="green"
+    />
+    <SkillItem
+      name="Storybook"
+      additionalClasses="col-start-5 col-end-6 row-start-4 row-end-5"
+    />
+    <SkillItem
+      name="GSAP"
+      additionalClasses="col-start-3 col-end-4 row-start-3 row-end-4"
+    />
+    <SkillItem
+      name="PHP"
+      additionalClasses="col-start-1 col-end-2 row-start-6 row-end-7"
+    />
+    <SkillItem
+      name="WordPress"
+      additionalClasses="col-start-2 col-end-3 row-start-7 row-end-8"
+      color="green"
+    />
+    <SkillItem
+      name="Drupal"
+      additionalClasses="col-start-2 col-end-3 row-start-6 row-end-7"
+      color="green"
+    />
+    <SkillItem
+      name="Craft CMS"
+      additionalClasses="col-start-3 col-end-4 row-start-7 row-end-8"
+    />
+    <SkillItem
+      name="Statamic"
+      additionalClasses="col-start-3 col-end-4 row-start-8 row-end-9"
+    />
+
+    <SkillItem
+      name="Python"
+      additionalClasses="col-start-4 col-end-5 row-start-7 row-end-8"
+    />
+    <SkillItem
+      name="Django"
+      additionalClasses="col-start-5 col-end-6 row-start-8 row-end-9"
+    />
+  </div>
+</div>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+  const items = document.querySelectorAll(".skill-grid-item");
+  const tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".skills-grid",
+      markers: true,
+      toggleActions: "play reverse play reverse",
+      start: "top 75%",
+      end: "top top",
+    },
+  });
+  tl.from(items, {
+    opacity: 0,
+    y: 20,
+    duration: 0.6,
+    // duration: 2,
+    delay: 0.6,
+    stagger: 0.025,
+    ease: "power3.out",
+  });
+  //tl.restart();
+</script>

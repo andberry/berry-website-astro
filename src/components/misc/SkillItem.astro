@@ -1,0 +1,33 @@
+---
+interface Props {
+  name: string;
+  color?: "pink" | "purple" | "green";
+  additionalClasses?: string;
+}
+const { name, color = "purple", additionalClasses = "" } = Astro.props;
+let colorClass = "";
+switch (color) {
+  case "green":
+    colorClass = "bg-grassGreenLight text-purple";
+    break;
+  case "purple":
+    colorClass = "bg-purple text-white";
+    break;
+  case "pink":
+    colorClass = "bg-pink3 text-purpledark";
+    break;
+  default:
+    break;
+}
+---
+
+<div
+  class:list={[
+    "rounded-sm inline-flex items-center justify-center py-3 leading-tight text-center font-light",
+    colorClass,
+    additionalClasses,
+    "skill-grid-item",
+  ]}
+>
+  {name}
+</div>
