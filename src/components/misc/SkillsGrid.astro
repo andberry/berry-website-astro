@@ -20,12 +20,13 @@ import SkillItem from "./SkillItem.astro";
     />
     <SkillItem
       name="Typescript"
-      color="pink"
       additionalClasses="col-start-4 col-end-5 row-start-2 row-end-3"
+      color="green"
     />
     <SkillItem
       name="React"
       additionalClasses="col-start-5 col-end-6 row-start-2 row-end-3"
+      color="pink"
     />
     <SkillItem
       name="Astro"
@@ -65,12 +66,10 @@ import SkillItem from "./SkillItem.astro";
     <SkillItem
       name="WordPress"
       additionalClasses="col-start-2 col-end-3 row-start-7 row-end-8"
-      color="green"
     />
     <SkillItem
       name="Drupal"
       additionalClasses="col-start-2 col-end-3 row-start-6 row-end-7"
-      color="green"
     />
     <SkillItem
       name="Craft CMS"
@@ -98,9 +97,13 @@ import SkillItem from "./SkillItem.astro";
   gsap.registerPlugin(ScrollTrigger);
   const items = document.querySelectorAll(".skill-grid-item");
   const tl = gsap.timeline({
+    /*
+    yoyo: true,
+    repeat: -1,
+    repeatDelay: 3,
+    */
     scrollTrigger: {
       trigger: ".skills-grid",
-      markers: true,
       toggleActions: "play reverse play reverse",
       start: "top 75%",
       end: "top top",
@@ -108,12 +111,15 @@ import SkillItem from "./SkillItem.astro";
   });
   tl.from(items, {
     opacity: 0,
-    y: 20,
-    duration: 0.6,
+    // y: 5,
+    // scale: 0.95,
     // duration: 2,
-    delay: 0.6,
-    stagger: 0.025,
-    ease: "power3.out",
+    stagger: {
+      each: 0.05,
+      amount: 0.4,
+      from: "random",
+    },
+    //ease: "power2.inOut",
+    ease: "none",
   });
-  //tl.restart();
 </script>

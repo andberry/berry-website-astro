@@ -6,15 +6,19 @@ interface Props {
 }
 const { name, color = "purple", additionalClasses = "" } = Astro.props;
 let colorClass = "";
+let textColorClass = "";
 switch (color) {
   case "green":
-    colorClass = "bg-grassGreenLight text-purple";
-    break;
-  case "purple":
-    colorClass = "bg-purple text-white";
+    colorClass = "u-border-gradient-lime";
+    textColorClass = "u-text-bg-gradient-lime";
     break;
   case "pink":
-    colorClass = "bg-pink3 text-purpledark";
+    colorClass = "u-border-gradient-pink";
+    textColorClass = "text-pink3";
+    break;
+  case "purple":
+    colorClass = "u-border-gradient-purple";
+    textColorClass = "text-white";
     break;
   default:
     break;
@@ -29,5 +33,5 @@ switch (color) {
     "skill-grid-item",
   ]}
 >
-  {name}
+  <span class={textColorClass}>{name}</span>
 </div>
