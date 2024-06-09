@@ -97,11 +97,6 @@ import SkillItem from "./SkillItem.astro";
   gsap.registerPlugin(ScrollTrigger);
   const items = document.querySelectorAll(".skill-grid-item");
   const tl = gsap.timeline({
-    /*
-    yoyo: true,
-    repeat: -1,
-    repeatDelay: 3,
-    */
     scrollTrigger: {
       trigger: ".skills-grid",
       toggleActions: "play reverse play reverse",
@@ -111,15 +106,11 @@ import SkillItem from "./SkillItem.astro";
   });
   tl.from(items, {
     opacity: 0,
-    // y: 5,
-    // scale: 0.95,
-    // duration: 2,
     stagger: {
       each: 0.05,
       amount: 0.4,
       from: "random",
     },
-    //ease: "power2.inOut",
     ease: "none",
   });
 </script>
