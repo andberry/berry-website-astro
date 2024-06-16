@@ -70,20 +70,19 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
       </Container>
     </section>
 
-    <section>
-      <Container size="sm">
-        <SkillsAnimation />
-      </Container>
-    </section>
-
-    <div
+    <section
       class:list={[
-        "flex flex-col gap-12 md:gap-16 py-12",
         "from-black to-purpledark from-75% to-95%",
         "dark:bg-gradient-to-t",
         "dark:md:bg-gradient-to-tr",
       ]}
     >
+      <Container size="sm">
+        <SkillsAnimation />
+      </Container>
+    </section>
+
+    <div class:list={["flex flex-col gap-12 md:gap-16 py-12"]}>
       <section class="relative lg:my-12 [text-wrap:balance]">
         <Container>
           <div
