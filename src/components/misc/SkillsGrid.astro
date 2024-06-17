@@ -95,40 +95,43 @@ import SkillItem from "./SkillItem.astro";
   import { gsap } from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
   gsap.registerPlugin(ScrollTrigger);
-  const items = document.querySelectorAll(".skill-grid-item");
-  const tl = gsap.timeline({
-    repeat: -1,
-    repeatDelay: 0.2,
-    delay: 0.2,
-    scrollTrigger: {
-      trigger: ".skills-grid",
-      toggleActions: "play reverse play reverse",
-      start: "top 65%",
-      end: "top top",
-    },
-  });
-  tl.from(items, {
-    opacity: 0,
-    y: 10,
-    stagger: {
-      amount: 0.2,
-      from: "random",
-    },
-    //ease: "none",
-    ease: "power4.out",
-  });
-  tl.to(
-    items,
-    {
+  document.addEventListener("astro:page-load", () => {
+    console.log("SkillsGrid astro:page-load: gsap", gsap);
+    const items = document.querySelectorAll(".skill-grid-item");
+    const tl = gsap.timeline({
+      repeat: -1,
+      repeatDelay: 0.2,
+      delay: 0.2,
+      scrollTrigger: {
+        trigger: ".skills-grid",
+        toggleActions: "play reverse play reverse",
+        start: "top 65%",
+        end: "top top",
+      },
+    });
+    tl.from(items, {
       opacity: 0,
-      x: 30,
-      duration: 0.3,
+      y: 10,
       stagger: {
-        each: 0.01,
+        amount: 0.2,
         from: "random",
       },
-      ease: "power4.in",
-    },
-    ">2"
-  );
+      //ease: "none",
+      ease: "power4.out",
+    });
+    tl.to(
+      items,
+      {
+        opacity: 0,
+        x: 30,
+        duration: 0.3,
+        stagger: {
+          each: 0.01,
+          from: "random",
+        },
+        ease: "power4.in",
+      },
+      ">2"
+    );
+  });
 </script>
