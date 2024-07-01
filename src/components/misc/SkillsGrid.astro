@@ -112,21 +112,21 @@ import SkillItem from "./SkillItem.astro";
     tl.from(items, {
       opacity: 0,
       y: 10,
+      duration: 0.5,
       stagger: {
-        amount: 0.2,
+        each: 0.02,
         from: "random",
       },
-      //ease: "none",
       ease: "power4.out",
     });
     tl.to(
       items,
       {
         opacity: 0,
-        x: 30,
-        duration: 0.3,
+        x: 20,
+        duration: 0.5,
         stagger: {
-          each: 0.01,
+          each: 0.02,
           from: "random",
         },
         ease: "power4.in",
