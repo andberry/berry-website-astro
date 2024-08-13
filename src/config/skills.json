@@ -2,8 +2,8 @@
   {
     "title": "Languages",
     "skills": [
-      "Html5",
-      "CSS3, Sass/SCSS",
+      "Html",
+      "CSS",
       "JavaScript, TypeScript",
       "PHP",
       "Python"
@@ -14,14 +14,14 @@
     "skills": [
       "Tailwind CSS",
       "CSS Modules",
-      "UIKit",
-      "Foundation",
-      "Bootstrap"
+      "Sass/SCSS"
     ]
   },
   {
-    "title": "JavaScript",
+    "title": "Js / Ts",
     "skills": [
+      "JavaScript",
+      "TypeScript",
       "React",
       "Next.js",
       "Astro",
@@ -33,7 +33,7 @@
   },
   {
     "title": "PHP / Python",
-    "skills": ["Drupal", "WordPress", "CraftCMS", "Statamic", "Django"]
+    "skills": ["Drupal", "WordPress", "CraftCMS", "Statamic", "ProcessWire", "Django"]
   },
   {
     "title": "Best Practices",
