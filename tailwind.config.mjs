@@ -38,6 +38,7 @@ export default {
       "3xl": "1680px",
     },
     maxWidth: {
+      "screen-sm": "640px",
       "screen-md": "768px",
       "screen-lg": "1024px",
       "screen-xl": "1280px",
