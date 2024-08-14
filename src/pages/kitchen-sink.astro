@@ -11,132 +11,186 @@ import { getCollection } from "astro:content";
 const blogPosts = await getCollection("blog");
 ---
 
-<BaseLayout>
+<BaseLayout metaTitle="Kitchen sink | andberry.me">
   <article class="pb-24">
-    <Container size="lg">
-      <header class="pt-32 pb-8 2xl:pt-48">
-        <HeroTitle>Kitchen Sink</HeroTitle>
-      </header>
-      <div class="mb-24">
-        <H2 class="mb-4">Colors</H2>
-        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div class="bg-white border border-black0 h-48"></div>
-            <div class="mt-2">white</div>
-          </div>
-          <div>
-            <div class="bg-black0 h-48"></div>
-            <div class="mt-2">black0</div>
-          </div>
-          <div>
-            <div class="bg-raisingBlack h-48"></div>
-            <div class="mt-2">raisingBlack</div>
-          </div>
+    <header>
+      <Container size="lg">
+        <div class="pt-32 pb-8 2xl:pt-48">
+          <HeroTitle>Kitchen Sink</HeroTitle>
+        </div>
+      </Container>
+    </header>
 
-          <div>
-            <div class="bg-lightgray h-48"></div>
-            <div class="mt-2">lightgray</div>
-          </div>
+    <section>
+      <Container size="lg">
+        <div class="mb-24">
+          <H2 class="mb-4">Colors</H2>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-8"
+          >
+            <div>
+              <div class="bg-white border border-black0 h-48"></div>
+              <div class="mt-2">white</div>
+            </div>
+            <div>
+              <div class="bg-black0 h-48"></div>
+              <div class="mt-2">black0</div>
+            </div>
+            <div>
+              <div class="bg-raisingBlack h-48"></div>
+              <div class="mt-2">raisingBlack</div>
+            </div>
 
-          <div>
-            <div class="bg-mediumgray h-48"></div>
-            <div class="mt-2">mediumgray</div>
+            <div>
+              <div class="bg-lightgray h-48"></div>
+              <div class="mt-2">lightgray</div>
+            </div>
+
+            <div>
+              <div class="bg-mediumgray h-48"></div>
+              <div class="mt-2">mediumgray</div>
+            </div>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-8"
+          >
+            <div>
+              <div class="bg-ultraviolet h-48"></div>
+              <div class="mt-2">ultraviolet</div>
+            </div>
+
+            <div>
+              <div class="bg-purple h-48"></div>
+              <div class="mt-2">purple</div>
+            </div>
+
+            <div>
+              <div class="bg-white h-48"></div>
+              <div class="mt-2">white</div>
+            </div>
+
+            <div>
+              <div class="bg-white2 h-48"></div>
+              <div class="mt-2">white2</div>
+            </div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div>
+              <div class="bg-grassGreen h-48"></div>
+              <div class="mt-2">grassGreen</div>
+            </div>
+
+            <div>
+              <div class="bg-lime h-48"></div>
+              <div class="mt-2">lime</div>
+            </div>
+
+            <div>
+              <div class="bg-greenyellow h-48"></div>
+              <div class="mt-2">greenyellow</div>
+            </div>
+
+            <div>
+              <div class="bg-lightgreen h-48"></div>
+              <div class="mt-2">lightgreen</div>
+            </div>
           </div>
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 mb-8">
-          <div>
-            <div class="bg-ultraviolet h-48"></div>
-            <div class="mt-2">ultraviolet</div>
-          </div>
+      </Container>
+    </section>
 
-          <div>
-            <div class="bg-purple h-48"></div>
-            <div class="mt-2">purple</div>
-          </div>
+    <section>
+      <Container size="lg">
+        <H2>Typography</H2>
+        <HeroTitle>This is HeroTitle</HeroTitle>
+        <H1>This is Heading1</H1>
+        <H2>This is Heading2</H2>
+        <H3>This is Heading3</H3>
 
-          <div>
-            <div class="bg-pink h-48"></div>
-            <div class="mt-2">pink</div>
-          </div>
+        <Copy size="small">
+          <b>This is Copy small</b> Dicta culpa facilis tempore veniam aliquam nihil
+          sed porro et aut enim vero repudiandae excepturi qui vel exercitationem
+          tempore molestiae rerum sequi dolor quaerat laborum quis laboriosam dolor
+          cumque velit voluptatem necessitatibus velit repellendus perferendis provident
+          sed quibusdam et aspernatur excepturi maxime veniam assumenda non doloribus
+          et vitae qui et facilis vel sequi animi perferendis.
+        </Copy>
+        <Copy size="medium">
+          This is Copy medium (default) Dicta culpa facilis tempore veniam
+          aliquam nihil sed porro et aut enim vero repudiandae excepturi qui vel
+          exercitationem tempore molestiae rerum sequi dolor quaerat laborum
+          quis laboriosam dolor cumque velit voluptatem necessitatibus velit
+          repellendus perferendis provident sed quibusdam et aspernatur
+          excepturi maxime veniam assumenda non doloribus et vitae qui et
+          facilis vel sequi animi perferendis.
+        </Copy>
+        <Copy size="large">
+          This is Copy large Dicta culpa facilis tempore veniam aliquam nihil
+          sed porro et aut enim vero repudiandae excepturi qui vel
+          exercitationem tempore molestiae rerum sequi dolor quaerat laborum
+          quis laboriosam dolor cumque velit voluptatem necessitatibus velit
+          repellendus perferendis provident sed quibusdam et aspernatur
+          excepturi maxime veniam assumenda non doloribus et vitae qui et
+          facilis vel sequi animi perferendis.
+        </Copy>
 
-          <div>
-            <div class="bg-pink2 h-48"></div>
-            <div class="mt-2">pink2</div>
-          </div>
+        <H2 class="mb-6">Berry's Blog</H2>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-20"
+        >
+          {
+            blogPosts
+              .slice(0, 4)
+              .map((post) => (
+                <BlogCard
+                  title={post.data.title}
+                  url={`/blog/${post.slug}`}
+                  heroImage={post.data.heroImage}
+                  tags={post.data.tags}
+                />
+              ))
+          }
         </div>
-        <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8">
-          <div>
-            <div class="bg-grassGreen h-48"></div>
-            <div class="mt-2">grassGreen</div>
-          </div>
+      </Container>
+    </section>
 
-          <div>
-            <div class="bg-lime h-48"></div>
-            <div class="mt-2">lime</div>
-          </div>
-
-          <div>
-            <div class="bg-greenyellow h-48"></div>
-            <div class="mt-2">greenyellow</div>
-          </div>
-
-          <div>
-            <div class="bg-lightgreen h-48"></div>
-            <div class="mt-2">lightgreen</div>
-          </div>
+    <section>
+      <H2>Containers</H2>
+      <Container size="xs">
+        <div class="py-12">
+          <div class="border border-[white]">Container xs</div>
         </div>
-      </div>
+      </Container>
 
-      <H2>Typography</H2>
-      <HeroTitle>This is HeroTitle</HeroTitle>
-      <H1>This is Heading1</H1>
-      <H2>This is Heading2</H2>
-      <H3>This is Heading3</H3>
+      <Container size="sm">
+        <div class="py-12">
+          <div class="border border-[white]">Container sm</div>
+        </div>
+      </Container>
 
-      <Copy size="small">
-        <b>This is Copy small</b> Dicta culpa facilis tempore veniam aliquam nihil
-        sed porro et aut enim vero repudiandae excepturi qui vel exercitationem tempore
-        molestiae rerum sequi dolor quaerat laborum quis laboriosam dolor cumque
-        velit voluptatem necessitatibus velit repellendus perferendis provident sed
-        quibusdam et aspernatur excepturi maxime veniam assumenda non doloribus et
-        vitae qui et facilis vel sequi animi perferendis.
-      </Copy>
-      <Copy size="medium">
-        This is Copy medium (default) Dicta culpa facilis tempore veniam aliquam
-        nihil sed porro et aut enim vero repudiandae excepturi qui vel
-        exercitationem tempore molestiae rerum sequi dolor quaerat laborum quis
-        laboriosam dolor cumque velit voluptatem necessitatibus velit
-        repellendus perferendis provident sed quibusdam et aspernatur excepturi
-        maxime veniam assumenda non doloribus et vitae qui et facilis vel sequi
-        animi perferendis.
-      </Copy>
-      <Copy size="large">
-        This is Copy large Dicta culpa facilis tempore veniam aliquam nihil sed
-        porro et aut enim vero repudiandae excepturi qui vel exercitationem
-        tempore molestiae rerum sequi dolor quaerat laborum quis laboriosam
-        dolor cumque velit voluptatem necessitatibus velit repellendus
-        perferendis provident sed quibusdam et aspernatur excepturi maxime
-        veniam assumenda non doloribus et vitae qui et facilis vel sequi animi
-        perferendis.
-      </Copy>
+      <Container size="md">
+        <div class="py-12">
+          <div class="border border-[white]">Container md</div>
+        </div>
+      </Container>
 
-      <H2 class="mb-6">Berry's Blog</H2>
-      <div
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-20"
-      >
-        {
-          blogPosts
-            .slice(0, 4)
-            .map((post) => (
-              <BlogCard
-                title={post.data.title}
-                url={`/blog/${post.slug}`}
-                heroImage={post.data.heroImage}
-                tags={post.data.tags}
-              />
-            ))
-        }
-      </div>
-    </Container>
+      <Container size="lg">
+        <div class="py-12">
+          <div class="border border-[white]">Container lg</div>
+        </div>
+      </Container>
+
+      <Container size="xl">
+        <div class="py-12">
+          <div class="border border-[white]">Container xl</div>
+        </div>
+      </Container>
+
+      <Container size="fluid">
+        <div class="py-12">
+          <div class="border border-[white]">Container fluid</div>
+        </div>
+      </Container>
+    </section>
   </article>
 </BaseLayout>
