@@ -14,8 +14,8 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
       class:list={[
         "text-black relative min-h-screen flex items-center pt-32 pb-16",
         "from-black to-purpledark from-75% to-95%",
-        "dark:text-white dark:bg-gradient-to-b",
-        "dark:md:bg-gradient-to-br",
+        "dark:text-white",
+        "dark:lg:bg-gradient-to-br",
       ]}
     >
       <Container>
@@ -75,9 +75,11 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
         "from-black to-purpledark from-75% to-95%",
         "dark:bg-gradient-to-t",
         "dark:md:bg-gradient-to-tr",
+        "py-24",
+        "hidden lg:block",
       ]}
     >
-      <Container size="sm">
+      <Container size="md">
         <SkillsAnimation />
       </Container>
     </section>
