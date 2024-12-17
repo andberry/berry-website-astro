@@ -2,8 +2,8 @@
 import SkillItem from "./SkillItem.astro";
 ---
 
-<div class="skills-grid">
-  <div class="grid-cols-5 gap-3 grid">
+<div class="js-skills-grid">
+  <div class="grid-cols-5 gap-3 grid 3xl:gap-8">
     <SkillItem
       name="HTML"
       additionalClasses="col-start-1 col-end-2 row-start-1 row-end-2"
@@ -98,10 +98,10 @@ import SkillItem from "./SkillItem.astro";
     const items = document.querySelectorAll(".skill-grid-item");
     const tl = gsap.timeline({
       repeat: -1,
-      repeatDelay: 0.2,
-      delay: 0.2,
+      repeatDelay: 0.3,
+      delay: 0,
       scrollTrigger: {
-        trigger: ".skills-grid",
+        trigger: ".js-skills-grid",
         toggleActions: "play reverse play reverse",
         start: "top 65%",
         end: "top top",
@@ -129,7 +129,7 @@ import SkillItem from "./SkillItem.astro";
         },
         ease: "power4.in",
       },
-      ">2"
+      ">5"
     );
   });
 </script>
