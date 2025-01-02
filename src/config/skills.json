@@ -25,15 +25,12 @@
       "React",
       "Next.js",
       "Astro",
-      "Eleventy (11ty)",
-      "Vue.js",
-      "Nuxt",
       "Framer Motion, GSAP"
     ]
   },
   {
     "title": "PHP / Python",
-    "skills": ["Drupal", "WordPress", "CraftCMS", "Statamic", "ProcessWire", "Django"]
+    "skills": ["Drupal", "WordPress", "ProcessWire", "Django"]
   },
   {
     "title": "Best Practices",
@@ -49,7 +46,7 @@
   },
   {
     "title": "Dev Tools",
-    "skills": ["Storybook", "Git", "DDEV", "gulp.js, rollup.js, Parcel "]
+    "skills": ["Git", "Storybook", "DDEV", "gulp.js, rollup.js, Parcel "]
   },
   {
     "title": "OS",
@@ -62,11 +59,13 @@
   {
     "title": "Soft Skills",
     "skills": [
-      "Critical and creative thinker",
+      "Never stop learning attitude",
       "Proactive approach",
       "Team building and leadership attitude",
-      "Work independently or as part of a team",
-      "Never stop learning attitude"
+      "Empathy",
+      "Work independently but love to be part of a team",
+      "Love to share knowledge / mentorship",
+      "Openness to criticism"
     ]
   }
 ]
