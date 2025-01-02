@@ -5,11 +5,11 @@ import ImageBerryTwitter from "@images/berry-twitter.jpg";
 import { Image } from "astro:assets";
 import HeroTitle from "@components/typography/HeroTitle.astro";
 import Copy from "@components/typography/Copy.astro";
-import SkillsAnimation from "@components/misc/SkillsGrid.astro";
+// import SkillsAnimation from "@components/misc/SkillsGrid.astro";
 ---
 
 <BaseLayout metaTitle="andberry.me">
-  <article class="pb-8">
+  <article>
     <section
       class:list={[
         "text-black relative min-h-screen flex items-center pt-32 pb-16",
@@ -18,7 +18,7 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
         "dark:lg:bg-gradient-to-br",
       ]}
     >
-      <Container>
+      <Container size="xl">
         <div class="lg:grid lg:grid-cols-6 lg:gap-8">
           <div
             class="w-1/3 mx-auto py-0 lg:w-full lg:px-4 lg:py-0 lg:col-start-1 lg:col-span-1 max-lg:hidden"
@@ -26,7 +26,7 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
             <Image
               src={ImageBerryTwitter}
               alt="Berry"
-              class="rounded-lg"
+              class="rounded-md"
               widths={[100, 200, 170, 340]}
               sizes={`(min-width: 1024px) 12vw, (min-width: 1440px) 170px, 0px`}
             />
@@ -39,72 +39,60 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
                   Hi,{" "}
                 </span>
                 I&apos;m{" "}
-                <span
-                  class="u-text-bg-gradient-pink dark:bg-none dark:text-white dark:drop-shadow-[6px_2px_12px_rgba(255,16,240,0.85)]"
-                >
-                  Berry!
-                </span>
+                <span class="dark:u-text-bg-gradient-pink"> Berry! </span>
               </p>
               <p class="mt-8">
-                I&apos;m a <span
-                  class="u-text-bg-gradient-pink-2 dark:bg-none dark:text-white dark:drop-shadow-[3px_3px_5px_rgba(173,252,47,1)]"
+                I&apos;m a senior <span
+                  class="dark:bg-none dark:text-white dark:drop-shadow-[2px_2px_8px_rgba(173,252,47,1)]"
                   >front-end</span
                 >{" "}
-                developer
+                developer,
                 <br />
                 and I love building{" "}
                 <span> usable</span>, neat and <span
-                  class="dark:u-text-bg-gradient-pink-2 u-text-bg-gradient-pink-2"
+                  class="mao dark:text-white dark:drop-shadow-[6px_2px_12px_rgba(255,16,240,0.85)] u-text-bg-gradient-pink-2"
                   >engaging</span
                 > web projects.
               </p>
             </HeroTitle>
           </div>
-          {
-            /*
-                <div class="opacity-0 intro__text__mask absolute inset-0 bg-lime z-20 transform -translate-x-full"></div>
-                <div class="intro__text__mask--2 absolute bottom-0 left-0 h-0 w-3 bg-lime300 z-30"></div>
-              */
-          }
         </div>
       </Container>
     </section>
 
     <section
       class:list={[
+        "flex flex-col gap-12 md:gap-16 pb-12 pt-24",
         "from-black to-purpledark from-75% to-95%",
         "dark:bg-gradient-to-t",
         "dark:md:bg-gradient-to-tr",
-        "py-24",
-        "hidden lg:block",
+        "relative lg:py-12 [text-wrap:balance]",
       ]}
     >
-      <Container size="lg">
-        <SkillsAnimation />
-      </Container>
-    </section>
-
-    <div class:list={["flex flex-col gap-12 md:gap-16 py-12"]}>
-      <section class="relative lg:my-12 [text-wrap:balance]">
+      <div>
         <Container>
           <div
             class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
           >
             <div class="intro__text lg:col-start-3 lg:col-span-3">
               <Copy size="large">
-                I'm <span class="text-violet800 font-bold">Andrea Berardi</span
+                I'm <span class="dark:u-text-bg-gradient-lime font-medium"
+                  >Andrea Berardi</span
                 >,
-                <br />an italian Web Developer with 10+ years of experience,
-                currently located in Trento after living and working in Canada
-                for 3 years.
+                <br />an <span
+                  class="dark:u-text-bg-gradient-pink-2 font-medium"
+                  >italian</span
+                > Web Developer with 10+ years of experience, currently located in
+                Trento after living and working in <span
+                  class="dark:u-text-bg-gradient-pink font-medium">Canada</span
+                > for 3 years.
               </Copy>
               <Copy size="large">
-                <span
-                  class="dark:u-text-bg-gradient-lime u-text-bg-gradient-pink-2 font-medium"
+                <span class="dark:u-text-bg-gradient-lime font-medium"
                   >I build websites</span
                 >,
                 <br /> and my main focus and experience is <span
-                  class="u-text-bg-gradient-pink font-medium"
+                  class="dark:u-text-bg-gradient-pink font-medium"
                   >front-end development</span
                 >.
               </Copy>
@@ -115,16 +103,16 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
           class:list={[
             "hidden lg:block",
             "absolute h-full w-1/3 top-12 left-0",
-            "bg-rgpointwhite bg-[length:16px_16px]",
+            "bg-rgpointgreen bg-[length:16px_16px]",
             "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
             "opacity-50",
             "u-anim--parallax-up",
           ]}
         >
         </div>
-      </section>
+      </div>
 
-      <section class="relative lg:my-12 [text-wrap:balance] xl:pb-12">
+      <div class="relative lg:my-12 [text-wrap:balance]">
         <Container>
           <div
             class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
@@ -132,31 +120,42 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
             <div class="lg:col-start-2 lg:col-span-4">
               <Copy size="large">
                 Fallen in love years ago with <span
-                  class="dark:u-text-bg-gradient-lime u-text-bg-gradient-pink-2 font-medium"
+                  class="dark:u-text-bg-gradient-pink-2 font-medium"
                   >Component-Based development</span
-                >,<br /> I work with <span
-                  class="dark:u-text-bg-gradient-pink font-medium">CMS</span
+                >,<br />I'm currently working mainly with <span
+                  class="dark:u-text-bg-gradient-lime font-medium">Next.js</span
+                >, and <span class="dark:u-text-bg-gradient-pink font-medium"
+                  >Astro</span
+                > frameworks, using <span
+                  class="dark:u-text-bg-gradient-lime font-medium">React</span
+                >, <span class="dark:u-text-bg-gradient-pink font-medium"
+                  >Typescript</span
+                > and <span class="dark:u-text-bg-gradient-lime font-medium"
+                  >Tailwind CSS</span
                 >
-                like <span class="dark:u-text-bg-gradient-pink-2 font-medium"
-                  >Drupal, WordPress</span
-                >, CraftCMS, SSG like Eleventy (11ty), and frameworks like <span
-                  class="dark:u-text-bg-gradient-lime font-medium"
-                  >Next.js, Astro</span
-                >, and Nuxt.js.
+                <br />
+                Backend-wise I usually play with Drupal and WordPress but I'm open
+                to any other CMS.
               </Copy>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      <div class="relative lg:my-12 [text-wrap:balance]">
+        <Container size="xl">
+          <div
+            class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb z-10"
+          >
+            <div class="lg:col-start-4 lg:col-span-3">
               <Copy size="large">
                 Content structure, semantic markup, implementing pixel perfect <span
-                  class="dark:u-text-bg-gradient-pink-2 u-text-bg-gradient-pink font-medium"
+                  class="dark:u-text-bg-gradient-pink-2 font-medium"
                   >responsive layouts</span
                 > mastering <span
-                  class="dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2 font-medium"
-                  >CSS</span
+                  class="dark:u-text-bg-gradient-pink font-medium">CSS</span
                 >
                 are my daily bread and butter.
-              </Copy>
-              <Copy size="large">
-                Attention to details, UI usability and technical SEO best
-                practices are good additions to my hard skills set.
               </Copy>
             </div>
           </div>
@@ -164,50 +163,39 @@ import SkillsAnimation from "@components/misc/SkillsGrid.astro";
         <div
           class:list={[
             "hidden lg:block",
-            "absolute h-full w-1/2 -top-24 right-0 border border-lime",
+            "absolute h-full w-1/2 -top-36 right-0 border border-lime z-0",
+            "bg-rgpointwhite bg-[length:16px_16px]",
+            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
+            "u-anim--parallax-down",
+          ]}
+        >
+        </div>
+      </div>
+
+      <div class="relative lg:my-12 [text-wrap:balance] xl:pb-24">
+        <Container size="xl">
+          <div
+            class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb-short z-10"
+          >
+            <div class="lg:col-start-2 lg:col-span-3">
+              <Copy size="large">
+                Attention to details, UI usability and technical SEO best
+                practices are good additions to my skills set.
+              </Copy>
+            </div>
+          </div>
+        </Container>
+        <div
+          class:list={[
+            "hidden lg:block",
+            "absolute h-full w-1/2 top-0 right-0 border border-lime z-0",
             "bg-rgpointpink bg-[length:16px_16px]",
             "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
             "u-anim--parallax-down",
           ]}
         >
         </div>
-      </section>
-
-      <!--
-    <section class="relative lg:my-12 [text-wrap:balance]">
-      <Container>
-        <div class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16">
-          <div class="intro__text lg:col-start-3 lg:col-span-3">
-            <Copy size="large">
-              <span class="text-greenyellow font-bold"
-                >What am I doing right now?</span
-              >
-              <br />
-              Currently having fun with Statamic, Eleventy and Next.js
-            </Copy>
-            <Copy size="large">
-              <span class="text-grassGreen font-bold"
-                >Plans for the future?</span
-              >
-              <br />
-              Rocket hands-on experience with Jamstack ecostystem, data visualization
-              with Chart.js, and deep dive into technical SEO are on the way.
-            </Copy>
-          </div>
-        </div>
-      </Container>
-      <div
-        class:list={[
-          "hidden lg:block",
-          "absolute h-full w-1/2 top-0 left-0",
-          "bg-rgpointgreen bg-[length:16px_16px]",
-          "[mask-image:radial-gradient(ellipse_at_center,rgba(0,0,0,1),transparent_75%)]",
-          "opacity-50",
-        ]}
-      >
       </div>
     </section>
-     -->
-    </div>
   </article>
 </BaseLayout>

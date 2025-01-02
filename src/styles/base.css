@@ -111,7 +111,15 @@
     opacity: 0;
     animation: revealFromBottom linear;
     animation-timeline: view();
-    animation-range: cover 20vh cover 35vh;
+    animation-range: cover 15vh cover 50vh;
+    animation-fill-mode: forwards;
+  }
+
+  .u-anim--rfb-short {
+    opacity: 0;
+    animation: revealFromBottom linear;
+    animation-timeline: view();
+    animation-range: cover 10vh cover 25vh;
     animation-fill-mode: forwards;
   }
 
@@ -161,7 +169,7 @@
     opacity: 0;
     animation: parallaxDown linear;
     animation-timeline: view();
-    animation-range: cover 15% contain 50%;
+    animation-range: cover 15% contain 75%;
     animation-fill-mode: forwards;
   }
 
