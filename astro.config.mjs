@@ -5,11 +5,14 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  trailingSlash: 'never',
   prefetch: {
     prefetchAll: true,
     defaultStrategy: "hover",
   },
-
+  build: {
+    format: 'file'
+  },
   integrations: [
     tailwind({
       // By default, the integration imports a basic base.css file on every page of your project.
