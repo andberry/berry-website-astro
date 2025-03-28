@@ -1,8 +1,8 @@
 ---
 import Header from "@components/base/Header.astro";
 import Footer from "@components/base/Footer.astro";
-import { ViewTransitions, fade } from "astro:transitions";
 import { pageAnimations } from "@utils/animations";
+import { ClientRouter } from "astro:transitions";
 import "@styles/base.css";
 
 export interface Props {
@@ -54,7 +54,7 @@ const { metaTitle } = Astro.props;
         checkTheme();
       });
     </script>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body class="font-exo2 font-extralight dark:bg-black dark:text-white">
     <a
