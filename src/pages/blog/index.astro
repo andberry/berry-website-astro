@@ -29,7 +29,6 @@ posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
                   url={`/blog/${post.id}`}
                   heroImage={post.data.heroImage}
                   tags={post.data.tags}
-                  slug={post.id}
                 />
               ))}
             </div>

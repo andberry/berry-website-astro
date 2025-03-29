@@ -4,17 +4,15 @@ import BlogTag from "./BlogTag.astro";
 import BlogCta from "./BlogCta.astro";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
-import { pageAnimations } from "@utils/animations";
 
 export interface Props {
-  slug: string;
   url: string;
   title: string;
   heroImage: CollectionEntry<"blog">["data"]["heroImage"];
   tags?: string[];
 }
 
-const { slug, url, title, heroImage, tags } = Astro.props;
+const { url, title, heroImage, tags } = Astro.props;
 ---
 
 <article class="grid grid-rows-subgrid row-span-2 gap-1">
@@ -23,11 +21,7 @@ const { slug, url, title, heroImage, tags } = Astro.props;
     {
       heroImage && (
         <div class="aspect-video overflow-hidden rounded-md">
-          <div
-            class="w-full h-full relative"
-            transition:name={`blogheroimage-${slug}`}
-            transition:animate={pageAnimations}
-          >
+          <div class="w-full h-full relative">
             <Image
               src={heroImage}
               alt=""

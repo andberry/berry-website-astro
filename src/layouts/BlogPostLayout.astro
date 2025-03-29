@@ -25,7 +25,6 @@ const dateFormatter = new Intl.DateTimeFormat("en-CA", {
   day: "numeric",
 });
 const displayDate = dateFormatter.format(postData.date);
-const slug = post.slug;
 ---
 
 <BaseLayout metaTitle={`${postData.title} - andberry.me`}>
@@ -43,10 +42,7 @@ const slug = post.slug;
       </div>
       {
         postData.heroImage && (
-          <div
-            class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]"
-            transition:name={`blogheroimage-${slug}`}
-          >
+          <div class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]">
             <Image
               src={postData.heroImage}
               alt=""
