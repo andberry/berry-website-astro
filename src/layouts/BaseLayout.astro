@@ -13,7 +13,7 @@ const { metaTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en" class="dark scroll-smooth" transition:animate="none">
+<html lang="en" class="dark scroll-smooth" transition:animate={pageAnimations}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -65,7 +65,7 @@ const { metaTitle } = Astro.props;
     </a>
     <Header />
 
-    <main id="page-content" transition:animate={pageAnimations}>
+    <main id="page-content">
       <slot />
     </main>
 
