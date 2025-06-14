@@ -12,10 +12,8 @@ import Copy from "@components/typography/Copy.astro";
   <article>
     <section
       class:list={[
-        "text-black relative min-h-screen flex items-center pt-32 pb-16",
-        "from-black to-purpledark from-75% to-95%",
-        "dark:text-white",
-        "dark:lg:bg-gradient-to-br",
+        "relative min-h-[calc(100vh-80px)] flex items-center py-16",
+        "dark:lg:bg-gradient-to-br from-black to-purpledark from-75% to-95%",
       ]}
     >
       <Container size="xl">
@@ -39,24 +37,17 @@ import Copy from "@components/typography/Copy.astro";
                   Hi,{" "}
                 </span>
                 I&apos;m{" "}
-                <span
-                  class="dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2"
-                >
-                  Berry!
-                </span>
+                <span class="u-text-gradient-pink"> Berry! </span>
               </p>
               <p class="mt-8">
-                I&apos;m a senior <span
-                  class="dark:bg-none dark:text-white dark:drop-shadow-[2px_2px_8px_rgba(173,252,47,1)]"
-                  >front-end</span
-                >{" "}
+                I&apos;m a senior<br />
+                <span class="u-text-green-glow">front-end</span>{" "}
                 developer,
                 <br />
                 and I love building{" "}
-                <span> usable</span>, neat and <span
-                  class="dark:text-white dark:drop-shadow-[6px_2px_12px_rgba(255,16,240,0.85)]"
+                <span> usable</span>, <span class="u-text-pink-glow"
                   >engaging</span
-                > web projects.
+                > and maintainable web projects.
               </p>
             </HeroTitle>
           </div>
@@ -80,25 +71,21 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="intro__text lg:col-start-3 lg:col-span-4">
               <Copy size="large">
-                I'm <span class="dark:u-text-bg-gradient-lime font-medium"
+                I'm <span class="u-text-gradient-pink font-medium"
                   >Andrea Berardi</span
                 >,
-                <br />an <span
-                  class="dark:u-text-bg-gradient-pink-2 font-medium"
+                <br />an <span class="u-text-green-glow--sm font-medium"
                   >italian</span
                 > Web Developer with 10+ years of experience, currently located in
                 Trento after living and working in <span
-                  class="dark:u-text-bg-gradient-pink font-medium">Canada</span
+                  class="u-text-pink-glow font-medium">Canada</span
                 > for 3 years.
               </Copy>
               <Copy size="large">
-                <span class="dark:u-text-bg-gradient-lime font-medium"
+                <span class="u-text-gradient-pink font-medium"
                   >I build websites</span
                 >,
-                <br /> and my main focus and experience is <span
-                  class="dark:u-text-bg-gradient-pink font-medium"
-                  >front-end development</span
-                >.
+                <br /> and my main focus and experience is front-end development.
               </Copy>
             </div>
           </div>
@@ -127,19 +114,19 @@ import Copy from "@components/typography/Copy.astro";
                   class="dark:u-text-bg-gradient-pink-2 font-medium"
                   >Component-Based development</span
                 >,<br />I'm currently working mainly with <span
-                  class="dark:u-text-bg-gradient-lime font-medium">Next.js</span
+                  class="u-text-green-glow--sm font-medium">Next.js</span
                 >, and <span class="dark:u-text-bg-gradient-pink font-medium"
                   >Astro</span
                 > frameworks, using <span
-                  class="dark:u-text-bg-gradient-lime font-medium">React</span
+                  class="u-text-green-glow--sm font-medium">React</span
                 >, <span class="dark:u-text-bg-gradient-pink font-medium"
                   >Typescript</span
-                > and <span class="dark:u-text-bg-gradient-lime font-medium"
+                > and <span class="u-text-pink-glow font-medium"
                   >Tailwind CSS</span
                 >
                 <br />
                 Backend-wise I usually play with Drupal and WordPress but I'm open
-                to any other CMS.
+                to adopt any other CMS.
               </Copy>
             </div>
           </div>
@@ -153,13 +140,11 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="lg:col-start-4 lg:col-span-3">
               <Copy size="large">
-                Content structure, semantic markup, implementing pixel perfect <span
-                  class="dark:u-text-bg-gradient-pink-2 font-medium"
-                  >responsive layouts</span
-                > mastering <span
-                  class="dark:u-text-bg-gradient-pink font-medium">CSS</span
-                >
-                are my daily bread and butter.
+                Content architecture, crafting pixel-perfect responsive layouts
+                with a <span class="dark:u-text-bg-gradient-pink-2 font-medium"
+                  >meticulous attention to details</span
+                >, a strong focus on UI usability, and comprehensive knowledge
+                of technical SEO best practices are my daily bread and butter.
               </Copy>
             </div>
           </div>
@@ -183,22 +168,27 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="lg:col-start-2 lg:col-span-3">
               <Copy size="large">
-                Attention to details, UI usability and technical SEO best
-                practices are good additions to my skills set.
+                From small one-man-band projects to medium or large size ones
+                involving many developers, individual contributor or front-end
+                <span class="u-text-gradient-pink">team lead</span> I'm always happy
+                to contribute to the project, and share my knowledge with <span
+                  class="u-text-bg-gradient-pink"
+                  >coaching sessions.
+                </span>
               </Copy>
             </div>
           </div>
+          <div
+            class:list={[
+              "hidden lg:block",
+              "absolute h-full w-1/2 top-0 right-0 border border-lime z-0",
+              "bg-rgpointpink bg-[length:16px_16px]",
+              "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
+              "u-anim--parallax-down",
+            ]}
+          >
+          </div>
         </Container>
-        <div
-          class:list={[
-            "hidden lg:block",
-            "absolute h-full w-1/2 top-0 right-0 border border-lime z-0",
-            "bg-rgpointpink bg-[length:16px_16px]",
-            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
-            "u-anim--parallax-down",
-          ]}
-        >
-        </div>
       </div>
     </section>
   </article>

@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
-  darkMode: "class",
+  darkMode: "selector",
   theme: {
     colors: {
       white: "#FFFFFF",
@@ -63,7 +63,7 @@ export default {
     },
     extend: {
       fontSize: {
-        clamphero: "clamp(3.5rem, -1.75rem + 10vw, 7rem)",
+        clamphero: "clamp(3rem, -1.75rem + 10vw, 7rem)",
         // clamph1: "clamp(3.2rem, -1.786rem + 9.762vw, 7rem)",
         clamph1: "clamp(2.625rem, 1.225rem + 3.5vw, 4.375rem)",
         // clamph2: "clamp(2.6rem, -1.714rem + 8.571vw, 6rem)",
@@ -84,6 +84,11 @@ export default {
         inOutCubic: "cubic-bezier(0.65, 0, 0.35, 1)",
         inOutQuart: "cubic-bezier(0.76, 0, 0.24, 1)",
       },
+      animation: {
+         
+      },
+      keyframes: {
+      }
     },
   },
   plugins: [
