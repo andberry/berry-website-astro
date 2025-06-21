@@ -4,7 +4,7 @@
     "skills": [
       "Html",
       "CSS",
-      "JavaScript, TypeScript",
+      "TypeScript / JavaScript",
       "PHP",
       "Python"
     ]
@@ -20,12 +20,11 @@
   {
     "title": "Js / Ts",
     "skills": [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
+      "TypeScript / JavaScript",
+      "React / Next.js",
+      "Vue.js / Nuxt",
       "Astro",
-      "Framer Motion, GSAP"
+      "GSAP, Framer Motion"
     ]
   },
   {
@@ -37,7 +36,7 @@
     "skills": [
       "Component-based development",
       "Responsive Web Design",
-      "CSS: BEM, ITCSS, Namespaces",
+      "CSS: Tailwind CSS, CSS modules, BEM, ITCSS, Namespaces",
       "Semantic HTML best practices",
       "Basic Accessibility best practices",
       "UI Usability best practices",
@@ -46,14 +45,13 @@
   },
   {
     "title": "Dev Tools",
-    "skills": ["Git", "Storybook", "DDEV", "gulp.js, rollup.js, Parcel "]
+    "skills": ["Git", "Storybook", "DDEV"]
   },
   {
     "title": "OS",
     "skills": [
       "macOS",
-      "Linux",
-      "Linux-based server setup (LAMP stack, nodejs)"
+      "Linux"
     ]
   },
   {
