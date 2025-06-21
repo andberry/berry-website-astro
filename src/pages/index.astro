@@ -5,6 +5,7 @@ import ImageBerryTwitter from "@images/berry-twitter.jpg";
 import { Image } from "astro:assets";
 import HeroTitle from "@components/typography/HeroTitle.astro";
 import Copy from "@components/typography/Copy.astro";
+import FancyText from "@components/typography/FancyText.astro";
 // import SkillsAnimation from "@components/misc/SkillsGrid.astro";
 ---
 
@@ -37,17 +38,18 @@ import Copy from "@components/typography/Copy.astro";
                   Hi,{" "}
                 </span>
                 I&apos;m{" "}
-                <span class="u-text-gradient-pink"> Berry! </span>
+                <FancyText variant="gradientPink2"> Berry! </FancyText>
               </p>
               <p class="mt-8">
                 I&apos;m a senior<br />
-                <span class="u-text-green-glow">front-end</span>{" "}
+                <FancyText variant="glowGreen">front-end</FancyText>{" "}
                 developer,
                 <br />
                 and I love building{" "}
-                <span> usable</span>, <span class="u-text-pink-glow"
-                  >engaging</span
-                > and maintainable web projects.
+                <span> usable</span>, <FancyText variant="glowPink"
+                  >engaging</FancyText
+                >
+                and maintainable web projects.
               </p>
             </HeroTitle>
           </div>
@@ -71,21 +73,27 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="intro__text lg:col-start-3 lg:col-span-4">
               <Copy size="large">
-                I'm <span class="u-text-gradient-pink font-medium"
-                  >Andrea Berardi</span
+                I'm <FancyText
+                  variant="gradientPink2"
+                  additionalClass="font-medium">Andrea Berardi</FancyText
                 >,
-                <br />an <span class="u-text-green-glow--sm font-medium"
-                  >italian</span
+                <br />an <FancyText
+                  variant="glowGreen"
+                  additionalClass="font-medium">italian</FancyText
                 > Web Developer with 10+ years of experience, currently located in
-                Trento after living and working in <span
-                  class="u-text-pink-glow font-medium">Canada</span
+                Trento after living and working in <FancyText
+                  variant="glowPink"
+                  additionalClass="font-medium">Canada</FancyText
                 > for 3 years.
               </Copy>
               <Copy size="large">
-                <span class="u-text-gradient-pink font-medium"
-                  >I build websites</span
+                <FancyText variant="gradientPink" additionalClass="font-medium"
+                  >I build websites</FancyText
                 >,
-                <br /> and my main focus and experience is front-end development.
+                <br /> and my main focus and experience is <FancyText
+                  variant="glowGreen"
+                  additionalClass="font-medium">front-end</FancyText
+                > development.
               </Copy>
             </div>
           </div>
@@ -110,19 +118,24 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="lg:col-start-1 lg:col-span-4">
               <Copy size="large">
-                Fallen in love years ago with <span
-                  class="dark:u-text-bg-gradient-pink-2 font-medium"
-                  >Component-Based development</span
-                >,<br />I'm currently working mainly with <span
-                  class="u-text-green-glow--sm font-medium">Next.js</span
-                >, and <span class="dark:u-text-bg-gradient-pink font-medium"
-                  >Astro</span
-                > frameworks, using <span
-                  class="u-text-green-glow--sm font-medium">React</span
-                >, <span class="dark:u-text-bg-gradient-pink font-medium"
-                  >Typescript</span
-                > and <span class="u-text-pink-glow font-medium"
-                  >Tailwind CSS</span
+                Fallen in love years ago with <FancyText
+                  variant="gradientPink2"
+                  additionalClass="font-medium"
+                  >Component-Based development</FancyText
+                >,<br />I'm currently working mainly with <FancyText
+                  variant="glowGreen"
+                  additionalClass="font-medium">Next.js</FancyText
+                >, <FancyText variant="glowPink" additionalClass="font-medium"
+                  >Nuxt</FancyText
+                > and <FancyText
+                  variant="glowPink"
+                  additionalClass="font-medium">Astro</FancyText
+                > frameworks, using
+                <FancyText variant="glowGreen">React</FancyText>, <FancyText
+                  variant="glowPink">Typescript</FancyText
+                > and <FancyText
+                  variant="glowGreen"
+                  additionalClass="font-medium">Tailwind CSS</FancyText
                 >
                 <br />
                 Backend-wise I usually play with Drupal and WordPress but I'm open
@@ -140,11 +153,12 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="lg:col-start-4 lg:col-span-3">
               <Copy size="large">
-                Content architecture, crafting pixel-perfect responsive layouts
-                with a <span class="dark:u-text-bg-gradient-pink-2 font-medium"
-                  >meticulous attention to details</span
-                >, a strong focus on UI usability, and comprehensive knowledge
-                of technical SEO best practices are my daily bread and butter.
+                Content architecture, crafting <FancyText
+                  variant="glowGreen"
+                  additionalClass="font-medium">pixel-perfect</FancyText
+                > responsive layouts with a <FancyText variant="gradientPink2"
+                  >meticulous attention to details</FancyText
+                > and a strong focus on UI usability are my daily bread and butter.
               </Copy>
             </div>
           </div>
@@ -168,13 +182,16 @@ import Copy from "@components/typography/Copy.astro";
           >
             <div class="lg:col-start-2 lg:col-span-3">
               <Copy size="large">
-                From small one-man-band projects to medium or large size ones
-                involving many developers, individual contributor or front-end
-                <span class="u-text-gradient-pink">team lead</span> I'm always happy
-                to contribute to the project, and share my knowledge with <span
-                  class="u-text-bg-gradient-pink"
-                  >coaching sessions.
-                </span>
+                From small <FancyText variant="glowGreen"
+                  >one-man-band</FancyText
+                >
+                projects, to medium or large size ones involving many developers,
+                individual contributor or front-end
+                <FancyText variant="glowGreen">team lead</FancyText>,
+                <br />I'm always happy to contribute to the project,<br />and
+                share my knowledge with <FancyText variant="gradientPink"
+                  >coaching sessions
+                </FancyText>.
               </Copy>
             </div>
           </div>

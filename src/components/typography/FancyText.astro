@@ -1,0 +1,17 @@
+---
+type TVariants = "glowGreen" | "glowPink" | "gradientPink" | "gradientPink2";
+interface Props {
+  variant: TVariants;
+  additionalClass?: string;
+}
+
+const { variant, additionalClass } = Astro.props;
+const classMap: { [key in TVariants]: string } = {
+  glowGreen: "dark:drop-shadow-[2px_2px_4px_rgba(173,252,47,1)]",
+  glowPink: "dark:drop-shadow-[2px_2px_6px_rgba(255,16,240,0.85)]",
+  gradientPink: "dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2",
+  gradientPink2: "dark:u-text-bg-gradient-pink-2 u-text-bg-gradient-pink",
+};
+---
+
+<span class:list={[classMap[variant], additionalClass]}><slot /></span>

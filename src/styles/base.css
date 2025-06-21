@@ -39,20 +39,7 @@
     color: transparent;
   }
 
-  .u-text-gradient-pink {
-    @apply dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2;
-  }
-  .u-text-green-glow {
-    @apply dark:drop-shadow-[2px_2px_4px_rgba(173,252,47,1)];
-  }
-
-   .u-text-green-glow--sm {
-    @apply dark:drop-shadow-[1px_1px_2px_rgba(173,252,47,1)];
-  }
   
-  .u-text-pink-glow {
-    @apply dark:drop-shadow-[2px_2px_6px_rgba(255,16,240,0.85)]
-  }
 
   /* SkillItem classes used in homepage */
   .u-border-gradient-lime {

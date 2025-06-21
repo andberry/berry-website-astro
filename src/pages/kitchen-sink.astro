@@ -4,6 +4,7 @@ import Copy from "@components/typography/Copy.astro";
 import H1 from "@components/typography/H1.astro";
 import H2 from "@components/typography/H2.astro";
 import H3 from "@components/typography/H3.astro";
+import FancyText from "@components/typography/FancyText.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 import Container from "@components/utils/Container.astro";
 import BlogCard from "@components/blog/BlogCard.astro";
@@ -132,6 +133,16 @@ const blogPosts = await getCollection("blog");
           repellendus perferendis provident sed quibusdam et aspernatur
           excepturi maxime veniam assumenda non doloribus et vitae qui et
           facilis vel sequi animi perferendis.
+        </Copy>
+
+        <H2 class="mb-6">FancyText</H2>
+        <Copy size="large">
+          <FancyText variant="gradientPink">Fancy Text gradientPink</FancyText>
+          <FancyText variant="gradientPink2"
+            >Fancy Text gradientPink 2</FancyText
+          >
+          <FancyText variant="glowPink">Fancy Text glowPink</FancyText>
+          <FancyText variant="glowGreen">Fancy Text glowgreen</FancyText>
         </Copy>
 
         <H2 class="mb-6">Berry's Blog</H2>
