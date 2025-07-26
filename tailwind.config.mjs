@@ -26,6 +26,8 @@ export default {
       // gradients
       pink3: "#FA66FF",
       purple: "#5b21b6", // 91,22,182
+      purple2: "#5a21b6", // 91, 33, 182
+      purpleLight: "#8439fa",
       grassGreen: "#7CFC00",
       grassGreenLight: "#75FF67",
     },
@@ -84,11 +86,8 @@ export default {
         inOutCubic: "cubic-bezier(0.65, 0, 0.35, 1)",
         inOutQuart: "cubic-bezier(0.76, 0, 0.24, 1)",
       },
-      animation: {
-         
-      },
-      keyframes: {
-      }
+      animation: {},
+      keyframes: {},
     },
   },
   plugins: [
