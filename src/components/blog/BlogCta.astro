@@ -12,18 +12,18 @@ const { url, title = "Read the Article" } = Astro.props;
 <a
   href={url}
   class:list={[
-    "dark:text-white font-light p-2 leading-none flex items-center gap-2 group justify-end",
-    "mt-1 @2xs/blogcardfooter:mt-0",
+    "dark:text-white font-light py-0 h-7 px-2 leading-none flex items-center gap-2 group justify-end flex-none",
+    "mt-0 @2xs/blogcardfooter:mt-0",
   ]}
 >
   <span
-    class="flex-shrink-0 text-base group-hover:text-pink transition-all ease-out duration-200"
+    class="flex-shrink-0 text-xs group-hover:text-pink3 transition-all ease-out duration-200"
     >{title}</span
   >
   <Icon
     name="la:long-arrow-alt-right"
     class:list={[
-      "w-5 dark:text-white leading-none mt-1 group-hover:translate-x-1",
+      "w-5 dark:text-white leading-none mt-[2px] group-hover:translate-x-1",
       "transition-all ease-out duration-200",
       "dark:group-hover:text-greenyellow group-hover:text-purple",
     ]}

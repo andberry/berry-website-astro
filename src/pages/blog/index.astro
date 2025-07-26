@@ -5,18 +5,17 @@ import Container from "@components/utils/Container.astro";
 import { getCollection } from "astro:content";
 import H1 from "@components/typography/H1.astro";
 import HeroTitle from "@components/typography/HeroTitle.astro";
+import FancyText from "@components/typography/FancyText.astro";
 const posts = await getCollection("blog", (p) => p.data.published === true);
 posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 ---
 
 <BaseLayout metaTitle="Blog - andberry.me">
   <article class="py-24">
-    <Container size="lg">
+    <Container size="xl">
       <header>
         <HeroTitle>
-          <span class="dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2"
-            >Berry's Blog</span
-          >
+          <FancyText variant="gradientPink">Berry's Blog</FancyText>
         </HeroTitle>
       </header>
       <section class="pt-8">

@@ -69,19 +69,18 @@ const displayDate = dateFormatter.format(postData.date);
             }
 
             <div
-              class='prose prose-neutral max-w-screen-3xl
+              class="prose prose-neutral max-w-screen-3xl
               prose-p:dark:text-mediumgray prose-p:text-black
               prose-a:dark:text-mediumgray prose-a:dark:font-normal
               prose-blockquote:text-white
               prose-strong:dark:text-mediumgray
               prose-ul:my-0 prose-li:dark:text-mediumgray
-              prose-headings:dark:text-pink prose-headings:text-black prose-headings:leading-[1] prose-headings:mb-3
+              prose-headings:dark:text-white prose-headings:text-black prose-headings:leading-[1] prose-headings:mb-3
               prose-h2:text-clamph2 prose-h3:text-clamph3
               prose-headings:relative
-              prose-headings:before:block prose-headings:before:absolute prose-headings:before:-left-4 prose-headings:before:top-0 prose-headings:before:content-[""] prose-headings:before:w-1 prose-headings:before:h-full prose-headings:before:bg-purple
-              xl:prose-headings:mt-16 prose-headings:ml-4
+              xl:prose-headings:mt-16
               dark:prose-code:text-white prose-code:text-black prose-code:text-sm prose-pre:leading-none prose-code:font-mono
-              prose-p:my-0 prose-p:mb-5'
+              prose-p:my-0 prose-p:mb-5"
             >
               <Copy size="medium">
                 <slot />
@@ -92,7 +91,7 @@ const displayDate = dateFormatter.format(postData.date);
           <aside class="relative lg:col-span-4 xl:col-span-4 mt-8 lg:mt-0">
             <div class="lg:sticky lg:top-24">
               <div
-                class="p-5 dark:bg-darkgray bg-mediumgray text-black0 dark:text-white rounded-md"
+                class="p-5 dark:bg-darkgray bg-lightgray text-black0 dark:text-white rounded-md"
                 id="blog-post-infos"
               >
                 <BlogCardTitle>{postData.title}</BlogCardTitle>
@@ -107,10 +106,13 @@ const displayDate = dateFormatter.format(postData.date);
                   )
                 }
                 <div class="mt-8">
-                  <a href="/blog" class="flex gap-2 group">
+                  <a
+                    href="/blog"
+                    class="flex gap-2 group hover:text-purpleLight"
+                  >
                     <Icon
                       name="la:long-arrow-alt-left"
-                      class="w-5 dark:text-white leading-none mt-1 group-hover:-translate-x-1 transition-all ease-out duration-200"
+                      class="w-5 dark:text-white leading-none mt-1 group-hover:-translate-x-1 transition-all ease-out duration-200 group-hover:text-purpleLight"
                     />
                     <span>Back to Blog Index</span>
                   </a>
@@ -119,7 +121,7 @@ const displayDate = dateFormatter.format(postData.date);
 
               <div
                 id="blog-post-progress-bar"
-                class="w-full h-1 bg-lime mt-4 rounded-md"
+                class="w-full h-1 bg-purpleLight mt-4 rounded-md"
               >
               </div>
 
