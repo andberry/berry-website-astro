@@ -1,6 +1,6 @@
 ---
 interface Props {
-  size?: "xs" | "sm" | "md" | "lg" | "xl" | "fluid";
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "xxl" | "fluid";
   additionalClasses?: string;
 }
 const { size = "lg", additionalClasses = "" } = Astro.props;
@@ -9,7 +9,8 @@ const sizeClassMap = {
   sm: "max-w-screen-md px-8",
   md: "max-w-screen-lg px-8 md:px-10",
   lg: "max-w-screen-xl px-8 md:px-10 xl:px-14",
-  xl: "max-w-screen-3xl px-8 md:px-10 xl:px-14",
+  xl: "max-w-screen-2xl px-8 md:px-10 xl:px-14",
+  xxl: "max-w-screen-3xl px-8 md:px-10 xl:px-14",
   fluid: "max-w-none px-8",
 };
 ---
