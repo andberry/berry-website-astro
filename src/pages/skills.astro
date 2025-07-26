@@ -5,6 +5,7 @@ import BaseLayout from "@layouts/BaseLayout.astro";
 import skillsData from "@config/skills.json";
 import H3 from "@components/typography/H3.astro";
 import TechIcon from "@components/TechIcon.astro";
+import FancyText from "@components/typography/FancyText.astro";
 ---
 
 <BaseLayout metaTitle="Skills - andberry.me">
@@ -12,9 +13,7 @@ import TechIcon from "@components/TechIcon.astro";
     <header class="pb-8">
       <Container size="lg">
         <HeroTitle>
-          <span class="dark:u-text-bg-gradient-pink u-text-bg-gradient-pink-2"
-            >Skills and Tech</span
-          >
+          <FancyText variant="gradientPink">Skills and Tech</FancyText>
         </HeroTitle>
       </Container>
     </header>
