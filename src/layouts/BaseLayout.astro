@@ -41,18 +41,16 @@ const { metaTitle } = Astro.props;
        * to run this code immediately, and not wait for HTML to be processed
        *
        * When Using View Transition: don't use is:inline and hook into lifecycle events
-       */
-      document.addEventListener("astro:page-load", () => {
-        checkTheme();
-      });
-
-      /**
-       * This is strongly recommended when using View Transition
-       * to check for theme earlier and prevent theme flashing during page load
+       *
+       * using astro:after-swap event is strongly recommended
+       * to prevent theme flashing during page load
        */
       document.addEventListener("astro:after-swap", () => {
         checkTheme();
       });
+
+      // we also want to check theme once during first page load
+      checkTheme();
     </script>
     <ClientRouter />
   </head>
