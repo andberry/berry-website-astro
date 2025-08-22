@@ -2,6 +2,8 @@
 import { nav } from "@config/nav";
 import ThemeSwitch from "@components/ThemeSwitch.astro";
 import SocialLinks from "./SocialLinks.astro";
+// server side, used  only on first page load
+const currentPathname: string = Astro.url.pathname;
 ---
 
 <div class="lg:hidden">
@@ -52,13 +54,25 @@ import SocialLinks from "./SocialLinks.astro";
         </div>
       </div>
       <nav
+        id="mobile-main-nav"
         class="flex flex-col items-start justify-center flex-grow py-8 overflow-y-auto overscroll-y-none"
       >
         <ul class="list-none flex gap-8 flex-col m-0 w-full text-center">
           {
             nav.map((item) => (
               <li>
-                <a href={item.url} class="text-xl">
+                <a
+                  href={item.url}
+                  class:list={[
+                    "text-xl link",
+                    {
+                      "dark:text-greenyellow text-purple":
+                        currentPathname === item.url ||
+                        (item.url !== "/" &&
+                          currentPathname.startsWith(item.url)),
+                    },
+                  ]}
+                >
                   {item.title}
                 </a>
               </li>
@@ -77,3 +91,19 @@ import SocialLinks from "./SocialLinks.astro";
     </div>
   </label>
 </div>
+
+<script>
+  /**
+   * Close Mobile Nav Panel after tapping on one of the links inside it
+   */
+  const mobileNavLinks = document.querySelectorAll("#mobile-main-nav .link");
+  for (const link of Array.from(mobileNavLinks) as HTMLAnchorElement[]) {
+    link.addEventListener("click", () => {
+      console.log("mobileNavLink clicked");
+      const mobileTriggerEl = document.getElementById(
+        "mobile-menu-trigger",
+      ) as HTMLInputElement;
+      mobileTriggerEl && (mobileTriggerEl.checked = false);
+    });
+  }
+</script>

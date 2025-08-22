@@ -3,7 +3,7 @@ import { nav } from "@config/nav";
 const currentPathname: string = Astro.url.pathname;
 ---
 
-<nav id="desktop-nav" class="hidden lg:block">
+<nav id="desktop-main-nav" class="hidden lg:block">
   <ul class="flex">
     {
       nav.map((item) => (
@@ -16,7 +16,7 @@ const currentPathname: string = Astro.url.pathname;
                   currentPathname === item.url ||
                   (item.url !== "/" && currentPathname.startsWith(item.url)),
               },
-              "navLink",
+              "link",
             ]}
             href={item.url}
           >
@@ -27,16 +27,3 @@ const currentPathname: string = Astro.url.pathname;
     }
   </ul>
 </nav>
-
-<script>
-  document.addEventListener("astro:after-swap", () => {
-    const currentUrl = window.location.href;
-    const links = document.querySelectorAll(".navLink");
-    for (const link of Array.from(links) as HTMLAnchorElement[]) {
-      link.classList.remove("dark:text-greenyellow", "text-purple");
-      if (link.href === currentUrl) {
-        link.classList.add("dark:text-greenyellow", "text-purple");
-      }
-    }
-  });
-</script>
