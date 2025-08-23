@@ -6,7 +6,7 @@ import { Icon } from "astro-icon";
 <nav>
   <ul class="flex items-center">
     {
-      links.map((item) => {
+      links.map((link) => {
         return (
           <li>
             <a
@@ -15,11 +15,11 @@ import { Icon } from "astro-icon";
                 "dark:text-white dark:hover::text-greenyellow",
                 "text-black0 hover:text-purple dark:hover:text-greenyellow",
               ]}
-              href={item.url}
+              href={link.url}
               target="_blank"
             >
-              <span class="sr-only">{item.name}</span>
-              <Icon class="w-6 md:w-7" name={item.iconName} />
+              <span class="sr-only">{link.name}</span>
+              <Icon class="w-6" name={link.iconName} />
             </a>
           </li>
         );
