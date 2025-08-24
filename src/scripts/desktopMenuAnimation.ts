@@ -7,7 +7,7 @@ logoTl.fromTo(logo,{y: '100%', opacity: 0}, {opacity: 1, y: 0, duration: 0.8, ea
 logoTl.to(logo,{opacity: 0, y: '100%', duration: 0.4, ease: 'expo.out'}, '>+12')
 
 const mainTl = gsap.timeline({paused: true, delay: 1})
-mainTl.fromTo(desktopNavLinks, {opacity: 0, y: 3}, {opacity: 1, y: 0, ease: 'power3.out', duration: 0.25, stagger: 0.12})
+mainTl.fromTo(desktopNavLinks, {autoAlpha: 0, y: 3}, {autoAlpha: 1, y: 0, ease: 'power3.out', duration: 0.25, stagger: 0.12})
 mainTl.add(logoTl, '>+0.4')
 
 mainTl.play()
