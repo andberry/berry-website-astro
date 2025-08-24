@@ -11,7 +11,7 @@ const currentPathname: string = Astro.url.pathname;
           <a
             href={link.url}
             class:list={[
-              "py-2 px-6 font-normal dark:font-light uppercase hover:text-purple dark:hover:text-greenyellow transition-all ease-linear duration-150 block",
+              "py-2 px-6 font-normal dark:font-light uppercase hover:text-purple dark:hover:text-greenyellow transition-all ease-linear duration-150 block invisible",
               {
                 "dark:text-greenyellow text-purple":
                   link.url === currentPathname ||
