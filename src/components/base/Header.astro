@@ -9,6 +9,7 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
 ---
 
 <header
+  id="page-header"
   class:list={[
     "fixed top-0 left-0 w-full h-20 z-50",
     "flex items-center",
@@ -22,8 +23,8 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
   <Container size="fluid" additionalClasses="w-full">
     <div class="flex justify-between items-center">
       <div class="flex items-center gap-6">
-        <div class="w-12">
-          <a href="/" class="block">
+        <div class="w-12 overflow-hidden h-12">
+          <a href="/" class="block js-logoLink">
             <Image
               src={berryTwitterImg}
               alt="Berry"
