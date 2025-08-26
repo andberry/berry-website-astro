@@ -11,7 +11,7 @@ import { Icon } from "astro-icon";
           <li>
             <a
               class:list={[
-                "block px-3 md:px-4 py-2 leading-none transition-all ease-linear duration-150",
+                "block px-3 py-2 leading-none transition-all ease-linear duration-150",
                 "dark:text-white dark:hover::text-greenyellow",
                 "text-black0 hover:text-purple dark:hover:text-greenyellow",
               ]}
@@ -19,7 +19,7 @@ import { Icon } from "astro-icon";
               target="_blank"
             >
               <span class="sr-only">{link.name}</span>
-              <Icon class="w-6" name={link.iconName} />
+              <Icon class="w-5" name={link.iconName} />
             </a>
           </li>
         );
