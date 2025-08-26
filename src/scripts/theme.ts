@@ -15,7 +15,9 @@ const setTheme = () => {
     : localStorage.setItem("theme", "dark");
 };
 
-/**
+
+export const handleTheme = () => {
+  /**
  * When NOT using View Transition: is:inline is required on <script> tag
  * to run this code immediately, and not wait for HTML to be processed
  *
@@ -23,9 +25,10 @@ const setTheme = () => {
  * Using astro:after-swap event is strongly recommended
  * to prevent theme flashing during page load
  */
-document.addEventListener("astro:after-swap", () => {
-  setTheme();
-});
+  document.addEventListener("astro:after-swap", () => {
+    setTheme();
+  });
 
-// we also want to check theme once during first page load
-setTheme();
+  // we also want to check theme once during first page load
+  setTheme();
+}
