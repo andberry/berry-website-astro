@@ -36,15 +36,11 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
         </div>
         <DesktopNav />
       </div>
-      <div class="flex gap-7 items-center">
-        <div class="hidden lg:block">
-          <SocialLinks />
-        </div>
-        <div class="hidden lg:block">
-          <ThemeSwitch />
-        </div>
-        <MobileNav />
+      <div class="gap-7 items-center hidden lg:flex">
+        <SocialLinks />
+        <ThemeSwitch />
       </div>
+      <MobileNav />
     </div>
   </Container>
 </header>

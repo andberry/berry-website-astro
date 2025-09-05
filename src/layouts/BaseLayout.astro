@@ -29,8 +29,9 @@ const { metaTitle } = Astro.props;
       import { setupActivePageLinksUpdate } from "../scripts/activePageLinksUpdate";
       import {
         desktopMenuAnimation,
+        setupMobileMenuAnimation,
         logoAnimation,
-      } from "../scripts/desktopMenuAnimation";
+      } from "../scripts/menuAnimation";
       handleTheme();
       setupActivePageLinksUpdate();
       desktopMenuAnimation();
@@ -38,6 +39,7 @@ const { metaTitle } = Astro.props;
       document.addEventListener("astro:after-swap", () => {
         desktopMenuAnimation();
       });
+      setupMobileMenuAnimation();
     </script>
     <ClientRouter />
   </head>

@@ -6,90 +6,82 @@ import SocialLinks from "./SocialLinks.astro";
 const currentPathname: string = Astro.url.pathname;
 ---
 
-<div class="lg:hidden">
-  <label for="mobile-menu-trigger">
-    <input type="checkbox" class="peer hidden" id="mobile-menu-trigger" />
-    <div
-      class="w-10 md:w-14 peer-checked:opacity-0 ease-linear transition-all duration-200"
+<button id="mobile-menu-open-button" class="lg:hidden">
+  <div class="w-10 md:w-14">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-full dark:fill-white fill-black0"
+      viewBox="0 0 24 24"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="w-full dark:fill-white fill-black0"
-        viewBox="0 0 24 24"
+      <path d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"></path>
+    </svg>
+  </div>
+  <div class="text-xs text-center font-light -top-2 relative">Menu</div>
+</button>
+
+<div
+  class="opacity-0 invisible fixed bg-black0/60 top-0 left-0 w-screen h-screen z-20 backdrop-blur-sm overscroll-y-none lg:hidden"
+  id="mobile-menu-bg-overlay"
+>
+</div>
+
+<div
+  class="flex flex-col fixed lg:hidden h-screen dark:bg-black bg-white w-[80vw] top-0 right-0 z-30 translate-x-full overscroll-y-contain overflow-y-auto"
+  id="mobile-menu-panel"
+>
+  <div class="mx-auto px-8 flex justify-end flex-shrink-0 w-full py-3">
+    <button id="mobile-menu-close-button">
+      <div class="w-10 md:w-14">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-full dark:fill-white"
+          viewBox="0 0 24 24"
+          ><path
+            d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z"
+          ></path></svg
+        >
+      </div>
+      <div
+        class="text-xs font-light text-center -top-2 relative dark:text-white"
       >
-        <path d="M4 17.27v-1h16v1zm0-4.77v-1h16v1zm0-4.77v-1h16v1z"></path>
-      </svg>
-    </div>
-    <div
-      class="text-xs text-center font-light -top-2 relative peer-checked:opacity-0 ease-linear transition-all duration-200"
-    >
-      Menu
-    </div>
-
-    <div
-      class="opacity-0 invisible peer-checked:opacity-100 fixed peer-checked:visible bg-black0/60 inset-0 z-20 backdrop-blur-sm transition-all ease-linear duration-200 overscroll-y-none"
-    >
-    </div>
-
-    <div
-      class="invisible peer-checked:visible flex flex-col fixed lg:hidden h-screen dark:bg-black bg-white w-[80vw] top-0 right-0 z-30 transition-all ease-out duration-300 translate-x-full peer-checked:translate-x-0 overscroll-y-contain overflow-y-auto"
-    >
-      <div class="mx-auto px-8 flex justify-end flex-shrink-0 w-full py-3">
-        <div>
-          <div class="w-10 md:w-14">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="w-full dark:fill-white"
-              viewBox="0 0 24 24"
-              ><path
-                d="m6.4 18.308l-.708-.708l5.6-5.6l-5.6-5.6l.708-.708l5.6 5.6l5.6-5.6l.708.708l-5.6 5.6l5.6 5.6l-.708.708l-5.6-5.6z"
-              ></path></svg
+        Close
+      </div>
+    </button>
+  </div>
+  <nav
+    id="mobile-main-nav"
+    class="flex flex-col items-start justify-center flex-grow py-8 overflow-y-auto overscroll-y-none"
+  >
+    <ul class="list-none flex gap-8 flex-col m-0 w-full text-center">
+      {
+        nav.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class:list={[
+                "text-xl js-link block opacity-0 translate-y-2",
+                {
+                  "dark:text-greenyellow text-purple":
+                    currentPathname === item.url ||
+                    (item.url !== "/" && currentPathname.startsWith(item.url)),
+                },
+              ]}
             >
-          </div>
-          <div
-            class="text-xs font-light text-center -top-2 relative dark:text-white"
-          >
-            Close
-          </div>
-        </div>
-      </div>
-      <nav
-        id="mobile-main-nav"
-        class="flex flex-col items-start justify-center flex-grow py-8 overflow-y-auto overscroll-y-none"
-      >
-        <ul class="list-none flex gap-8 flex-col m-0 w-full text-center">
-          {
-            nav.map((item) => (
-              <li>
-                <a
-                  href={item.url}
-                  class:list={[
-                    "text-xl link",
-                    {
-                      "dark:text-greenyellow text-purple":
-                        currentPathname === item.url ||
-                        (item.url !== "/" &&
-                          currentPathname.startsWith(item.url)),
-                    },
-                  ]}
-                >
-                  {item.title}
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-      </nav>
-      <div class="py-8 flex items-center flex-col">
-        <div class="mb-10">
-          <SocialLinks />
-        </div>
-        <div>
-          <ThemeSwitch />
-        </div>
-      </div>
+              {item.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <div class="py-8 flex items-center flex-col">
+    <div class="mb-10 opacity-0 translate-y-1" id="mobile-socials">
+      <SocialLinks />
     </div>
-  </label>
+    <div class="opacity-0 translate-y-1" id="mobile-theme-switch">
+      <ThemeSwitch />
+    </div>
+  </div>
 </div>
 
 <script>
@@ -101,7 +93,7 @@ const currentPathname: string = Astro.url.pathname;
     link.addEventListener("click", () => {
       console.log("mobileNavLink clicked");
       const mobileTriggerEl = document.getElementById(
-        "mobile-menu-trigger",
+        "mobile-menu-trigger"
       ) as HTMLInputElement;
       mobileTriggerEl && (mobileTriggerEl.checked = false);
     });
