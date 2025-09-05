@@ -8,7 +8,7 @@ export const setupActivePageLinksUpdate = () => {
   document.addEventListener("astro:after-swap", () => {
     const currentUrl = window.location.href;
     const mainNavLinks = document.querySelectorAll(
-      "#desktop-main-nav .link, #mobile-main-nav .link",
+      "#desktop-main-nav .link, #mobile-main-nav .js-link",
     );
     for (const link of Array.from(mainNavLinks) as HTMLAnchorElement[]) {
       link.classList.remove("dark:text-greenyellow", "text-purple");
