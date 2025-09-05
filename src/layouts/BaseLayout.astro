@@ -30,12 +30,12 @@ const { metaTitle } = Astro.props;
       import {
         desktopMenuAnimation,
         setupMobileMenuAnimation,
-        logoAnimation,
+        setupLogoAnimation,
       } from "../scripts/menuAnimation";
       handleTheme();
       setupActivePageLinksUpdate();
       desktopMenuAnimation();
-      logoAnimation();
+      setupLogoAnimation();
       document.addEventListener("astro:after-swap", () => {
         desktopMenuAnimation();
       });

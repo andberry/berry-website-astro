@@ -32,9 +32,15 @@ export const setupMobileMenuAnimation = () => {
   mobileMenuCloseTrigger?.addEventListener('click', () => {
     tl.reverse()
   })
+
+  for (const item of mobileNavLinks) {
+    item.addEventListener('click', () => {
+      tl.reverse();
+    })
+  }
 }
 
-export const logoAnimation = () => {
+export const setupLogoAnimation = () => {
   const logo = document.querySelector('#page-header .js-logoLink')
 
   const logoTl = gsap.timeline({repeat: -1, delay: 2});
