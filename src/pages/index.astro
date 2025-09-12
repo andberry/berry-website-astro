@@ -6,6 +6,10 @@ import { Image } from "astro:assets";
 import HeroTitle from "@components/typography/HeroTitle.astro";
 import Copy from "@components/typography/Copy.astro";
 import FancyText from "@components/typography/FancyText.astro";
+import TechIcon from "@components/TechIcon.astro";
+import H2 from "@components/typography/H2.astro";
+import H3 from "@components/typography/H3.astro";
+import H1 from "@components/typography/H1.astro";
 // import SkillsAnimation from "@components/misc/SkillsGrid.astro";
 ---
 
@@ -13,8 +17,8 @@ import FancyText from "@components/typography/FancyText.astro";
   <article>
     <section
       class:list={[
-        "relative min-h-[calc(100vh-80px)] flex items-center py-16",
-        "dark:lg:bg-gradient-to-br from-black to-purpledark from-75% to-95%",
+        "relative min-h-[calc(100vh-80px)] flex items-center py-8 xl:py-12 2xl:py-24",
+        "dark:bg-gradient-to-br from-black to-purpledark from-75% to-95%",
       ]}
     >
       <Container size="xxl">
@@ -41,7 +45,7 @@ import FancyText from "@components/typography/FancyText.astro";
                 <FancyText variant="gradientPink2"> Berry! </FancyText>
               </p>
               <p class="mt-8">
-                I&apos;m a senior<br />
+                I&apos;m a
                 <FancyText variant="glowGreen">front-end</FancyText>{" "}
                 developer,
                 <br />
@@ -61,8 +65,7 @@ import FancyText from "@components/typography/FancyText.astro";
       class:list={[
         "flex flex-col gap-12 md:gap-16 pb-12 pt-24",
         "from-black to-purpledark from-75% to-95%",
-        "dark:bg-gradient-to-t",
-        "dark:md:bg-gradient-to-tr",
+        "dark:bg-gradient-to-tr",
         "relative lg:py-12 [text-wrap:balance]",
       ]}
     >
@@ -80,8 +83,8 @@ import FancyText from "@components/typography/FancyText.astro";
                 <br />an <FancyText
                   variant="glowGreen"
                   additionalClass="font-medium">italian</FancyText
-                > Web Developer with 10+ years of experience, currently located in
-                Trento after living and working in <FancyText
+                > front-end developer with 10+ years of experience, currently located
+                in Trento after living and working in <FancyText
                   variant="glowPink"
                   additionalClass="font-medium">Canada</FancyText
                 > for 3 years.
@@ -144,6 +147,51 @@ import FancyText from "@components/typography/FancyText.astro";
             </div>
           </div>
         </Container>
+      </div>
+
+      <div class="relative lg:my-12 [text-wrap:balance]">
+        <Container>
+          <div
+            class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb"
+          >
+            <div class="lg:col-start-1 lg:col-span-4">
+              <Copy size="large">
+                Use the right tool for the jobs, don't overengineer things, KISS
+                over DRY are my pillars
+              </Copy>
+            </div>
+          </div>
+        </Container>
+      </div>
+
+      <div class="relative lg:my-12 [text-wrap:balance] dark:fill-white">
+        <Container size="xl" additionalClasses="text-center">
+          <H2
+            ><FancyText variant="gradientPink2">My favourite stack</FancyText
+            ></H2
+          >
+          <Copy>React, Next.js, Tailwind CSS, GSAP, Astro </Copy>
+        </Container>
+        <Container size="md" additionalClasses="text-center mt-8">
+          <div class="grid grid-cols-6 gap-8 justify-center">
+            <TechIcon icon="simple-icons:react" title="React" />
+            <TechIcon icon="logos:nextjs-icon" title="Nextjs" />
+            <TechIcon icon="mdi:tailwind" title="TailwindCSS" />
+            <TechIcon icon="mdi:language-typescript" title="TypeScript" />
+            <TechIcon icon="simple-icons:greensock" title="GSAP" />
+            <TechIcon icon="simple-icons:astro" title="Astro" />
+          </div>
+        </Container>
+        <div
+          class:list={[
+            "hidden lg:block",
+            "absolute h-full w-1/2 -top-36 right-0 border border-lime z-0",
+            "bg-rgpointwhite bg-[length:16px_16px]",
+            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
+            "u-anim--parallax-down",
+          ]}
+        >
+        </div>
       </div>
 
       <div class="relative lg:my-12 [text-wrap:balance]">
