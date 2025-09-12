@@ -37,7 +37,7 @@ export default {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1440px",
-      "3xl": "1680px",
+      "3xl": "1600px",
     },
     maxWidth: {
       "screen-sm": "640px",
@@ -45,7 +45,7 @@ export default {
       "screen-lg": "1024px",
       "screen-xl": "1280px",
       "screen-2xl": "1440px",
-      "screen-3xl": "1680px",
+      "screen-3xl": "1600px",
     },
     fontFamily: {
       exo2: ['"Exo 2"', "sans-serif"],
@@ -60,7 +60,7 @@ export default {
       lg: "1024px",
       xl: "1280px",
       "2xl": "1440px",
-      "3xl": "1680px",
+      "3xl": "1600px",
       "4xl": "1920px",
     },
     extend: {
