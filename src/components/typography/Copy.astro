@@ -6,11 +6,11 @@ export interface Props {
 const fontSizeMap: { [key in typeof size]: string } = {
   small: "text-sm xl:text-base/[1.6]",
   medium: "text-lg xl:text-xl/[1.5]",
-  large: "text-2xl xl:text-3xl/[1.4]",
+  large: "text-2xl/tight xl:text-[32px] 3xl:text-[36px]",
 };
 const { size = "medium" } = Astro.props;
 ---
 
-<div class:list={[fontSizeMap[size], "pb-4 font-extralight"]}>
+<div class:list={[fontSizeMap[size], "pb-4 font-[100]"]}>
   <slot />
 </div>
