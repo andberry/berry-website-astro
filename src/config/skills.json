@@ -5,7 +5,7 @@
   },
   {
     "title": "CSS",
-    "skills": ["Tailwind CSS", "CSS Modules", "Sass/SCSS"]
+    "skills": ["Tailwind CSS", "CSS/SCSS Modules", "Sass/SCSS"]
   },
   {
     "title": "Js / Ts",
@@ -26,7 +26,7 @@
     "skills": [
       "Component-based development",
       "Responsive Web Design",
-      "CSS: Tailwind CSS, CSS modules, BEM, ITCSS, Namespaces",
+      "CSS: Tailwind CSS, CSS/SCSS modules, BEM, ITCSS, Namespaces",
       "Semantic HTML best practices",
       "Accessibility best practices",
       "UI Usability best practices"
@@ -34,7 +34,7 @@
   },
   {
     "title": "Dev Tools",
-    "skills": ["Git", "Storybook", "DDEV"]
+    "skills": ["Git", "Gitlab", "Github", "Vercel", "Netlify", "Storybook", "DDEV"]
   },
   {
     "title": "OS",
