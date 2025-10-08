@@ -1,6 +1,6 @@
 ---
 import { links } from "@config/links";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 ---
 
 <nav>
@@ -19,7 +19,7 @@ import { Icon } from "astro-icon";
               target="_blank"
             >
               <span class="sr-only">{link.name}</span>
-              <Icon class="w-5" name={link.iconName} />
+              <Icon class="w-5 h-auto" name={link.iconName} />
             </a>
           </li>
         );

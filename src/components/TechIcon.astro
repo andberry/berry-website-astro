@@ -1,16 +1,17 @@
 ---
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 
 export interface Props {
   icon: string;
   title: string;
+  additionalClass?: string;
 }
 
-const { icon, title } = Astro.props;
+const { icon, title, additionalClass } = Astro.props;
 ---
 
-<div class="flex flex-col items-center">
-  <Icon class="h-9" name={icon} text={title} />
+<div class:list={["flex flex-col items-center", additionalClass]}>
+  <Icon class="h-9 w-auto" name={icon} title={title} />
   <div class="text-sm mt-2 text-center leading-none font-light dark:font-thin">
     {title}
   </div>

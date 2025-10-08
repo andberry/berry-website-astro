@@ -7,7 +7,7 @@ import Copy from "@components/typography/Copy.astro";
 import BlogCardTitle from "@components/typography/BlogCardTitle.astro";
 import BlogTag from "@components/blog/BlogTag.astro";
 import { Image } from "astro:assets";
-import { Icon } from "astro-icon";
+import { Icon } from "astro-icon/components";
 import type { MarkdownHeading } from "astro";
 import Toc from "@components/blog/Toc.astro";
 
@@ -55,10 +55,10 @@ const displayDate = dateFormatter.format(postData.date);
       }
     </header>
     <div class="py-12 xl:py-24">
-      <Container size="md">
+      <Container size="xl">
         <div class="lg:grid lg:grid-cols-12 lg:gap-10 xl:gap-16">
           <article
-            class="lg:col-span-8 xl:col-start-2 xl:col-span-7 3xl:col-start-1 3xl:col-span-8"
+            class="lg:col-span-8 xl:col-start-2 xl:col-span-7 3xl:col-start-3 3xl:col-span-7"
           >
             {
               headings?.length > 0 && (
@@ -88,7 +88,9 @@ const displayDate = dateFormatter.format(postData.date);
             </div>
           </article>
 
-          <aside class="relative lg:col-span-4 xl:col-span-4 mt-8 lg:mt-0">
+          <aside
+            class="relative lg:col-span-4 xl:col-span-4 3xl:col-span-3 mt-8 lg:mt-0"
+          >
             <div class="lg:sticky lg:top-24">
               <div
                 class="p-5 dark:bg-darkgray bg-lightgray text-black0 dark:text-white rounded-md"

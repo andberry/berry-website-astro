@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
+import icon from 'astro-icon';
 
 import react from "@astrojs/react";
 
@@ -19,12 +20,13 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
     react(),
+    icon()
   ],
   markdown: {
     shikiConfig: {
       // Choose from Shiki's built-in themes (or add your own)
       // https://github.com/shikijs/shiki/blob/main/docs/themes.md
-      theme: "monokai",
+      theme: "catppuccin-macchiato",
       // Add custom languages
       // Note: Shiki has countless langs built-in, including .astro!
       // https://github.com/shikijs/shiki/blob/main/docs/languages.md
