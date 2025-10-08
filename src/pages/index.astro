@@ -10,6 +10,7 @@ import TechIcon from "@components/TechIcon.astro";
 import H2 from "@components/typography/H2.astro";
 import H3 from "@components/typography/H3.astro";
 import H1 from "@components/typography/H1.astro";
+
 // import SkillsAnimation from "@components/misc/SkillsGrid.astro";
 ---
 
@@ -49,11 +50,12 @@ import H1 from "@components/typography/H1.astro";
                 <FancyText variant="glowGreen">front-end</FancyText>{" "}
                 developer,
                 <br />
-                and I love building{" "}
-                <span> usable</span>, <FancyText variant="glowPink"
-                  >engaging</FancyText
+                and I love building{" "}<br />
+
+                <FancyText variant="glowPink" additionalClass="js-scramble-text"
+                  >Usable</FancyText
                 >
-                and maintainable web projects.
+                <br /><span class="js-reveal-text">&nbsp;</span>
               </p>
             </HeroTitle>
           </div>
@@ -62,6 +64,7 @@ import H1 from "@components/typography/H1.astro";
     </section>
 
     <section
+      id="intro"
       class:list={[
         "flex flex-col gap-12 md:gap-16 pb-12 pt-24",
         "from-black to-purpledark from-75% to-95%",
@@ -148,31 +151,49 @@ import H1 from "@components/typography/H1.astro";
       <div class="relative lg:my-12 [text-wrap:balance] dark:fill-white">
         <Container size="xl" additionalClasses="text-center">
           <H2
-            ><FancyText variant="gradientPink2">My favourite stack</FancyText
-            ></H2
+            ><FancyText
+              variant="gradientPink2"
+              additionalClass="js-fst-title"
+            />&nbsp;</H2
           >
-          <Copy>React, Next.js, Tailwind CSS, GSAP, Astro </Copy>
+          <Copy additionalClass="js-fst-text"
+            >React, Next.js, Astro, Tailwind CSS, GSAP
+          </Copy>
         </Container>
         <Container size="md" additionalClasses="text-center mt-8">
           <div class="grid grid-cols-3 md:grid-cols-6 gap-8 justify-center">
-            <TechIcon icon="simple-icons:react" title="React" />
-            <TechIcon icon="logos:nextjs-icon" title="Nextjs" />
-            <TechIcon icon="mdi:tailwind" title="TailwindCSS" />
-            <TechIcon icon="mdi:language-typescript" title="TypeScript" />
-            <TechIcon icon="simple-icons:greensock" title="GSAP" />
-            <TechIcon icon="simple-icons:astro" title="Astro" />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="simple-icons:react"
+              title="React"
+            />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="logos:nextjs-icon"
+              title="Nextjs"
+            />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="simple-icons:astro"
+              title="Astro"
+            />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="mdi:tailwind"
+              title="TailwindCSS"
+            />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="mdi:language-typescript"
+              title="TypeScript"
+            />
+            <TechIcon
+              additionalClass="js-fst-icon"
+              icon="simple-icons:greensock"
+              title="GSAP"
+            />
           </div>
         </Container>
-        <div
-          class:list={[
-            "hidden lg:block",
-            "absolute h-full w-1/2 -top-36 right-0 border border-lime z-0",
-            "bg-rgpointwhite bg-[length:16px_16px]",
-            "[mask-image:radial-gradient(ellipse_at_80%_center,rgba(0,0,0,1),transparent_65%)]",
-            "u-anim--parallax-down",
-          ]}
-        >
-        </div>
       </div>
 
       <div class="relative lg:my-12 [text-wrap:balance]">
@@ -198,11 +219,11 @@ import H1 from "@components/typography/H1.astro";
                   [text-wrap:balance]
                   xl:pb-24"
       >
-        <Container size="xxl">
+        <Container>
           <div
             class="lg:grid lg:grid-cols-6 lg:gap-8 relative md:max-lg:px-16 u-anim--rfb-short z-10"
           >
-            <div class="lg:col-start-2 lg:col-span-4 text-center">
+            <div class="lg:col-start-1 lg:col-span-4">
               <Copy size="large">
                 From small <FancyText variant="glowGreen"
                   >one-man-band</FancyText
@@ -234,3 +255,121 @@ import H1 from "@components/typography/H1.astro";
     </section>
   </article>
 </BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
+  import { TextPlugin } from "gsap/TextPlugin";
+  import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+  gsap.registerPlugin(ScrambleTextPlugin, TextPlugin, ScrollToPlugin);
+
+  const favouriteStackAnimation = () => {
+    const titleEl = document.querySelector(".js-fst-title");
+    const textEl = document.querySelector(".js-fst-text");
+    const iconEls = document.querySelectorAll(".js-fst-icon");
+
+    if (!titleEl || !textEl || !iconEls) {
+      return null;
+    }
+
+    const tl = gsap.timeline({
+      paused: true,
+      delay: 1,
+      defaults: { ease: "power3.out", duration: 0.8 },
+    });
+
+    tl.to(titleEl, {
+      text: { value: "My favourite stack", speed: 1 },
+      ease: "none",
+    });
+    tl.fromTo(
+      iconEls,
+      { opacity: 0, y: 10 },
+      { opacity: 1, y: 0, stagger: 0.08, duration: 0.4, ease: "back.out(5)" },
+      ">+0.5"
+    );
+    tl.fromTo(textEl, { opacity: 0 }, { opacity: 1 }, ">-0.8");
+
+    tl.play();
+  };
+
+  const heroScrambleTextAnimation = () => {
+    const scrambleEl = document.querySelector(".js-scramble-text");
+    const revealTextEl = document.querySelector(".js-reveal-text");
+    if (!scrambleEl || !revealTextEl) {
+      return null;
+    }
+
+    const tl = gsap.timeline({
+      paused: true,
+      delay: 1,
+      repeat: 0,
+      repeatDelay: 2,
+      defaults: { ease: "none", duration: 0.8 },
+    });
+    tl.fromTo(scrambleEl, { opacity: 0 }, { opacity: 1, duration: 0.6 });
+    tl.to(scrambleEl, {
+      scrambleText: { text: "Engaging", chars: "andberryme", speed: 2 },
+    });
+    tl.to(
+      scrambleEl,
+      {
+        scrambleText: {
+          text: "Maintainable",
+          chars: "andberryme",
+          speed: 2,
+        },
+      },
+      ">+0.9"
+    );
+    tl.to(
+      scrambleEl,
+      {
+        scrambleText: { text: "Beautiful", chars: "andberryme", speed: 2 },
+      },
+      ">+0.6"
+    );
+    tl.to(
+      revealTextEl,
+      {
+        text: { value: "web projects.", speed: 1.5, preserveSpaces: true },
+      },
+      ">+0.3"
+    );
+    tl.to(
+      revealTextEl,
+      {
+        text: {
+          value: "webapps.",
+          speed: 1.5,
+          preserveSpaces: true,
+          type: "diff",
+        },
+      },
+      ">+0.3"
+    );
+    tl.to(
+      revealTextEl,
+      {
+        text: { value: "websites.", speed: 1.5, preserveSpaces: true },
+      },
+      ">+0.3"
+    );
+    document.querySelector("html")?.classList.remove("scroll-smooth");
+    document.querySelector("html")?.classList.add("berry-scroll");
+    tl.to(
+      window,
+      {
+        scrollTo: { y: "#intro", offsetY: 100, autoKill: true },
+        ease: "power4.in",
+        duration: 0.6,
+      },
+      ">+0.6"
+    );
+    document.querySelector("html")?.classList.add("scroll-smooth");
+    tl.play();
+  };
+
+  heroScrambleTextAnimation();
+  favouriteStackAnimation();
+</script>
