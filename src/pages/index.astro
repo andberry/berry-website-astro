@@ -352,21 +352,29 @@ import H1 from "@components/typography/H1.astro";
       revealTextEl,
       {
         text: { value: "websites.", speed: 1.5, preserveSpaces: true },
+        // scroll to intro section only if user has not scrolled "too much"
+        onComplete: () => {
+          if (window.scrollY < 350) {
+            document.querySelector("html")?.classList.remove("scroll-smooth");
+            tl.to(
+              window,
+              {
+                scrollTo: { y: "#intro", offsetY: 100, autoKill: true },
+                ease: "power3.inOut",
+                duration: 0.9,
+                onComplete: () => {
+                  document
+                    .querySelector("html")
+                    ?.classList.remove("scroll-smooth");
+                },
+              },
+              ">+0.6"
+            );
+          }
+        },
       },
       ">+0.3"
     );
-    document.querySelector("html")?.classList.remove("scroll-smooth");
-    document.querySelector("html")?.classList.add("berry-scroll");
-    tl.to(
-      window,
-      {
-        scrollTo: { y: "#intro", offsetY: 100, autoKill: true },
-        ease: "power4.in",
-        duration: 0.6,
-      },
-      ">+0.6"
-    );
-    document.querySelector("html")?.classList.add("scroll-smooth");
     tl.play();
   };
 
