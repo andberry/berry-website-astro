@@ -206,7 +206,7 @@ import H1 from "@components/typography/H1.astro";
                 Use the right tool for the job, avoid over-engineering, and <FancyText
                   variant="glowPink"
                   additionalClass="font-medium">KISS over DRY</FancyText
-                > are a few of my tech-decision pillars
+                > are my tech-decision pillars
               </Copy>
             </div>
           </div>
@@ -261,7 +261,13 @@ import H1 from "@components/typography/H1.astro";
   import { ScrambleTextPlugin } from "gsap/ScrambleTextPlugin";
   import { TextPlugin } from "gsap/TextPlugin";
   import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-  gsap.registerPlugin(ScrambleTextPlugin, TextPlugin, ScrollToPlugin);
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(
+    ScrambleTextPlugin,
+    TextPlugin,
+    ScrollToPlugin,
+    ScrollTrigger
+  );
 
   const favouriteStackAnimation = () => {
     const titleEl = document.querySelector(".js-fst-title");
@@ -273,9 +279,16 @@ import H1 from "@components/typography/H1.astro";
     }
 
     const tl = gsap.timeline({
-      paused: true,
-      delay: 1,
+      //delay: 1,
       defaults: { ease: "power3.out", duration: 0.8 },
+      scrollTrigger: {
+        trigger: ".js-fst-title",
+        start: "top 75%",
+        // end: "top: 10%",
+        // toggleActions: "restart none none none",
+        // scrub: true,
+        // markers: true,
+      },
     });
 
     tl.to(titleEl, {
@@ -290,7 +303,7 @@ import H1 from "@components/typography/H1.astro";
     );
     tl.fromTo(textEl, { opacity: 0 }, { opacity: 1 }, ">-0.8");
 
-    tl.play();
+    //tl.play();
   };
 
   const heroScrambleTextAnimation = () => {
@@ -354,22 +367,22 @@ import H1 from "@components/typography/H1.astro";
         text: { value: "websites.", speed: 1.5, preserveSpaces: true },
         // scroll to intro section only if user has not scrolled "too much"
         onComplete: () => {
-          if (window.scrollY < 350) {
-            document.querySelector("html")?.classList.remove("scroll-smooth");
-            tl.to(
-              window,
-              {
-                scrollTo: { y: "#intro", offsetY: 100, autoKill: true },
-                ease: "power3.inOut",
-                duration: 0.9,
-                onComplete: () => {
-                  document
-                    .querySelector("html")
-                    ?.classList.remove("scroll-smooth");
-                },
+          if (window.scrollY < 450) {
+            // using alongside scroll-behavior: smooth in CSS will cause conflicts: temporarily removing it
+            const htmlEl = document.querySelector("html");
+            htmlEl && htmlEl.classList.remove("scroll-smooth");
+            htmlEl && (htmlEl.style.scrollBehavior = "auto");
+
+            tl.to(window, {
+              scrollTo: { y: "#intro", offsetY: 100 },
+              ease: "power4.inOut",
+              duration: 1.2,
+              onComplete: () => {
+                // restoring croll-behavior: smooth
+                htmlEl && htmlEl.classList.add("scroll-smooth");
+                htmlEl && (htmlEl.style.scrollBehavior = "smooth");
               },
-              ">+0.6"
-            );
+            });
           }
         },
       },
