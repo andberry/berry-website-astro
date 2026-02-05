@@ -1,0 +1,33 @@
+---
+import HeroTitle from "@components/typography/HeroTitle.astro";
+import Container from "@components/utils/Container.astro";
+import BaseLayout from "@layouts/BaseLayout.astro";
+---
+
+<BaseLayout metaTitle="Kitchen sink | andberry.me">
+  <header>
+    <Container size="lg">
+      <div class="pt-32 pb-8 2xl:pt-48">
+        <HeroTitle>This is DGV Flowers Count Testing Page</HeroTitle>
+      </div>
+    </Container>
+  </header>
+  <section class="my-12">This is section one</section>
+  <section>
+    <Container>
+      <div id="flower-counter-widget"></div>
+      <link
+        rel="stylesheet"
+        href="https://flower-counter.dev.verbinteractive.com/flower-counter/widget/assets/flower-counter.css"
+      />
+      <link rel="stylesheet" href="https://use.typekit.net/wta0gvk.css" />
+      <script>
+        window.process = { env: { NODE_ENV: "production" } };
+      </script>
+      <script
+        src="https://flower-counter.dev.verbinteractive.com/flower-counter/widget/flower-counter.js"
+      ></script>
+    </Container>
+  </section>
+  <section class="my-12">This is section two</section>
+</BaseLayout>
