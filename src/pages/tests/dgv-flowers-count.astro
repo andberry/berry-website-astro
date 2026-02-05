@@ -1,10 +1,11 @@
 ---
+import H1 from "@components/typography/H1.astro";
 import HeroTitle from "@components/typography/HeroTitle.astro";
 import Container from "@components/utils/Container.astro";
 import BaseLayout from "@layouts/BaseLayout.astro";
 ---
 
-<BaseLayout metaTitle="Kitchen sink | andberry.me">
+<BaseLayout metaTitle="DGV Flowers Count Test | andberry.me">
   <header>
     <Container size="lg">
       <div class="pt-32 pb-8 2xl:pt-48">
@@ -13,9 +14,11 @@ import BaseLayout from "@layouts/BaseLayout.astro";
     </Container>
   </header>
   <section class="my-12">This is section one</section>
-  <section>
+  <section class="my-12">
     <Container>
-      <div id="flower-counter-widget"></div>
+      <H1>Embedding with ID and script</H1>
+
+      <div id="flower-counter-widget" class="border border-lime p-2"></div>
       <link
         rel="stylesheet"
         href="https://flower-counter.dev.verbinteractive.com/flower-counter/widget/assets/flower-counter.css"
@@ -27,6 +30,23 @@ import BaseLayout from "@layouts/BaseLayout.astro";
       <script
         src="https://flower-counter.dev.verbinteractive.com/flower-counter/widget/flower-counter.js"
       ></script>
+    </Container>
+  </section>
+  <section class="my-12">
+    <Container>
+      <H1>Embedding with iframe</H1>
+      <div class="border border-lime p-2 h-[600px]">
+        <iframe
+          class="_iframe_1cuey_13"
+          scrolling="auto"
+          title="code example"
+          name="htmlComp-iframe"
+          width="100%"
+          height="100%"
+          data-src=""
+          src="https://4ff3760f-ce77-45ff-b298-d71eb383ecec.filesusr.com/html/40546d_779e612df06c2db931eb0cf12903a255.html"
+        ></iframe>
+      </div>
     </Container>
   </section>
   <section class="my-12">This is section two</section>
