@@ -42,11 +42,11 @@ const displayDate = dateFormatter.format(postData.date);
       </div>
       {
         postData.heroImage && (
-          <div class="w-full md:h-[40vh] lg:h-[60vh] xl:min-h-[400px]">
+          <div class="w-full md:h-[40vh] lg:h-[60vh] xl:h-[85vh] xl:min-h-[400px] js-hero-img-container overflow-hidden">
             <Image
               src={postData.heroImage}
               alt=""
-              class="object-cover object-center w-full block h-full"
+              class="object-cover object-center w-full block h-full js-hero-img"
               widths={[375, 768, 1280, 1920]}
               sizes="100vw"
             />
@@ -80,7 +80,7 @@ const displayDate = dateFormatter.format(postData.date);
               prose-headings:relative
               xl:prose-headings:mt-16
               dark:prose-code:text-white prose-code:text-black prose-code:text-sm prose-pre:leading-none prose-code:font-mono
-              prose-p:my-0 prose-p:mb-5"
+              prose-p:my-0 prose-p:mb-8"
             >
               <Copy size="medium">
                 <slot />
@@ -144,3 +144,34 @@ const displayDate = dateFormatter.format(postData.date);
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  gsap.registerPlugin(ScrollTrigger);
+
+  const animateHero = () => {
+    const heroImg = document.querySelector(".js-hero-img");
+    const heroImgContainer = document.querySelector(".js-hero-img-container");
+    if (!heroImg || !heroImgContainer) {
+      return null;
+    }
+
+    const heroTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: heroImgContainer,
+        start: "top 60%",
+        end: "bottom 20%",
+        scrub: true,
+      },
+    });
+    heroTl.to(heroImg, {
+      scale: 1.15,
+      opacity: 0.2,
+      y: "-100px",
+      ease: "power1.inOut",
+    });
+  };
+
+  animateHero();
+</script>
