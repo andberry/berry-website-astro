@@ -92,9 +92,10 @@ import H1 from "@components/typography/H1.astro";
                   additionalClass="font-medium">Canada</FancyText
                 > for 3 years.
               </Copy>
-              <Copy size="large">
+              <Copy size="large"
+                >I build
                 <FancyText variant="gradientPink" additionalClass="font-medium"
-                  >I build websites</FancyText
+                  >websites and apps</FancyText
                 >,
                 <br /> and my main focus and experience is <FancyText
                   variant="glowGreen"
@@ -131,7 +132,8 @@ import H1 from "@components/typography/H1.astro";
                   variant="gradientPink2"
                   additionalClass="font-medium"
                   >meticulous attention to details</FancyText
-                > and a strong focus on UI usability are my daily bread and butter.
+                > and a strong focus on UI usability and accessibility are my daily
+                bread and butter.
               </Copy>
             </div>
           </div>
@@ -157,31 +159,27 @@ import H1 from "@components/typography/H1.astro";
             />&nbsp;</H2
           >
           <Copy additionalClass="js-fst-text"
-            >React, Next.js, Astro, Tailwind CSS, GSAP
+            >React, Tailwind CSS, GSAP, Astro
           </Copy>
         </Container>
         <Container size="md" additionalClasses="text-center mt-8">
-          <div class="grid grid-cols-3 md:grid-cols-6 gap-8 justify-center">
+          <div class="grid grid-cols-3 md:grid-cols-5 gap-8 justify-center">
             <TechIcon
               additionalClass="js-fst-icon"
               icon="simple-icons:react"
               title="React"
             />
             <TechIcon
-              additionalClass="js-fst-icon fill-black"
-              icon="logos:nextjs-icon"
-              title="Nextjs"
+              additionalClass="js-fst-icon"
+              icon="mdi:language-typescript"
+              title="TypeScript"
             />
             <TechIcon
               additionalClass="js-fst-icon"
               icon="mdi:tailwind"
               title="TailwindCSS"
             />
-            <TechIcon
-              additionalClass="js-fst-icon"
-              icon="mdi:language-typescript"
-              title="TypeScript"
-            />
+
             <TechIcon
               additionalClass="js-fst-icon"
               icon="simple-icons:greensock"
@@ -292,7 +290,7 @@ import H1 from "@components/typography/H1.astro";
     });
 
     tl.to(titleEl, {
-      text: { value: "My favourite stack", speed: 1 },
+      text: { value: "My favourite tech", speed: 1 },
       ease: "none",
     });
     tl.fromTo(
